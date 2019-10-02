@@ -1,0 +1,2697 @@
+<body>
+    <div class="views">
+        <div class="view view-main">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!--<div class="left">
+                        <a href="#" class="link icon-only open-panel">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>-->
+					<div class="left">
+                        <a href="index.html" class="link icon-only" onclick="autoSaveFormData(); return false;">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </div>
+                    <div class="center">
+						<a href="#" onclick="">
+							<h2 class="title Text_Change_language" onclick="toggleSurveyLanguage();">Change Language</h2>
+						</a>
+                    </div>
+					<!--<h2 class="title">{{url_query.title}}</h2>-->
+					<div class="right">
+                        <a href="#" onclick="autoSaveFormData(); return false;">
+							<h2 class="title Text_Save" style="color: #FFF;padding-right: 10px;">Save</h2>
+                        </a>
+						<!-- <div class="item-title label">Switch</div> -->
+						<!-- <div class="item-input"> -->
+							<!-- <label class="label-switch"> -->
+								<!-- <input type="checkbox"> -->
+								<!-- <div class="checkbox"></div> -->
+							<!-- </label> -->
+						<!-- </div> -->
+                    </div>
+					
+                </div>
+            </div>
+            <div class="pages navbar-through">
+                <div data-page="survey" class="page survey">
+					<div class="page-content hide-bars-on-scroll">
+						<form id="surveyForm" onsubmit='return submitSurvey(this)'>
+						<!-- <form id="surveyForm"> -->
+							<span id="section_1">
+		                        <div class="content-block-title">
+		                            <h2 class="heading">I. <span class="Text_Basic_Information">Basic Information</span></h2>
+		                        </div>
+		                        <div class="list-block">
+		                            <ul>
+										<li>
+											<div class="item-content">
+												<div class="item-inner">
+													<div class="item-title label Text_Survey_name_of_surveyor">Surveyor Name</div>
+													<div class="item-input">
+														<input type="text" placeholder=" " name="surveyorName" required>
+													</div>
+												</div>
+											</div>
+		                                </li>
+		                                <li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Settlement">Settlement</div>
+		                                            <div class="item-input">
+		                                                <select name="settlement" onchange='checkSettlement(this);' required>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="Ambujwadi_TDH" class="Text_Settlement_Ambujwadi_TDH">Ambujwadi (TDH)</option>
+		                                                    <option value="Behrampada_TDH" class="Text_Settlement_Behrampada_TDH">Behrampada (TDH)</option>
+															<option value="Ambujwadi_Comic_Relief" class="Text_Settlement_Ambujwadi_COMIC_RELIEF">Ambujwadi (COMIC RELIEF)</option>
+															<option value="Nalasopara_Comic_Relief" class="Text_Settlement_Nalasopara_COMIC_RELIEF">Nalasopara (COMIC RELIEF)</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Cluster">Building/Society/Cluster</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="settlementType" placeholder="" required>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="align-top">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Address">Address</div>
+		                                            <div class="item-input">
+		                                                <textarea name="address" placeholder="House No/Address"></textarea>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Which_Floor">Floor?</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="houseFloor" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Type_of_house">Type of House</div>
+		                                            <div class="item-input">
+		                                                <select name="houseType">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="kuctha" class="Text_Type_of_house_kutcha">Kutcha</option>
+															<option value="semiPakka" class="Text_Type_of_house_semi_pucca">Semi Pakka</option>
+															<option value="pakka" class="Text_Type_of_house_pucca">Pakka</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Contact_person">Contact Person Name</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="contactPerson" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Phone_No">Phone No</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="phoneNo" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                            </ul>
+		                        </div>
+	                        </span>
+	                        
+							<span id="section_2">
+								<div class="content-block-title">
+		                            <h2 class="heading">II. <span class="Text_Demographics_section">Household Demographics</span></h2>
+		                        </div>
+		                        <div class="list-block">
+		                            <ul>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Religion">Religion</div>
+		                                            <div class="item-input">
+		                                                <select name="religion" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="Hindu" class="Text_Religion_Hindu">Hindu</option>
+		                                                    <option value="Muslim" class="Text_Religion_Muslim">Muslim</option>
+															<option value="Buddhist" class="Text_Religion_Buddhist">Buddhist</option>
+															<option value="Christian" class="Text_Religion_Christian">Christian</option>
+															<option value="other" class="Text_Others_Specify" class="Text_Others_Specify">Other (Specify)</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li style="display: none">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Specify_Other_Religion">Specify Religion</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="religionOther" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Caste">Caste</div>
+		                                            <div class="item-input">
+		                                                <select name="caste" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="SC" class="Text_Caste_SC">SC</option>
+		                                                    <option value="ST" class="Text_Caste_SC">>ST</option>
+															<option value="OBC" class="Text_Caste_OBC">>OBC</option>
+															<option value="NT/DNT" class="Text_Caste_NT">>NT/DNT</option>
+															<option value="GEN" class="Text_Caste_General">GENERAL</option>
+															<option value="other" class="Text_Others_Specify">Other (Specify)</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li style="display: none">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Specify_Other_Caste">Specify Caste</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="casteOther" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Native_place">Native/ancestral place</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="nativePlace" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Migration_to_Mumbai">Year of migration to Mumbai</div>
+		                                            <div class="item-input">
+		                                                <select name="yearOfMigrationMumbai">
+															<option value="">-- Select Year --</option>
+		                                                    <option value="1945">1945</option>
+															<option value="1946">1946</option>
+															<option value="1947">1947</option>
+															<option value="1948">1948</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Migration_to_basti">Year of migration to this Basti</div>
+		                                            <div class="item-input">
+		                                                <select name="yearOfMigrationBasti">
+															<option value="">-- Select Year --</option>
+		                                                    <option value="1945">1945</option>
+															<option value="1946">1946</option>
+															<option value="1947">1947</option>
+															<option value="1948">1948</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Migration_reason">Reason for migration</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="reasonForMigration" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                            </ul>
+		                        </div>
+								<div class="list-block accordion-list">
+								    <ul>
+								    	<li class="list-group-title">
+											<p><span class="Text_Family_profile">Family members’ profile (same house only)</span>
+					                        <a href="#" id="addNewFamilyMember" onclick="addFamilyMember(); return false;" class="link icon-only" style="color: #283593;float:right;font-size: 14px">
+					                            <i class="fa fa-plus" style="margin-right: 0px;"></i> Add
+					                        </a></p>
+										</li>
+								        <li class="accordion-item familyMember" style="display: none;" id="familyMemberAccordion">
+								            <a href="#" class="item-content item-link" style="background: #fffafa;">
+								                <div class="item-inner">
+								                    <div class="item-title memberItemHeading" style="border-right: none;">Member 1</div>
+								                </div>
+								            </a>
+								            <div class="accordion-item-content">
+								                <div class="content-block">
+								                    <div class="list-block">
+							                            <ul>
+															<li>
+																<div class="item-content">
+																	<div class="item-inner">
+																		<div class="item-title label Text_Family_member_name">Name of family member</div>
+																		<div class="item-input">
+																			<input type="text" placeholder=" " name="familyMemberName[0]">
+																		</div>
+																	</div>
+																</div>
+							                                </li>
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Family_member_age">Age</div>
+							                                            <div class="item-input">
+							                                                <input type="tel" name="familyMemberAge[0]" placeholder="">
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Family_member_gender">Gender</div>
+							                                            <div class="item-input">
+							                                                <select name="familyMemberGender[0]">
+																				<option value="">-- SELECT --</option>
+							                                                    <option value="male" class="Text_Male">Male</option>
+							                                                    <option value="female" class="Text_Family_member_gender_female">Female</option>
+																				<option value="other" class="Text_Other">Other</option>
+							                                                </select>
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Family_member_relation">Relation with head of household</div>
+							                                            <div class="item-input">
+							                                                <select name="familyMemberRelationWithHead[0]">
+																				<option value="">-- SELECT --</option>
+							                                                    <option value="self" class="Text_Family_member_relation_self">Self</option>
+							                                                    <option value="child" class="Text_Family_member_relation_child">Child</option>
+							                                                    <option value="parent" class="Text_Family_member_relation_parent">Parent</option>
+							                                                    <option value="spouse"class="Text_Family_member_relation_spouse">Spouse</option>
+							                                                    <option value="parentInLaw" class="Text_Family_member_relation_parent_in_law">Parent in law</option>
+																				<option value="other" class="Text_Others_Specify">Other (Specify)</option>
+							                                                </select>
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Education_qualification">Educational Qualification</div>
+							                                            <div class="item-input">
+							                                                <select name="familyMemberEducationalQualification[0]">
+																				<option value="">-- SELECT --</option>
+																				<option value="noneCannotReadCalculate" class="Text_Education_qualification_none">None, cannot read, cannot calculate</option>
+																				<option value="canCalculate" class="Text_Education_qualification_numeracy">None, cannot read, can calculate</option>
+																				<option value="canReadCalculate" class="Text_Education_qualification_literacy">None, can read, can calculate</option>
+							                                                    <option value="upto5th" class="Text_Education_qualification_up_to_5">Upto 5th</option>
+							                                                    <option value="6th-9th" class="Text_Education_qualification_6_to_9">6th to 9th</option>
+							                                                    <option value="10thPass" class="Text_Education_qualification_10_pass">10th pass</option>
+							                                                    <option value="12thPass" class="Text_Education_qualification_12_pass">12th pass</option>
+							                                                    <option value="Graduate" class="Text_Education_qualification_graduate">Graduate</option>
+																				<option value="postgraduateAndAbove" class="Text_Education_qualification_post_graduate_above">Post Graduate & above</option>
+							                                                </select>
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+															<li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Occupation">Occupation(s)</div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberOccupation[0]" value="none">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Occupation_none" style="border-right: none;">None</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberOccupation[0]" value="student">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Occupation_student" style="border-right: none;">Student</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberOccupation[0]" value="homeMaker">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Occupation_home_maker" style="border-right: none;">Home-maker</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberOccupation[0]" value="dailyWageLabourer">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Occupation_daily_wage_labourer" style="border-right: none;">Daily wage/Begari Labourer</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberOccupation[0]" value="contractualLabour">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Occupation_contractual_labour" style="border-right: none;">Contractual Labour</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberOccupation[0]" value="industrialWorker">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Occupation_industrial_worker" style="border-right: none;">Industrial Worker</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberOccupation[0]" value="homeBasedWorker">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Occupation_home_based_worker" style="border-right: none;">Home based Worker</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberOccupation[0]" value="domesticWorker">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Occupation_domestic_worker" style="border-right: none;">Domestic Worker</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberOccupation[0]" value="sanitationWorker">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Occupation_sanitation_worker" style="border-right: none;">Sanitation Worker/ Waste Recycler</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberOccupation[0]" value="hawker">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Occupation_hawker" style="border-right: none;">Hawker/Peddler/Street vendor</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberOccupation[0]" value="driver">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Occupation_driver" style="border-right: none;">Driver</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberOccupation[0]" value="selfEmployed">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Occupation_driver" style="border-right: none;">Self-Employed</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberOccupation[0]" value="other">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Other" style="width: 40%;">Other</div>
+							                                            <input type="text" name="familyMemberOccupationOther[0]" placeholder=" Specify">
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <!--<li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label">Occupation(s)</div>
+							                                            <div class="item-input">
+							                                                <select name="familyMemberOccupation[0]">
+																				<option value="">-- SELECT --</option>
+							                                                    <option value="none" class="">None</option>
+							                                                    <option value="student" class="Text_Occupation_student">Student</option>
+							                                                    <option value="homeMaker" class="Text_Occupation_home_maker">Home-maker</option>
+							                                                    <option value="dailyWageLabourer" class="Text_Occupation_daily_wage_labourer">Daily wage/Begari Labourer</option>
+							                                                    <option value="contractualLabour" class="Text_Occupation_contractual_labour">Contractual Labour</option>
+							                                                    <option value="industrialWorker" class="Text_Occupation_industrial_worker">Industrial Worker</option>
+							                                                    <option value="homeBasedWorker" class="Text_Occupation_home_based_worker">Home based Worker</option>
+							                                                    <option value="domesticWorker" class="Text_Occupation_domestic_worker">Domestic Worker</option>
+							                                                    <option value="sanitationWorker" class="Text_Occupation_sanitation_worker">Sanitation Worker/ Waste Recycler</option>
+							                                                    <option value="hawker" class="Text_Occupation_hawker">Hawker/Peddler/Street vendor</option>
+							                                                    <option value="driver" class="Text_Occupation_driver">Driver</option>
+							                                                    <option value="selfEmployed" class="Text_Occupation_driver">Self-Employed</option>
+							                                                    <option value="other" class="Text_Others_Specify">Others (Specify)</option>
+							                                                </select>
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </li>-->
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Employment_type">Employment Type</div>
+							                                            <div class="item-input">
+							                                                <select name="familyMemberEmploymentType[0]">
+																				<option value="">-- SELECT --</option>
+							                                                    <option value="formal" class="Text_Employment_type_formal">Formal</option>
+							                                                    <option value="informal" class="Text_Employment_type_informal">Informal</option>
+							                                                </select>
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Monthly_income">Monthly Income</div>
+							                                            <div class="item-input">
+							                                                <input type="tel" name="familyMemberMonthlyIncome[0]" placeholder="">
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Identity_documents_held">Identity documents held</div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Pan Card">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_pan" style="border-right: none;">Pan Card</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Ration Card">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_ration" style="border-right: none;">Ration Card</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Aadhar Card">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_aadhaar" style="border-right: none;">Aadhar Card</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Voter Card">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_voter" style="border-right: none;">Voter Card</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Passport">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_passport" style="border-right: none;">Passport</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Birth Certificate">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_birth" style="border-right: none;">Birth Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Domicile Certificate">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_domicile" style="border-right: none;">Domicile Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Bank Account">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_bank_account" style="border-right: none;">Bank Account</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Income Certificate">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_income" style="border-right: none;">Income Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Caste Certificate">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_caste" style="border-right: none;">Caste Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="specificGovtCard">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_job_specific_id" style="border-right: none;">Job - specific identity card by govt. (domestic worker/construction worker)</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="other">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Other" style="width: 40%;">Other</div>
+							                                            <input type="text" name="familyMemberDocumentsHeldOther[0]" placeholder=" Specify">
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Long_term_health_issues">Long-term health issues</div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="Blood pressure">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_blood_pressure" style="border-right: none;">Blood pressure</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="Heart related">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_heart_related" style="border-right: none;">Heart related</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="Sugar/Diabetes">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_diabetes" style="border-right: none;">Sugar/Diabetes</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="Dengue/Malaria/Typhoid/Jaundice">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_bacterial" style="border-right: none;">Dengue/Malaria/Typhoid/Jaundice</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="Cancer">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_cancer" style="border-right: none;">Cancer</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="Asthma">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_asthma" style="border-right: none;">Asthma</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="Skin related">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_skin" style="border-right: none;">Skin related</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="HIV/AIDS/STD">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_STD" style="border-right: none;">HIV/AIDS/STD</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="Addiction/Alcoholism/Drug abuse">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_addiction" style="border-right: none;">Addiction/Alcoholism/Drug abuse</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="other">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Other" style="width: 40%;">Other</div>
+							                                            <input type="text" name="familyMemberHealthIssuesOther[0]" placeholder=" Specify">
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Type_of_disability">Type of disability</div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDisability[0]" value="Mobility/Physical">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Type_of_disability_physical" style="border-right: none;">Mobility/Physical</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDisability[0]" value="Visual">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Type_of_disability_visual" style="border-right: none;">Visual</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDisability[0]" value="Hearing">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Type_of_disability_hearing" style="border-right: none;">Hearing</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDisability[0]" value="Speaking">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Type_of_disability_speaking" style="border-right: none;">Speaking</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDisability[0]" value="Intellectual">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Type_of_disability_intellectual" style="border-right: none;">Intellectual</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDisability[0]" value="Mental">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Type_of_disability_mental" style="border-right: none;">Mental</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDisability[0]" value="other">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Other" style="width: 40%;">Other</div>
+							                                            <input type="text" name="familyMemberDisabilityOther[0]" placeholder=" Specify">
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                            </ul>
+							                        </div>
+								                </div>
+								            </div>
+								        </li>
+										<li class="accordion-item familyMember">
+								            <a href="#" class="item-content item-link" style="background: #fffafa;">
+								                <div class="item-inner">
+								                    <div class="item-title memberItemHeading" style="border-right: none;">Member 1</div>
+								                </div>
+								            </a>
+								            <div class="accordion-item-content">
+								                <div class="content-block">
+								                    <div class="list-block">
+							                            <ul>
+															<li>
+																<div class="item-content">
+																	<div class="item-inner">
+																		<div class="item-title label Text_Family_member_name">Name of family member</div>
+																		<div class="item-input">
+																			<input type="text" placeholder=" " name="familyMemberName[0]">
+																		</div>
+																	</div>
+																</div>
+							                                </li>
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Family_member_age">Age</div>
+							                                            <div class="item-input">
+							                                                <input type="tel" name="familyMemberAge[0]" placeholder="">
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Family_member_gender">Gender</div>
+							                                            <div class="item-input">
+							                                                <select name="familyMemberGender[0]">
+																				<option value="">-- SELECT --</option>
+							                                                    <option value="male" class="Text_Male">Male</option>
+							                                                    <option value="female" class="Text_Family_member_gender_female">Female</option>
+																				<option value="other" class="Text_Other">Other</option>
+							                                                </select>
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Family_member_relation">Relation with head of household</div>
+							                                            <div class="item-input">
+							                                                <select name="familyMemberRelationWithHead[0]">
+																				<option value="">-- SELECT --</option>
+							                                                    <option value="self" class="Text_Family_member_relation_self">Self</option>
+							                                                    <option value="child" class="Text_Family_member_relation_child">Child</option>
+							                                                    <option value="parent" class="Text_Family_member_relation_parent">Parent</option>
+							                                                    <option value="spouse"class="Text_Family_member_relation_spouse">Spouse</option>
+							                                                    <option value="parentInLaw" class="Text_Family_member_relation_parent_in_law">Parent in law</option>
+																				<option value="other" class="Text_Others_Specify">Other (Specify)</option>
+							                                                </select>
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Education_qualification">Educational Qualification</div>
+							                                            <div class="item-input">
+							                                                <select name="familyMemberEducationalQualification[0]">
+																				<option value="">-- SELECT --</option>
+							                                                    <option value="none">None</option>
+							                                                    <option value="5th">5th</option>
+							                                                    <option value="6th-9th" class="Text_Education_qualification_6_to_9">6th to 9th</option>
+							                                                    <option value="10thPass" class="Text_Education_qualification_10_pass">10th pass</option>
+							                                                    <option value="12thPass" class="Text_Education_qualification_12_pass">12th pass</option>
+							                                                    <option value="Graduate" class="Text_Education_qualification_graduate">Graduate</option>
+																				<option value="postgraduateAndAbove" class="Text_Education_qualification_post_graduate_above">Post Graduate & above</option>
+							                                                </select>
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label">Occupation(s)</div>
+							                                            <div class="item-input">
+							                                                <select name="familyMemberOccupation[0]">
+																				<option value="">-- SELECT --</option>
+							                                                    <option value="none" class="">None</option>
+							                                                    <option value="student" class="Text_Occupation_student">Student</option>
+							                                                    <option value="homeMaker" class="Text_Occupation_home_maker">Home-maker</option>
+							                                                    <option value="dailyWageLabourer" class="Text_Occupation_daily_wage_labourer">Daily wage Labourer</option>
+							                                                    <option value="contractualLabour" class="Text_Occupation_contractual_labour">Contractual Labour</option>
+							                                                    <option value="industrialWorker" class="Text_Occupation_industrial_worker">Industrial Worker</option>
+							                                                    <option value="homeBasedWorker" class="Text_Occupation_home_based_worker">Home based Worker</option>
+							                                                    <option value="domesticWorker" class="Text_Occupation_domestic_worker">Domestic Worker</option>
+							                                                    <option value="sanitationWorker" class="Text_Occupation_sanitation_worker">Sanitation Worker/ Waste Recycler</option>
+							                                                    <option value="hawker" class="Text_Occupation_hawker">Hawker/Peddler/Street vendor</option>
+							                                                    <option value="driver" class="Text_Occupation_driver">Driver</option>
+							                                                    <option value="selfEmployed" class="Text_Occupation_self_employed">Self-Employed</option>
+							                                                    <option value="other" class="Text_Others_Specify">Others (Specify)</option>
+							                                                </select>
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Employment_type">Employment Type</div>
+							                                            <div class="item-input">
+							                                                <select name="familyMemberEmploymentType[0]">
+																				<option value="">-- SELECT --</option>
+							                                                    <option value="formal" class="Text_Employment_type_formal">Formal</option>
+							                                                    <option value="informal" class="Text_Employment_type_informal">Informal</option>
+							                                                </select>
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Monthly_income">Monthly Income</div>
+							                                            <div class="item-input">
+							                                                <input type="tel" name="familyMemberMonthlyIncome[0]" placeholder="">
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Identity_documents_held">Identity documents held</div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Pan Card">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_pan" style="border-right: none;">Pan Card</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Ration Card">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_ration" style="border-right: none;">Ration Card</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Aadhar Card">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_aadhaar" style="border-right: none;">Aadhar Card</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Voter Card">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_voter" style="border-right: none;">Voter Card</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Passport">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_passport" style="border-right: none;">Passport</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Birth Certificate">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_birth" style="border-right: none;">Birth Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Domicile Certificate">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_domicile" style="border-right: none;">Domicile Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Bank Account">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_bank_account" style="border-right: none;">Bank Account</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Income Certificate">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_income" style="border-right: none;">Income Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="Caste Certificate">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_caste" style="border-right: none;">Caste Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="specificGovtCard">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_job_specific_id" style="border-right: none;">Job - specific identity card by govt. (domestic worker/construction worker)</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[0]" value="other">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Other" style="width: 40%;">Other</div>
+							                                            <input type="text" name="familyMemberDocumentsHeldOther[0]" placeholder=" Specify">
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Long_term_health_issues">Long-term health issues</div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="Blood pressure">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_blood_pressure" style="border-right: none;">Blood pressure</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="Heart related">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_heart_related" style="border-right: none;">Heart related</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="Sugar/Diabetes">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_diabetes" style="border-right: none;">Sugar/Diabetes</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="Dengue/Malaria/Typhoid/Jaundice">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_bacterial" style="border-right: none;">Dengue/Malaria/Typhoid/Jaundice</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="Cancer">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_cancer" style="border-right: none;">Cancer</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="Asthma">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_asthma" style="border-right: none;">Asthma</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="Skin related">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_skin" style="border-right: none;">Skin related</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="HIV/AIDS/STD">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Long_term_health_issues_STD" style="border-right: none;">HIV/AIDS/STD</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberHealthIssues[0]" value="other">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Other" style="width: 40%;">Other</div>
+							                                            <input type="text" name="familyMemberHealthIssuesOther[0]" placeholder=" Specify">
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <div class="item-content">
+							                                        <div class="item-inner">
+							                                            <div class="item-title label Text_Type_of_disability">Type of disability</div>
+							                                        </div>
+							                                    </div>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDisability[0]" value="Mobility/Physical">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Type_of_disability_physical" style="border-right: none;">Mobility/Physical</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDisability[0]" value="Visual">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Type_of_disability_visual" style="border-right: none;">Visual</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDisability[0]" value="Hearing">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Type_of_disability_hearing" style="border-right: none;">Hearing</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDisability[0]" value="Speaking">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Type_of_disability_speaking" style="border-right: none;">Speaking</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDisability[0]" value="Intellectual">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Type_of_disability_intellectual" style="border-right: none;">Intellectual</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDisability[0]" value="Mental">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Type_of_disability_mental" style="border-right: none;">Mental</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                                <li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDisability[0]" value="other">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Others_Specify" style="width: 40%;">Other</div>
+							                                            <input type="text" name="familyMemberDisabilityOther[0]" placeholder=" Specify">
+							                                        </div>
+							                                    </label>
+							                                </li>
+							                            </ul>
+							                        </div>
+								                </div>
+								            </div>
+								        </li>
+									</ul>
+								</div>
+		                    </span>    
+							
+							<span id="section_3">
+								<div class="content-block-title">
+		                            <h2 class="heading" id="adequate_housing">III. <span class="Text_Housing_section">Adequate Housing</span></h2>
+		                        </div>
+		                        <div class="list-block">
+		                            <ul>
+										 <li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Residence_duration">Since which year have you been living in this house?</div>
+		                                            <div class="item-input">
+		                                                <select name="whichYearHouse">
+															<option value="">-- SELECT YEAR --</option>
+		                                                    <option value="1945">1945</option>
+															<option value="1946">1946</option>
+															<option value="1947">1947</option>
+															<option value="1948">1948</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Do you own this house?</div>
+		                                            <div class="item-input">
+		                                                <select name="isHouseOwner" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Ownership_of_house_owner">Yes, owner</option>
+															<option value="NO" class="Text_Ownership_of_house_rented">No, rented</option>
+															<option value="other" class="Text_Others_Specify">Other (Specify)</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li style="display: none">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Specify_Other_Owner">Specify Owner</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="isHouseOwnerOther" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Documentation_for_house">Documentation for the house</div>
+		                                            <div class="item-input">
+		                                                <select name="houseDocumentation" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="ownershipPapers" class="Text_Documentation_for_house_ownership_paper">Ownership papers</option>
+															<option value="rentAgreement" class="Text_Documentation_for_house_rent_agreement">Rent Agreement</option>
+															<option value="other" class="Text_Others_Specify">Other (Specify)</option>
+															<option value="none" class="Text_Occupation_none">None</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li style="display: none">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Specify Documentation</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="houseDocumentationOther" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Floor_of_house">On which floor is the house?</div>
+		                                            <div class="item-input">
+		                                                <select name="houseFloor" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="ground" class="Text_Floor_of_house_ground">Ground Floor</option>
+		                                                    <option value="first" class="Text_Floor_of_house_first">First Floor</option>
+		                                                    <option value="second"class="Text_Floor_of_house_second">Second Floor</option>
+		                                                    <option value="third"class="Text_Floor_of_house_third">Third Floor</option>
+															<option value="other" class="Text_Others_Specify">Other (Specify)</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li style="display: none">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Specify Floor</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="houseFloorOther" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Floor_area_of_house">Floor Area (sq. feet)</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="houseArea" placeholder="Sq. Feet">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Number_of_rooms">Number of rooms in the house (except bathroom and toilet)</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="noOfRooms" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="list-group-title">
+											<p class="Text_Cost_of_living">Average monthly expenses towards the house</p>
+										</li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Cost_of_living_rent">Rent</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="costOfLivingRent" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Cost_of_living_rent">Rent</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="costOfLivingRent" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Cost_of_living_tax">Tax</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="costOfLivingTax" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Electricity">Electricity</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="costOfLivingElectricity" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Others_Specify">Other (Specify)</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="costOfLivingOther" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Accessibility_for_pwd">Accessibility for people with physical disability</div>
+		                                            <div class="item-input">
+		                                                <select name="houseAccessibility">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option>
+															<option value="cannotTell" class="Text_Cannot_tell">Cannot tell</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Is the house livable during Cold?</div>
+		                                            <div class="item-input">
+		                                                <select name="houseLivableCold">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option>
+															<option value="cannotTell" class="Text_Cannot_tell">Cannot tell</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Is the house livable during Rain?</div>
+		                                            <div class="item-input">
+		                                                <select name="houseLivableRain">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option>
+															<option value="cannotTell" class="Text_Cannot_tell">Cannot tell</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Is the house livable during Heat?</div>
+		                                            <div class="item-input">
+		                                                <select name="houseLivableHeat">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option>
+															<option value="cannotTell" class="Text_Cannot_tell">Cannot tell</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Is the house livable during Wind/Storm?</div>
+		                                            <div class="item-input">
+		                                                <select name="houseLivableWind">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option>
+															<option value="cannotTell" class="Text_Cannot_tell">Cannot tell</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="align-top">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_House_habitability_challenges">In case you face any challenge during extreme weather conditions, please describe them</div>
+		                                            <div class="item-input">
+		                                                <textarea name="extremeWeatherDesc" placeholder="Description"></textarea>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                            </ul>
+		                        </div>
+							
+								<div class="content-block-title">
+									<h2 class="Text_Basic_services">Basic Services</h2>
+								</div>
+								<div class="list-block">
+		                            <ul>
+										<li class="list-group-title">
+											<p class="Text_Electricity">Electricity</p>
+										</li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_electricity_availability">Availability</div>
+		                                            <div class="item-input">
+		                                                <select name="electricityAvailable">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="No" class="Text_No">No</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_electricity_metre">Do you have a meter in your name?</div>
+		                                            <div class="item-input">
+		                                                <select name="electricityMeterInYourName">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+															<option value="UNSURE">Not Sure</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_electricity_supply">For how many hours?</div>
+		                                            <div class="item-input">
+		                                                <select name="electricityAvailableHours">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="fullTime">Full Time</option>
+															<option value="partial">Partial</option>
+															<option value="none" class="Text_Basic_services_electricity_supply_none">None</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="list-group-title">
+											<p class="Text_Basic_services_water">Water</p>
+										</li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_water_connection">Type of Connection</div>
+		                                            <div class="item-input">
+		                                                <select name="electricityTypeOfConnection" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="personal" class="Text_Personal">Personal</option>
+															<option value="shared" class="Text_Shared">Shared</option>
+															<option value="common" class="Text_Common">Common</option>
+															<option value="none" class="Text_Basic_services_electricity_supply_none">None</option>
+															<option value="other" class="Text_Others_Specify">Other (Specify)</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li style="display: none">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Specify Connection Type</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="electricityTypeOfConnectionOther" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_water_supply_hours">Supply Hours</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="waterSupplyHours" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_water_adequacy">Adequacy</div>
+		                                            <div class="item-input">
+		                                                <select name="waterAdequacy">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+															<option value="UNSURE" class="Text_Dont_know">Not Sure</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_water_cost">Cost</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="waterCost" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Water needed in 1 day (litre)</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="waterNeededPerDay" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="list-group-title">
+											<p class="Text_Basic_services_cooking">Cooking</p>
+										</li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_cooking_fuel_used">Type of Fuel Used</div>
+		                                            <div class="item-input">
+		                                                <select name="typeOfFuel" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="lpgConnection" class="Text_Basic_services_cooking_fuel_used_lpg_connection">LPG Connection</option>
+		                                                    <option value="lpgCylinder" class="Text_Basic_services_cooking_fuel_used_lpg_cylinder">LPG Cylinder</option>
+															<option value="kerosene" class="Text_Basic_services_cooking_fuel_used_lpg_kerosene">Kerosene</option>
+															<option value="coal" class="Text_Basic_services_cooking_fuel_used_lpg_coal">Coal</option>
+															<option value="firewood" class="Text_Basic_services_cooking_fuel_used_firewood">Firewood</option>
+															<option value="other" class="Text_Others_Specify">Other (Specify)</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li style="display: none">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Specify Fuel Type</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="typeOfFuelOther" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_cooking_cost">Cost per Month</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="cookingCostPerMonth" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="list-group-title">
+											<p class="Text_Basic_services_toilet">Toilet</p>
+										</li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_toilet_type">Type of Toilet</div>
+		                                            <div class="item-input">
+		                                                <select name="typeOfToilet" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="personal" class="Text_Personal">Personal</option>
+															<option value="shared" class="Text_Shared">Shared</option>
+															<option value="common" class="Text_Common">Common</option>
+															<option value="none" class="Text_None">None</option>
+															<option value="other" class="Text_Others_Specify">Other (Specify)</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li style="display: none" class="typeOfToiletBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Specify Toilet Type</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="typeOfToiletOther" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="typeOfToiletBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_toilet_supply">Water Supply</div>
+		                                            <div class="item-input">
+		                                                <select name="toiletWaterSupply">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="typeOfToiletBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_toilet_connection">Sewer Connection</div>
+		                                            <div class="item-input">
+		                                                <select name="toiletSewerConnection">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="typeOfToiletBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_toilet_clean">Cleaned</div>
+		                                            <div class="item-input">
+		                                                <select name="toiletCleaned">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+															<option value="SOMETIMES" class="Text_Sometimes">Sometimes</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="typeOfToiletBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_water_cost">Cost for Use</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="toiletCost" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_toilet_defecation">Open Defecation</div>
+		                                            <div class="item-input">
+		                                                <select name="toiletOpenDefecation">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="ALWAYS" class="Text_Basic_services_toilet_defecation_always">Always</option>
+															<option value="SOMETIMES" class="Text_Sometimes">Sometimes</option> 
+															<option value="NEVER" class="Text_Never">Never</option> 
+															
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="list-group-title">
+											<p id="text_waste_collection">Waste Collection</p>
+										</li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_collection_segregation">Segregation of Wet and Dry waste</div>
+		                                            <div class="item-input">
+		                                                <select name="wasteSegregation">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_collection_reused">Waste reused or given to recycler</div>
+		                                            <div class="item-input">
+		                                                <select name="wasteReused">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_collection_service">Collection service available</div>
+		                                            <div class="item-input">
+		                                                <select name="wasteCollectionAvailable">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="wasteCollectionAvailableBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_cooking_cost">Cost per Month</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="wasteCollectionCost" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="wasteCollectionAvailableBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_collection_frequency">Frequency of Collection</div>
+		                                            <div class="item-input">
+		                                                <select name="wasteCollectionFrequency" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="Daily" class="Text_Basic_services_collection_frequency_daily">Daily</option>
+															<option value="Alternate" class="Text_Basic_services_collection_frequency_alternate_days">Alternate Days</option> 
+															<option value="twiceWeekly" class="Text_Basic_services_collection_frequency_once">Twice a week</option>
+															<option value="onceWeekly" class="Text_Basic_services_collection_frequency_once">Once a week</option>
+															<option value="onceMonthly" class="Text_Basic_services_collection_frequency_once_a_month">Once a month</option>
+															<option value="Never" class="Text_Never">Never</option>
+															<option value="other" class="Text_Others_Specify">Other (Specify)</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li style="display: none"  class="wasteCollectionAvailableBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Specify Frequency</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="wasteCollectionFrequencyOther" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li style="display: none">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_collection_dispose">Where do you dispose the waste for collection/cleaning?</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="wasteDisposedLocation" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                            </ul>
+		                        </div>
+	                        </span>
+	                        
+	                        <span id="section_4">
+		                        <div class="content-block-title">
+		                            <h2 class="heading">IV. <span class="Text_Health_Section">Health</span></h2>
+		                        </div>
+		                        <div class="list-block">
+		                            <ul>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Health_consultation">Where do you go in case of medical needs/treatment/consultation?</div>
+		                                            <div class="item-input">
+		                                                <select name="healthTreatment" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="publicHospital" class="Text_Health_consultation_public">Public hospital</option>
+		                                                    <option value="privateHospital" class="Text_Health_consultation_private">Private hospital</option>
+															<option value="healthPost" class="Text_Health_consultation_health_post">Health post</option>
+															<option value="clinic" class="Text_Health_consultation_clinic">Clinic in the locality</option>
+															<option value="alternativeMedicine" class="Text_Health_consultation_alternative">Alternative medicine (Ayurvedic/Homeopathic)</option>
+															<option value="other" class="Text_Others_Specify">Other (Specify)</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li style="display: none">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Specify Place</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="healthTreatmentOther" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">How much do you spend on healthcare per Month?</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="healthcareCostPerMonth" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">How much do you spend in case of Medical emergency?</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="healthcareEmergencyCost" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Health_information_support">Does anyone in your family get healthcare-related information or any support with medicines/nutrition/vaccinations/consultation from any organization?</div>
+		                                            <div class="item-input">
+		                                                <select name="healthcareSupport">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="align-top">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Address">Health-care support details</div>
+		                                            <div class="item-input">
+		                                                <textarea name="healthCareSupportDetails" placeholder="Details"></textarea>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="align-top">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Health_death_in_family">Did any death take place in the last 10 years in your family? Who and how?</div>
+		                                            <div class="item-input">
+		                                                <textarea name="deathInFamilyDetails" placeholder="Details"></textarea>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                            </ul>
+		                        </div>
+		                    </span>    
+	                        
+	                        <span id="section_5">
+		                        <div class="content-block-title">
+		                            <h2 class="heading">V. <span class="Text_Children_Section">Children’s Wellbeing</span></h2>
+		                        </div>
+		                        <div class="list-block">
+		                            <ul>
+		                            	<li class="list-group-title">
+											<p class="Text_Children_Anganwadi_balwadi">Anganwadi (IF CHILDREN UP TO 6 YEARS AGE)</p>
+										</li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Anganwadi_balwadi_go">Do any of your children go to Anganwadi/Balwadi?</div>
+		                                            <div class="item-input">
+		                                                <select name="anganwadiFood">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES,Anganwadi" class="Text_Yes_anganwadi">Yes, Anganwadi</option>
+															<option value="YES,Balwadi" class="Text_Yes_balwadi">Yes, Balwadi</option> 
+															<option value="NO" class="Text_No">No</option>  
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Anganwadi_balwadi_go_children_in_home">How many children in the home go to the Anganwadi?</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="noOfChildrenAnganwadi" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Anganwadi_balwadi_go_time">If any, how many times a week?</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="childrenAnganwadiFrequency" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_How_much_cost_per_annum">How much does it cost you per annum?</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="balwadiCostPerAnnum" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Anganwadi_balwadi_meal">Do they get food at the Anganwadi?</div>
+		                                            <div class="item-input">
+		                                                <select name="anganwadiFood">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+															<option value="UNSURE" class="Text_Dont_know">Not Sure</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Anganwadi_balwadi_BMI_checked">Is their height and weight checked regularly at the Anganwadi?</div>
+		                                            <div class="item-input">
+		                                                <select name="anganwadiHeightMeasured">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+															<option value="UNSURE" class="Text_Dont_know">Not Sure</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="anganwadiHeightMeasuredBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Anganwadi_balwadi_BMI_not_checked">If no, why not?</div>
+		                                            <div class="item-input">
+		                                                <select name="anganwadiHeightNotMeasuredReason" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="childrenTooOld" class="Text_Children_Anganwadi_balwadi_BMI_not_checked_old">Children too old</option>
+															<option value="notPresent" class="Text_Children_Anganwadi_balwadi_BMI_not_checked_not_present">No Anganwadi present</option> 
+															<option value="tooFar" class="Text_Children_Anganwadi_balwadi_BMI_not_checked_too_far">Anganwadi/Balwadi too far</option> 
+															<option value="notFunctional" class="Text_Children_Anganwadi_balwadi_BMI_not_checked_not_functional">Anganwadi/Balwadi not functional</option> 
+															<option value="other" class="Text_Others_Specify">Other (Specify)</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li style="display: none"  class="anganwadiHeightMeasuredBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Specify Reason</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="anganwadiHeightNotMeasuredReasonOther" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="list-group-title">
+											<p class="Text_Children_Schooling">Schooling (IF CHILDREN FROM 7 TO 14 YEARS AGE) </p>
+										</li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Schooling_enrollment">Are the children in the house currently enrolled in school?</div>
+		                                            <div class="item-input">
+		                                                <select name="childrenEnrolledInSchool">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="childrenEnrolledInSchoolYesBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Schooling_enrolled">If yes, Which school do they attend?</div>
+		                                            <div class="item-input">
+		                                                <select name="childrenSchoolType" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="public" class="Text_Children_Schooling_enrolled_public">Public</option>
+															<option value="private" class="Text_Children_Schooling_enrolled_private">Private</option>
+															<option value="other" class="Text_Others_Specify">Other (Specify)</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li style="display: none" class="childrenEnrolledInSchoolYesBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Specify Type</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="childrenSchoolTypeOther" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="childrenEnrolledInSchoolNoBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Schooling_scholarship_not_availed">If no, Why?</div>
+		                                            <div class="item-input">
+		                                                <select name="childrenNotInSchoolReason" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="financialConstraints" class="Text_Financial_constraints">Financial constraints</option>
+															<option value="toHelpEarn" class="Text_To_help_earn">To help earn</option>
+															<option value="notInterested" class="Text_Not_interested">Not interested</option>
+															<option value="childrenHaveCompletedSchooling" class="Text_Children_Schooling_scholarship_not_availed_schooling_complete">Children have completed their schooling</option>
+															<option value="other" class="Text_Others_Specify">Other (Specify)</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li style="display: none" class="childrenEnrolledInSchoolNoBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Specify Reason</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="childrenNotInSchoolReasonOther" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Schooling_dropout">Did any of your children permanently drop out from school?</div>
+		                                            <div class="item-input">
+		                                                <select name="childrenDroppedOutOfSchool">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="childrenDroppedOutOfSchoolBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Schooling_dropped_out">If yes, How many ?</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="childrenDroppedOutCount" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="childrenDroppedOutOfSchoolBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Schooling_dropped_out_reasons">Reason for dropping out</div>
+		                                            <!-- <div class="item-input">
+		                                                <input type="tel" name="childrenDroppedReason" placeholder="">
+		                                            </div> -->
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="childrenDroppedOutOfSchoolBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="childrenDroppedReason" value="Financial constraints">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Financial_constraints" style="border-right: none;">Financial constraints</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li class="childrenDroppedOutOfSchoolBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="childrenDroppedReason" value="Household responsibilities">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Schooling_dropped_out_reasons_household" style="border-right: none;">Household responsibilities</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li class="childrenDroppedOutOfSchoolBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="childrenDroppedReason" value="Marriage">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Marriage" style="border-right: none;">Marriage</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li class="childrenDroppedOutOfSchoolBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="childrenDroppedReason" value="To help earn">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_To_help_earn" style="border-right: none;">To help earn</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li class="childrenDroppedOutOfSchoolBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="childrenDroppedReason" value="Not interested">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Not_interested" style="border-right: none;">Not interested</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li class="childrenDroppedOutOfSchoolBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <!-- Checked by default -->
+		                                        <input type="checkbox" name="childrenDroppedReason" value="School too far from place of residence">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Schooling_dropped_out_reasons_far" style="border-right: none;">School too far from place of residence</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li class="childrenDroppedOutOfSchoolBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <!-- Checked by default -->
+		                                        <input type="checkbox" name="childrenDroppedReason" value="Travel to school was considered unsafe">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Schooling_dropped_out_reasons_unsafe" style="border-right: none;">Travel to school was considered unsafe</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li class="childrenDroppedOutOfSchoolBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <!-- Checked by default -->
+		                                        <input type="checkbox" name="childrenDroppedReason" value="other">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Other" style="width: 40%;">Other</div>
+		                                            <input type="text" name="childrenDroppedReasonOther" placeholder=" Specify">
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Schooling_dropout_working">Are any children (below 14 years) in the house working?</div>
+		                                            <div class="item-input">
+		                                                <select name="childrenBelow14Working">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="childrenBelow14WorkingBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title labelText_Children_Schooling_dropout_working_yes_nature_of_job">If yes, what work do they do?</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="childrenBelow14WorkingProfession" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="list-group-title">
+											<p class="Text_Children_Higher_Education">Higher Education (IF YOUTH BETWEEN 15 TO 29 YEARS AGE)</p>
+										</li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Higher_Education_attended">Have the youth attended or is still attending college?</div>
+		                                            <div class="item-input">
+		                                                <select name="youthAttendingCollege">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="youthAttendingCollegeYesBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Higher_Education_attended_college_course">If yes, What college and course</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="youthAttendingCollegeAndCourse" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="youthAttendingCollegeNoBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Higher_Education_attended_scholarship_not_availed">If no, reason for not attending college</div>
+		                                            <div class="item-input">
+		                                                <select name="youthNotAttendingCollegeReason">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="To take care of household responsibilities" class="Text_Children_Higher_Education_attended_scholarship_not_availed_responsibilities">To take care of household responsibilities</option>
+															<option value="College fees too high" class="Text_Children_Higher_Education_attended_scholarship_not_availed_fees">College fees too high</option> 
+															<option value="College too far" class="Text_Children_Higher_Education_attended_scholarship_not_availed_far">College too far</option> 
+															<option value="Have completed college" class="Text_Children_Higher_Education_attended_scholarship_not_availed_completed">Have completed college</option> 
+															<option value="Marriage" class="Text_Marriage">Marriage</option> 
+															<option value="Started working" class="Text_Children_Higher_Education_attended_scholarship_not_availed_working">Started working</option> 
+															<option value="No job assured" class="Text_Children_Higher_Education_attended_scholarship_not_availed_no_job">No job assured</option> 
+															<option value="Not interested in studying" class="Text_Children_Higher_Education_attended_scholarship_not_availed_disinterest">Not interested in studying</option> 
+															<option value="others" class="Text_Others_Specify">Other (Specify)</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="youthAttendingCollegeYesBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Higher_Education_completed">If finished, did college education help in securing a job?</div>
+		                                            <div class="item-input">
+		                                                <select name="youthCollegePlaced">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+															<option value="Cannot tell" class="Text_Cannot_tell">Cannot tell</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="youthAttendingCollegeYesBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Higher_Education_not_complete">If no, reasons</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="youthCollegeNotPlacedReason" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Higher_Education_skill_training">Did any youth in the house undergo skill training?</div>
+		                                            <div class="item-input">
+		                                                <select name="youthSkillTraining">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+															<option value="Cannot tell" class="Text_Cannot_tell">Cannot tell</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="youthSkillTrainingBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Higher_Education_skill_training_yes">If yes, Which training </div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="youthSkillTrainingType" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="youthSkillTrainingBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">What type of training centre was it?</div>
+		                                            <div class="item-input">
+		                                                <select name="youthSkillTrainingType" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="Government">Government</option>
+															<option value="Private">Private</option> 
+															<option value="other" class="Text_Others_Specify">Other (Specify)</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li style="display: none" class="youthSkillTrainingBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Specify Type</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="youthSkillTrainingTypeOther" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="youthSkillTrainingBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Higher_Education_completed">Did it help in securing a job?</div>
+		                                            <div class="item-input">
+		                                                <select name="youthSkillTrainingJobSecured">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+															<option value="stillPursuing">Still Pursuing</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="youthSkillTrainingBlock youthSkillTrainingJobSecuredBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Higher_Education_not_complete">If no, reason?</div>
+		                                            <div class="item-input">
+		                                                <select name="youthSkillTrainingJobUnsecuredReason" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="Not aware of skill training">Not aware of skill training</option>
+															<option value="Did not feel the need for it">Did not feel the need for it</option> 
+															<option value="Fees to high">Fees too high</option>
+															<option value="other" class="Text_Others_Specify">Other (Specify)</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li style="display: none" class="youthSkillTrainingBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Specify Reason</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="youthSkillTrainingJobUnsecuredReasonOther" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="align-top">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Which course/training/degree/skill would you like to have?</div>
+		                                            <div class="item-input">
+		                                                <textarea name="skillTrainingRequirement" placeholder=""></textarea>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                            </ul>
+		                        </div>
+	                        </span>
+	                        
+	                        <span id="section_6">
+		                        <div class="content-block-title">
+		                            <h2 class="heading">VI. <span class="Text_Organising_and_Participation_Section">Organising and Participation</span></h2>
+		                        </div>
+		                        <div class="list-block">
+		                            <ul>
+		                                <li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Organising_and_Participation_group">Is/Was anyone in your family a part of community based group?</div>
+		                                            <div class="item-input">
+		                                                <select name="communityGroupMember" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="men" class="Text_Male">Men</option>
+		                                                    <option value="women" class="Text_Organising_and_Participation_group_women">Women</option>
+															<option value="children" class="Text_Organising_and_Participation_group_children">Children</option>
+															<option value="youth" class="Text_Organising_and_Participation_group_youth">Youth</option>
+															<option value="none" class="Text_None">None</option>
+															<option value="other" class="Text_Others_Specify">Other (Specify)</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li style="display: none" class="communityGroupMemberBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Organising_and_Participation_group_name">Name of the group</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="groupName" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="communityGroupMemberBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Organising_and_Participation_group_registration">Is the group recognized/registered?</div>
+		                                            <div class="item-input">
+		                                                <select name="groupRecognised">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+															<option value="Not Sure" class="Text_Dont_know">Don't Know</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Organising_and_Participation_family_participation">Has anyone from your family ever participated in any campaign/event/conference organised by any NGO or government body?</div>
+		                                            <div class="item-input">
+		                                                <select name="groupRecognised" onchange="checkFamilyInvolvement(this)">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="align-top" class="familyInvolvmentInNGODetailsBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Organising_and_Participation_family_participation_yes">If yes, please provide details?</div>
+		                                            <div class="item-input">
+		                                                <textarea name="familyInvolvmentInNGODetails" placeholder=""></textarea>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li class="align-top">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">Do you know any person with disability/transgender person living in your neighbourhood?</div>
+		                                           	<div class="item-input">
+		                                                <select name="knownPersonWithDisability">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                            </ul>
+		                        </div>
+							</span>
+							<div class="content-block-title">
+								<button type='submit' class="button button-fill" style="background: #283593">Submit</button>
+							</div>
+						</form>
+                    </div>
+			   </div>
+            </div>
+        </div>
+    </div>
+	
+	<!-- <script type="text/javascript" src="../translation/language.json"></script> -->
+</body>
