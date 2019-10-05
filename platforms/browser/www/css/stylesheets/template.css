@@ -135,6 +135,7 @@ li.notification-item div.item-content div.item-inner div.item-text {
 
 .survey li.list-group-title p {
 	font-weight: bold;
+	white-space: initial;
 }
 
 .survey .label-checkbox .item-title {

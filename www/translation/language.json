@@ -2,7 +2,7 @@
         {
             "KEY": "Text_Accessibility_for_pwd",
             "ENGLISH": "(If anyone in the family with physical disability) Is the house accessible for people with physical disability?",
-            "HINDI": "(अगर कोई विकलांग व्यक्ति घर में है तो) शारीरिक विकलांग लोगों के लिए पहुंच"
+            "HINDI": "(अगर कोई विकलांग व्यक्ति घर में है तो) शारीरिक विकलांग लोगों के लिए बिना किसी की मदद के घर में आना जाना संभव है?"
         },
         {
             "KEY": "Text_Type_of_house",
@@ -61,7 +61,7 @@
         },
         {
             "KEY": "Text_Long_term_health_issues_addiction",
-            "ENGLISH": "Addiction/Alcoholism/Drug abuse",
+            "ENGLISH": "Addiction/ Alcoholism/ Drug abuse",
             "HINDI": "लत, शराबीपन, ड्रग व्यसन"
         },
         {
@@ -86,8 +86,8 @@
         },
         {
             "KEY": "Text_Health_consultation_alternative",
-            "ENGLISH": "Alternative medicine (Ayurvedic/Homeopathic)",
-            "HINDI": "और कोई चिकित्सा (आयुर्वेदिक/होम्योपैथिक)"
+            "ENGLISH": "Alternative medicine (Ayurvedic/ Homeopathic)",
+            "HINDI": "और कोई चिकित्सा (आयुर्वेदिक/ होम्योपैथिक)"
         },
         {
             "KEY": "Text_Basic_services_toilet_defecation_always",
@@ -106,18 +106,18 @@
         },
         {
             "KEY": "Text_Children_Anganwadi_balwadi",
-            "ENGLISH": "Anganwadi/Balwadi (IF CHILDREN UP TO 6 YEARS AGE)",
-            "HINDI": "आंगनवाड़ी/बालवाड़ी (बच्चों के लिए यदि 6 साल के अंदर)"
+            "ENGLISH": "Anganwadi/ Balwadi (IF CHILDREN UP TO 6 YEARS AGE)",
+            "HINDI": "आंगनवाड़ी/ बालवाड़ी (बच्चों के लिए यदि 6 साल के अंदर)"
         },
         {
-            "KEY": "Text_Children_Anganwadi_balwadi_BMI_not_checked_not_functional",
-            "ENGLISH": "Anganwadi/Balwadi not functional",
-            "HINDI": "आंगनवाड़ी/बालवाड़ी चालू"
+            "KEY": "Text_Children_No_Anganwadi_balwadi_not_checked_not_functional",
+            "ENGLISH": "Anganwadi/ Balwadi not functional",
+            "HINDI": "आंगनवाड़ी/ बालवाड़ी चालू"
         },
         {
-            "KEY": "Text_Children_Anganwadi_balwadi_BMI_not_checked_too_far",
-            "ENGLISH": "Anganwadi/Balwadi too far",
-            "HINDI": "आंगनवाड़ी/बालवाड़ी बहुत दूर"
+            "KEY": "Text_Children_No_Anganwadi_balwadi_not_checked_too_far",
+            "ENGLISH": "Anganwadi/ Balwadi too far",
+            "HINDI": "आंगनवाड़ी/ बालवाड़ी बहुत दूर"
         },
         {
             "KEY": "Text_Children_Schooling_dropout_working",
@@ -136,8 +136,8 @@
         },
         {
             "KEY": "Text_Children_Higher_Education_skill_training_yes_repairing",
-            "ENGLISH": "Auto/car repair",
-            "HINDI": "ऑटो/गाडी रिपेयर"
+            "ENGLISH": "Auto/ car repair",
+            "HINDI": "ऑटो/ गाडी रिपेयर"
         },
         {
             "KEY": "Text_Basic_services_electricity_availability",
@@ -240,7 +240,7 @@
             "HINDI": "बच्चों ने अपनी स्कूली शिक्षा पूरी कर ली है"
         },
         {
-            "KEY": "Text_Children_Anganwadi_balwadi_BMI_not_checked_old",
+            "KEY": "Text_Children_No_Anganwadi_balwadi_not_checked_old",
             "ENGLISH": "Children too old",
             "HINDI": "बच्चे बड़े है"
         },
@@ -256,8 +256,8 @@
         },
         {
             "KEY": "Text_Basic_services_toilet_clean",
-            "ENGLISH": "Cleaned",
-            "HINDI": "सफ़ाई"
+            "ENGLISH": "Cleanliness",
+            "HINDI": "साफ़-सफ़ाई"
         },
         {
             "KEY": "Text_Health_consultation_clinic",
@@ -321,13 +321,13 @@
         },
         {
             "KEY": "Text_Basic_services_water_cost",
-            "ENGLISH": "Cost",
-            "HINDI": "लागत"
+            "ENGLISH": "Cost ​per month",
+            "HINDI": "प्रति माह खर्चा"
         },
         {
             "KEY": "Text_Basic_services_toilet_cost",
             "ENGLISH": "Cost of use per month",
-            "HINDI": "उपयोग की लागत हर महिना"
+            "HINDI": "उपयोग का खर्चा हर महिना"
         },
         {
             "KEY": "Text_Basic_services_cooking_cost",
@@ -341,8 +341,8 @@
         },
         {
             "KEY": "Text_Occupation_daily_wage_labourer",
-            "ENGLISH": "Daily wage/Begari labourer",
-            "HINDI": "दिहाड़ी/बेगारी मजदूर"
+            "ENGLISH": "Daily wage/ Begari labourer",
+            "HINDI": "दिहाड़ी/ बेगारी मजदूर"
         },
         {
             "KEY": "Text_Survey_Date",
@@ -351,33 +351,39 @@
         },
         {
             "KEY": "Text_Long_term_health_issues_viral",
-            "ENGLISH": "Dengue/Malaria",
-            "HINDI": "डेंगू/मलेरिया"
+            "ENGLISH": "Dengue/ Malaria",
+            "HINDI": "डेंगू/ मलेरिया"
         },
         {
             "KEY": "Text_Health_death_in_family",
-            "ENGLISH": "Did any death happened in the last 10 years in your family? Who and how?",
-            "HINDI": "क्या आपके परिवार में पिछले १० वर्षों में कोई मृत्यु हुई है? कौन और कैसे"
+            "ENGLISH": "In case your family has lost any members in the last 10 years and if you are willing to share the details, please describe how it happened.",
+            "HINDI": "अगर आपके परिवार ने पिछले १० वर्षों में किसी सदस्य को खोया है और अगर आपको यह जानकारी देने में कोई आपत्ति नहीं है, तो कृपया बताएं कि क्या हुआ था और कैसे हुआ था."
         },
         {
             "KEY": "Text_Children_Schooling_dropout",
             "ENGLISH": "Did any of your children permanently drop out from school",
             "HINDI": "क्या आपका कोई बच्चा स्थायी रूप से स्कूल से बाहर हो गया था?"
         },
+		
+		{
+            "KEY": "Text_Children_Schooling_enrolled_number",
+            "ENGLISH": "IF YES, how many children go to schools?",
+            "HINDI": "अगर हाँ, कितने बच्चे स्कूल जाते हैं?"
+        },
         {
             "KEY": "Text_Children_Higher_Education_skill_training",
-            "ENGLISH": "Did any youth in the house undergo/is undergoing skill training",
-            "HINDI": "क्या घर के किसी युवा ने कौशल प्रशिक्षण (स्किल ट्रेनिंग) ली है/लेह रहें है??"
+            "ENGLISH": "Did any youth in the house undergo/ is undergoing skill training",
+            "HINDI": "क्या घर के किसी युवा ने कौशल प्रशिक्षण (स्किल ट्रेनिंग) ली है/ लेह रहें है??"
         },
         {
             "KEY": "Text_Children_Anganwadi_balwadi_go",
-            "ENGLISH": "Do any of your children go to Anganwadi/Balwadi?",
-            "HINDI": "क्या आपके बच्चे आंगनवाड़ी/बालवाड़ी में जाते हैं?"
+            "ENGLISH": "Do any of your children go to Anganwadi/ Balwadi?",
+            "HINDI": "क्या आपके बच्चे आंगनवाड़ी/ बालवाड़ी में जाते हैं?"
         },
         {
             "KEY": "Text_Children_Anganwadi_balwadi_meal",
-            "ENGLISH": "Do they get food at the Anganwadi/Balwadi",
-            "HINDI": "क्या उन्हें आंगनवाड़ी/बालवाड़ी में भोजन मिलता है?"
+            "ENGLISH": "Do they get food at the Anganwadi/ Balwadi",
+            "HINDI": "क्या उन्हें आंगनवाड़ी/ बालवाड़ी में भोजन मिलता है?"
         },
         {
             "KEY": "Text_Basic_services_electricity_metre",
@@ -391,13 +397,19 @@
         },
         {
             "KEY": "Text_Documentation_for_house",
-            "ENGLISH": "Documentation for the house",
+            "ENGLISH": "Do you have any documentation for the house?",
             "HINDI": "क्या आपके घर का कोई दस्तावेज़ है?"
         },
+		{
+			"KEY": "Text_House_habitability",
+            "ENGLISH": "What are some of the difficulties you face during the following weather conditions? (Can select multiple options)",
+            "HINDI": "आपको निम्नलिखित मौसमी हालात के समय क्या समस्याएं आती हैं? (एक से ज़्यादा जवाबों को चुन सकते हैं)"
+			
+		}, 
         {
             "KEY": "Text_Health_information_support",
-            "ENGLISH": "Does anyone in your family get healthcare-related information or any support with medicines/nutrition/vaccinations/consultation from any organization? If yes, details",
-            "HINDI": "क्या आपके परिवार में किसी को किसी भी संगठन से स्वास्थ्य शिक्षा/सहायता मिलती है?  यदि हाँ, तो विवरण"
+            "ENGLISH": "Does anyone in your family get healthcare-related information or any support with medicines/ nutrition/ vaccinations/ consultation from any organization? If yes, details",
+            "HINDI": "क्या आपके परिवार में किसी को किसी भी संगठन से स्वास्थ्य शिक्षा/ सहायता मिलती है?  यदि हाँ, तो विवरण"
         },
         {
             "KEY": "Text_Occupation_domestic_worker",
@@ -407,7 +419,7 @@
         {
             "KEY": "Text_Identity_documents_held_domicile",
             "ENGLISH": "Domicile certificate",
-            "HINDI": "मूल निवासी/रहिवासी/अधिवास प्रमाण पत्र"
+            "HINDI": "मूल निवासी/ रहिवासी/ अधिवास प्रमाण पत्र"
         },
         {
             "KEY": "Text_Dont_know",
@@ -556,8 +568,8 @@
         },
         {
             "KEY": "Text_Organising_and_Participation_family_participation",
-            "ENGLISH": "Has anyone from your family ever participated in any campaign/event/conference organised by any NGO or government body",
-            "HINDI": "क्या आपके परिवार के किसी व्यक्ति ने कभी किसी एनजीओ या सरकारी संस्था द्वारा आयोजित किसी अभियान/कार्यक्रम/सम्मेलन में भाग लिया है?"
+            "ENGLISH": "Has anyone from your family ever participated in any campaign/ event/ conference organised by any NGO or government body",
+            "HINDI": "क्या आपके परिवार के किसी व्यक्ति ने कभी किसी एनजीओ या सरकारी संस्था द्वारा आयोजित किसी अभियान/ कार्यक्रम/ सम्मेलन में भाग लिया है?"
         },
         {
             "KEY": "Text_Children_Higher_Education_attended_scholarship_not_availed_completed",
@@ -567,16 +579,16 @@
         {
             "KEY": "Text_Children_Higher_Education_attended",
             "ENGLISH": "Have the youth attended or is still attending college",
-            "HINDI": "क्या घर के युवक कॉलेज में पढ़ रहे हैं/थे?"
+            "HINDI": "क्या घर के युवक कॉलेज में पढ़ रहे हैं/ थे?"
         },
         {
             "KEY": "Text_Availed_scholarship",
             "ENGLISH": "Have you availed any scholarship?",
-            "HINDI": "क्या आपने कोई छात्रवृत्ति प्राप्त की है?"
+            "HINDI": "क्या आपने कोई छात्रवृत्ति (फीस माफ़ी या मदद) प्राप्त की है?"
         },
         {
             "KEY": "Text_Occupation_hawker",
-            "ENGLISH": "Hawker/Peddler/Street vendor",
+            "ENGLISH": "Hawker/ Peddler/ Street vendor",
             "HINDI": "फेरीवाले"
         },
         {
@@ -616,8 +628,8 @@
         },
         {
             "KEY": "Text_Long_term_health_issues_STD",
-            "ENGLISH": "HIV/AIDS/STD",
-            "HINDI": "एच.आई.वी./एड्स/यौन संबंधी"
+            "ENGLISH": "HIV/ AIDS/ STD",
+            "HINDI": "एच.आई.वी./ एड्स/ यौन संबंधी"
         },
         {
             "KEY": "Text_Occupation_home_based_worker",
@@ -659,10 +671,45 @@
             "ENGLISH": "How much do you spend on healthcare",
             "HINDI": "आप स्वास्थ्य पे कितना खर्च करते हैं?"
         },
+		{
+            "KEY": "Text_Children_Higher_Education_skill_training_no_reason",
+            "ENGLISH": "If no, reason for not attending any training (Can select multiple options)",
+            "HINDI": "अगर कोई कौशल प्रशिक्षण नहीं, तो कारण (एक से ज़्यादा जवाबों को चुन सकते हैं)"
+        },
+		{
+            "KEY": "Text_Children_Higher_Education_skill_training_no_reason_unaware",
+            "ENGLISH": "Not aware of skill training",
+            "HINDI": "कौशल प्रशिक्षण के बारे में पता नहीं है"
+        },
+		{
+            "KEY": "Text_Children_Higher_Education_skill_training_wanted",
+            "ENGLISH": "Which course/ training/ degree/ skill would you like to have? (Can select multiple options)",
+            "HINDI": "कौन सा कोर्स, काम या हुनर आप सीखना चाहते हैं? (एक से ज़्यादा जवाबों को चुन सकते हैं)"
+        },
+		{
+            "KEY": "Text_Organising_and_Participation_interest",
+            "ENGLISH": "In case anyone in your family would like to participate in any community based groups/ campaigns/ events, please share their details and interest area",
+            "HINDI": "यदि आपके परिवार में कोई व्यक्ति किसी सामुदायिक समूह/ संगठन/ अभियान में हिस्सा लेना चाहते हैं, तो कृपया उनके विवरण और रुचि के बारे में बताएं"
+        },
+		{
+            "KEY": "Text_Children_Higher_Education_skill_training_no_reason_unwanted",
+            "ENGLISH": "Did not feel the need for it",
+            "HINDI": "जरूरत महसूस नहीं हुई"
+        },
+		{
+            "KEY": "Text_Children_Higher_Education_skill_training_no_reason_expensive",
+            "ENGLISH": "Fees too high",
+            "HINDI": "फीस ज्यादा है"
+        },
         {
             "KEY": "Text_How_much_cost_per_annum",
             "ENGLISH": "How much does it cost you per annum?",
             "HINDI": "प्रति वर्ष लागत कितनी है?"
+        },
+        {
+            "KEY": "Text_Children_Higher_Education_skill_training_cost",
+            "ENGLISH": "How much did it cost you?",
+            "HINDI": "इसका ख़र्चा कितना हुआ?"
         },
         {
             "KEY": "Text_Identity_documents_held",
@@ -671,8 +718,8 @@
         },
         {
             "KEY": "Text_Children_Anganwadi_balwadi_go_children_in_home",
-            "ENGLISH": "If any, How many children in the home go to the Anganwadi/Balwadi",
-            "HINDI": "अगर हाँ, घर में कितने बच्चे आंगनवाड़ी/बालवाड़ी में जाते हैं?"
+            "ENGLISH": "If any, How many children in the home go to the Anganwadi/ Balwadi",
+            "HINDI": "अगर हाँ, घर में कितने बच्चे आंगनवाड़ी/ बालवाड़ी में जाते हैं?"
         },
         {
             "KEY": "Text_Children_Higher_Education_completed",
@@ -681,8 +728,8 @@
         },
         {
             "KEY": "Text_Children_Higher_Education_attended_scholarship_not_availed",
-            "ENGLISH": "If no, reason for not attending college",
-            "HINDI": "यदि नहीं, तो कॉलेज नहीं जाने का कारण"
+            "ENGLISH": "If no, reason for not attending college (Can select multiple options)",
+            "HINDI": "यदि नहीं, तो कॉलेज नहीं जाने का कारण (एक से ज़्यादा जवाबों को चुन सकते हैं)"
         },
         {
             "KEY": "Text_Children_Higher_Education_not_complete",
@@ -695,11 +742,11 @@
             "HINDI": "यदि नहीं, तो क्यों?"
         },
         {
-            "KEY": "Text_Children_Anganwadi_balwadi_BMI_not_checked",
-            "ENGLISH": "If no, why not",
-            "HINDI": "यदि नहीं, तो क्यों नहीं?"
+            "KEY": "Text_Children_No_Anganwadi_balwadi_not_checked",
+            "ENGLISH": "If no, why children don’t go to Anganwadi/ Balwadi?",
+            "HINDI": "अगर बच्चे आंगनवाडी/ बालवाड़ी नहीं जाते, तो क्यों नहीं?"
         },
-        {
+		{
             "KEY": "Text_Children_Schooling_scholarship_availed",
             "ENGLISH": "If yes",
             "HINDI": "यदि हाँ"
@@ -736,13 +783,13 @@
         },
         {
             "KEY": "Text_Children_Schooling_enrolled",
-            "ENGLISH": "If yes, Which schools do they attend",
-            "HINDI": "यदि हाँ, तो वे किन विद्यालयों में जाते हैं?"
+            "ENGLISH": "Which schools do they attend",
+            "HINDI": "वे किन विद्यालयों में जाते हैं?"
         },
         {
             "KEY": "Text_Children_Higher_Education_skill_training_yes",
-            "ENGLISH": "If yes, Which training",
-            "HINDI": "यदि हाँ, तो कौन सा प्रशिक्षण?"
+            "ENGLISH": "If yes, which training (Can select multiple options)",
+            "HINDI": "यदि हाँ, तो कौन सा प्रशिक्षण? (एक से ज़्यादा जवाबों को चुन सकते हैं)"
         },
         {
             "KEY": "Text_Health_expense_emergency",
@@ -774,30 +821,104 @@
             "ENGLISH": "Intellectual",
             "HINDI": "बौद्धिक"
         },
-        {
-            "KEY": "Text_House_habitability",
-            "ENGLISH": "Is house liveable during",
-            "HINDI": "ऐसे वक़्त में आवास की संभावना"
+		{
+            "KEY": "Text_House_habitability_during_rain_flood",
+            "ENGLISH": "Heavy rain/ flood",
+            "HINDI": "भारी बारिश / बाढ़"
         },
+        {
+            "KEY": "Text_House_habitability_during_rain_flood_house",
+            "ENGLISH": "Flooding/ seepage/ leakage in the house",
+            "HINDI": "घर में पानी भर जाता/ टपकता है"
+        },
+		{
+            "KEY": "Text_House_habitability_during_rain_flood_streets",
+            "ENGLISH": "Flooding in the streets of the locality",
+            "HINDI": "घर के पास सड़कों पे पानी भर जाता है"
+        },
+		{
+            "KEY": "Text_House_habitability_during_rain_flood_drainage",
+            "ENGLISH": "Drainage gets clogged",
+            "HINDI": "नाले बंद हो जाते हैं"
+        },
+		{
+            "KEY": "Text_House_habitability_during_rain_flood_access",
+            "ENGLISH": "Road access get blocked",
+            "HINDI": "रोड इस्तेमाल नहीं कर पाते"
+        },
+		{
+            "KEY": "Text_House_habitability_during_rain_flood_none",
+            "ENGLISH": "No Problem",
+            "HINDI": "कोई परेशानी नहीं होती"
+        },
+		{
+            "KEY": "Text_House_habitability_during_heat",
+            "ENGLISH": "Extreme heat",
+            "HINDI": "भीषण गर्मी"
+        },
+		{
+            "KEY": "Text_House_habitability_during_heat_house",
+            "ENGLISH": "Too hot to stay indoors",
+            "HINDI": "घर के अंदर बहुत ज़्यादा गर्मी हो जाती है"
+        },
+		{
+            "KEY": "Text_House_habitability_during_heat_shade",
+            "ENGLISH": "No shelter/ shade present nearby",
+            "HINDI": "आस पास कोई छांव वाली जगह नहीं है"
+        },
+		{
+            "KEY": "Text_House_habitability_during_heat_chores",
+            "ENGLISH": "Unable to do household chores during the day",
+            "HINDI": "दिन में घर का काम करने में परेशानी होती है"
+        },
+		
+		
+		{
+            "KEY": "Text_Basic_services_water_connection_common_source",
+            "ENGLISH": "If Common, then what kind of source?",
+            "HINDI": "अगर सार्वजनिक, तो किस प्रकार का स्रोत?"
+        },
+		{
+            "KEY": "Text_Basic_services_water_connection_common_source_borewell",
+            "ENGLISH": "Bore well",
+            "HINDI": "बोरवेल"
+        },
+		{
+            "KEY": "Text_Basic_services_water_connection_common_source_well",
+            "ENGLISH": "Well",
+            "HINDI": "कुंआ"
+        },
+		{
+            "KEY": "Text_Basic_services_water_connection_common_source_tanker",
+            "ENGLISH": "Tanker",
+            "HINDI": "टैंकर"
+        },
+		{
+            "KEY": "Text_Basic_services_water_connection_common_source_pipe",
+            "ENGLISH": "Pipe at a common point",
+            "HINDI": "बस्ती में सार्वजनिक पाइप"
+        },
+
+
         {
             "KEY": "Text_Organising_and_Participation_group_registration",
-            "ENGLISH": "Is the group recognized/registered",
-            "HINDI": "क्या समूह मान्यताप्राप्त/पंजीकृत है?"
+            "ENGLISH": "Is the group recognized/ registered",
+            "HINDI": "क्या समूह मान्यताप्राप्त/ पंजीकृत है?"
         },
         {
-            "KEY": "Text_Children_Anganwadi_balwadi_BMI_checked",
-            "ENGLISH": "Is their height and weight checked regularly at the Anganwadi/Balwadi?",
-            "HINDI": "आंगनवाड़ी/बालवाड़ी में नियमित रूप से उनकी ऊंचाई और वजन की जाँच की जाती है?"
+            "KEY": "Text_Children_No_Anganwadi_balwadi_checked",
+            "ENGLISH": "Is their height and weight checked regularly at the Anganwadi/ Balwadi?",
+            "HINDI": "आंगनवाड़ी/ बालवाड़ी में नियमित रूप से उनकी ऊंचाई और वजन की जाँच की जाती है?"
         },
         {
             "KEY": "Text_Organising_and_Participation_group",
-            "ENGLISH": "Is/Was anyone in your family a part of community based groups",
-            "HINDI": "क्या आपके परिवार में कोई व्यक्ति समुदाय आधारित समूहों का हिस्सा है/था?"
+            "ENGLISH": "Is/ Was anyone in your family a part of community based groups",
+            "HINDI": "क्या आपके परिवार में कोई व्यक्ति समुदाय आधारित समूहों का हिस्सा है/ था?"
         },
         {
             "KEY": "Text_Identity_documents_held_job_specific_id",
-            "ENGLISH": "Job-specific identity card issued by govt (domestic worker/construction worker)",
-            "HINDI": "नौकरी से संबंधित पहचान पत्र (घरकाम/निर्माणकाम)"
+            "ENGLISH": "Job-specific identity card issued by govt (domestic worker/ construction worker)",
+            "HINDI": "नौकरी से संबंधित पहचान पत्र (घरकाम/ निर्माणकाम)"
         },
         {
             "KEY": "Text_Basic_services_cooking_fuel_used_lpg_kerosene",
@@ -851,7 +972,7 @@
         },
         {
             "KEY": "Text_Type_of_disability_physical",
-            "ENGLISH": "Mobility/physical",
+            "ENGLISH": "Mobility/ physical",
             "HINDI": "चलने- फिरने में"
         },
         {
@@ -882,7 +1003,7 @@
         {
             "KEY": "Text_Survey_name_of_surveyor",
             "ENGLISH": "Surveyor Name",
-            "HINDI": "सर्वेक्षक/सर्वेक्षिका का नाम"
+            "HINDI": "सर्वेक्षक/ सर्वेक्षिका का नाम"
         },
         {
             "KEY": "Text_Organising_and_Participation_group_name",
@@ -896,8 +1017,13 @@
         },
         {
             "KEY": "Text_Native_place",
-            "ENGLISH": "Native/ancestral place (Village/city, district, state)",
-            "HINDI": "पैतृक स्थान (गॉव/शहर, जिला, राज्य)"
+            "ENGLISH": "Native/ ancestral place (Village/ city, district, state)",
+            "HINDI": "पैतृक स्थान (गॉव/ शहर, जिला, राज्य)"
+        },
+		{
+            "KEY": "Text_Children_Schooling_scholarship_availed_agency",
+            "ENGLISH": "Source/ Funding agency",
+            "HINDI": "दान/ अनुदान का स्त्रोत/  एजेंसी"
         },
         {
             "KEY": "Text_Never",
@@ -910,9 +1036,9 @@
             "HINDI": "नहीं"
         },
         {
-            "KEY": "Text_Children_Anganwadi_balwadi_BMI_not_checked_not_present",
-            "ENGLISH": "No Anganwadi/Balwadi present",
-            "HINDI": "आंगनवाड़ी/बालवाड़ी मौजूद नहीं है"
+            "KEY": "Text_Children_No_Anganwadi_balwadi_not_checked_not_present",
+            "ENGLISH": "No Anganwadi/ Balwadi present",
+            "HINDI": "आंगनवाड़ी/ बालवाड़ी मौजूद नहीं है"
         },
         {
             "KEY": "Text_Children_Higher_Education_attended_scholarship_not_availed_no_job",
@@ -971,8 +1097,8 @@
         },
         {
             "KEY": "Text_Caste_NT",
-            "ENGLISH": "NT/DNT",
-            "HINDI": "एन.टी./डी.एन.टी."
+            "ENGLISH": "NT/ DNT",
+            "HINDI": "एन.टी./ डी.एन.टी."
         },
         {
             "KEY": "Text_Number_of_rooms",
@@ -1069,6 +1195,36 @@
             "ENGLISH": "Personal",
             "HINDI": "व्यक्तिगत"
         },
+		
+		
+		{
+            "KEY": "Text_Basic_services_toilet_type_personal",
+            "ENGLISH": "Personal",
+            "HINDI": "खुद का शौचालय"
+        },
+		{
+            "KEY": "Text_Basic_services_toilet_type_shared",
+            "ENGLISH": "Shared",
+            "HINDI": "साझा/ कुछ परिवारों का मिलाकर एक शौचालय"
+        },
+		{
+            "KEY": "Text_Basic_services_toilet_type_community",
+            "ENGLISH": "Community toilet",
+            "HINDI": "बस्ती का शौचालय"
+        },
+		{
+            "KEY": "Text_Basic_services_toilet_type_public",
+            "ENGLISH": "Public toilet",
+            "HINDI": "सार्वजनिक शौचालय"
+        },
+		{
+            "KEY": "Text_Basic_services_toilet_type_none",
+            "ENGLISH": "Open defecation",
+            "HINDI": "खुले में शौच"
+        },
+
+		
+		
         {
             "KEY": "Text_Education_qualification_post_graduate_above",
             "ENGLISH": "Post graduate and above",
@@ -1101,8 +1257,8 @@
         },
         {
             "KEY": "Text_House_liveable_during_rain_flood",
-            "ENGLISH": "Rain/flood",
-            "HINDI": "बारिश/बाढ़"
+            "ENGLISH": "Rain/ flood",
+            "HINDI": "बारिश/ बाढ़"
         },
         {
             "KEY": "Text_Identity_documents_held_ration",
@@ -1141,8 +1297,8 @@
         },
         {
             "KEY": "Text_Occupation_sanitation_worker",
-            "ENGLISH": "Sanitation worker/Waste Recycler",
-            "HINDI": "सफाई कर्मचारी/रद्दी या कबाड़ी वाले "
+            "ENGLISH": "Sanitation worker/ Waste Recycler",
+            "HINDI": "सफाई कर्मचारी/ रद्दी या कबाड़ी वाले "
         },
         {
             "KEY": "Text_Caste_SC",
@@ -1261,8 +1417,8 @@
         },
         {
             "KEY": "Text_Long_term_health_issues_diabetes",
-            "ENGLISH": "Sugar/Diabetes",
-            "HINDI": "मधुमेह/डायबिटीज"
+            "ENGLISH": "Sugar/ Diabetes",
+            "HINDI": "मधुमेह/ डायबिटीज"
         },
         {
             "KEY": "Text_Basic_services_water_supply_hours",
@@ -1326,8 +1482,8 @@
         },
         {
             "KEY": "Text_Long_term_health_issues_bacterial",
-            "ENGLISH": "Typhoid/Jaundice",
-            "HINDI": "टाइफाइड/जॉन्डिस"
+            "ENGLISH": "Typhoid/ Jaundice",
+            "HINDI": "टाइफाइड/ जॉन्डिस"
         },
         {
             "KEY": "Text_Education_qualification_up_to_5",
@@ -1361,8 +1517,8 @@
         },
         {
             "KEY": "Text_Basic_services_water_needed",
-            "ENGLISH": "Water needed in 1 day",
-            "HINDI": "एक दिन में पानी की जरूरत"
+            "ENGLISH": "Water needed in 1 day (in litre)",
+            "HINDI": "एक दिन में पानी की जरूरत (लीटर)"
         },
         {
             "KEY": "Text_Basic_services_toilet_supply",
@@ -1371,18 +1527,18 @@
         },
         {
             "KEY": "Text_Basic_services_collection_dispose",
-            "ENGLISH": "Where do you dispose the waste for collection/cleaning?",
-            "HINDI": "आप घर का कचड़ा कहाँ फेकते/रकते है, संघ्रह के लिए?"
+            "ENGLISH": "Where do you dispose the waste for collection/ cleaning?",
+            "HINDI": "आप घर का कचड़ा कहाँ फेकते/ रकते है, संघ्रह के लिए?"
         },
         {
             "KEY": "Text_Health_consultation",
-            "ENGLISH": "Where do you go in case of medical needs/treatment/consultation",
+            "ENGLISH": "Where do you go in case of medical needs/ treatment/ consultation",
             "HINDI": "चिकित्सा की ज़रुरत के लिए आप कहां जाते हैं?"
         },
         {
             "KEY": "Text_House_liveable_during_wind_storm",
-            "ENGLISH": "Wind/storm",
-            "HINDI": "हवा/आंधी"
+            "ENGLISH": "Wind/ storm",
+            "HINDI": "हवा/ आंधी"
         },
         {
             "KEY": "Text_Organising_and_Participation_group_women",
@@ -1428,5 +1584,40 @@
             "KEY": "Text_Yuva_heading",
             "ENGLISH": "YOUTH FOR UNITY AND VOLUNTARY ACTION (YUVA)",
             "HINDI": "यूथ फ़ोर यूनिटी एंड वॉलुंटेरी ऐक्शन (युवा)"
+        },
+		{
+            "KEY": "Text_Children_Schooling_not_studying_situation",
+            "ENGLISH": "Which of these following case it is?",
+            "HINDI": "इनमें से क्या कारण है?"
+        },
+		{
+            "KEY": "Text_Children_Schooling_not_studying_situation_never_admitted",
+            "ENGLISH": "Never admitted to school",
+            "HINDI": "स्कूल में कभी दाख़िला नहीं किया"
+        },
+		{
+            "KEY": "Text_Children_Schooling_not_studying_situation_dropout",
+            "ENGLISH": "Permanently dropped out",
+            "HINDI": "स्थायी रूप से स्कूल छोड़ दिया"
+        },
+		{
+            "KEY": "Text_Children_Schooling_not_studying_situation_completed",
+            "ENGLISH": "Schooling completed",
+            "HINDI": "स्कूली शिक्षा पूरी कर ली"
+        },
+		{
+            "KEY": "Text_Children_Schooling_not_studying_reason",
+            "ENGLISH": "If schooling not completed by any child, why? (Can select multiple options)",
+            "HINDI": "अगर किसी बच्चे ने स्कूली शिक्षा पूरी नहीं की, तो क्यों? (एक से ज़्यादा जवाबों को चुन सकते हैं)"
+        },
+        {
+            "KEY": "Text_Children_Schooling_not_studying_reason_violence",
+            "ENGLISH": "Lack of safety at school from violence/ abuse",
+            "HINDI": "हिंसा से सुरक्षा की कमी"
+        },
+        {
+            "KEY": "Text_Children_Schooling_not_studying_reason_inacessible",
+            "ENGLISH": "Not accessible for people with physical disability",
+            "HINDI": "विकलांग व्यक्तिओं के लिए प्रयोग करने की सुविधा नहीं है"
         }
 ]

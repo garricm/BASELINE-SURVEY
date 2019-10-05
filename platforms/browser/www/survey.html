@@ -213,32 +213,20 @@
 		                                </li>
 										<li>
 		                                    <div class="item-content">
-		                                        <div class="item-inner">
+												<div class="item-inner">
 		                                            <div class="item-title label Text_Migration_to_Mumbai">Year of migration to Mumbai</div>
 		                                            <div class="item-input">
-		                                                <select name="yearOfMigrationMumbai">
-															<option value="">-- Select Year --</option>
-		                                                    <option value="1945">1945</option>
-															<option value="1946">1946</option>
-															<option value="1947">1947</option>
-															<option value="1948">1948</option> 
-		                                                </select>
+		                                                <input type="tel" name="yearOfMigrationMumbai" placeholder="">
 		                                            </div>
 		                                        </div>
 		                                    </div>
 		                                </li>
 										<li>
 		                                    <div class="item-content">
-		                                        <div class="item-inner">
+												<div class="item-inner">
 		                                            <div class="item-title label Text_Migration_to_basti">Year of migration to this Basti</div>
 		                                            <div class="item-input">
-		                                                <select name="yearOfMigrationBasti">
-															<option value="">-- Select Year --</option>
-		                                                    <option value="1945">1945</option>
-															<option value="1946">1946</option>
-															<option value="1947">1947</option>
-															<option value="1948">1948</option> 
-		                                                </select>
+		                                                <input type="tel" name="yearOfMigrationBasti" placeholder="">
 		                                            </div>
 		                                        </div>
 		                                    </div>
@@ -1373,18 +1361,12 @@
 		                        </div>
 		                        <div class="list-block">
 		                            <ul>
-										 <li>
+										<li>
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
 		                                            <div class="item-title label Text_Residence_duration">Since which year have you been living in this house?</div>
 		                                            <div class="item-input">
-		                                                <select name="whichYearHouse">
-															<option value="">-- SELECT YEAR --</option>
-		                                                    <option value="1945">1945</option>
-															<option value="1946">1946</option>
-															<option value="1947">1947</option>
-															<option value="1948">1948</option> 
-		                                                </select>
+		                                                <input type="tel" name="whichYearHouse" placeholder="">
 		                                            </div>
 		                                        </div>
 		                                    </div>
@@ -1392,7 +1374,7 @@
 										<li>
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label">Do you own this house?</div>
+		                                            <div class="item-title label Text_Ownership_of_house">Do you own this house?</div>
 		                                            <div class="item-input">
 		                                                <select name="isHouseOwner" onchange='checkValueForOther(this);'>
 															<option value="">-- SELECT --</option>
@@ -1417,7 +1399,7 @@
 										<li>
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Documentation_for_house">Documentation for the house</div>
+		                                            <div class="item-title label Text_Documentation_for_house">Do you have any documentation for the house?</div>
 		                                            <div class="item-input">
 		                                                <select name="houseDocumentation" onchange='checkValueForOther(this);'>
 															<option value="">-- SELECT --</option>
@@ -1436,23 +1418,6 @@
 		                                            <div class="item-title label">Specify Documentation</div>
 		                                            <div class="item-input">
 		                                                <input type="text" name="houseDocumentationOther" placeholder=" ">
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                </li>
-										<li>
-		                                    <div class="item-content">
-		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Floor_of_house">On which floor is the house?</div>
-		                                            <div class="item-input">
-		                                                <select name="houseFloor" onchange='checkValueForOther(this);'>
-															<option value="">-- SELECT --</option>
-		                                                    <option value="ground" class="Text_Floor_of_house_ground">Ground Floor</option>
-		                                                    <option value="first" class="Text_Floor_of_house_first">First Floor</option>
-		                                                    <option value="second"class="Text_Floor_of_house_second">Second Floor</option>
-		                                                    <option value="third"class="Text_Floor_of_house_third">Third Floor</option>
-															<option value="other" class="Text_Others_Specify">Other (Specify)</option>
-		                                                </select>
 		                                            </div>
 		                                        </div>
 		                                    </div>
@@ -1490,16 +1455,6 @@
 										<li class="list-group-title">
 											<p class="Text_Cost_of_living">Average monthly expenses towards the house</p>
 										</li>
-										<li>
-		                                    <div class="item-content">
-		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Cost_of_living_rent">Rent</div>
-		                                            <div class="item-input">
-		                                                <input type="tel" name="costOfLivingRent" placeholder="">
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                </li>
 										<li>
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
@@ -1555,76 +1510,147 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
+										<li class="list-group-title">
+											<p class="Text_House_habitability">What are some of the difficulties you face during the following weather conditions? ​(Can select multiple options)</p>
+										</li>
 										<li>
-		                                    <div class="item-content">
-		                                        <div class="item-inner">
-		                                            <div class="item-title label">Is the house livable during Cold?</div>
-		                                            <div class="item-input">
-		                                                <select name="houseLivableCold">
-															<option value="">-- SELECT --</option>
-		                                                    <option value="YES" class="Text_Yes">Yes</option>
-															<option value="NO" class="Text_No">No</option>
-															<option value="cannotTell" class="Text_Cannot_tell">Cannot tell</option>
-		                                                </select>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                </li>
+											<div class="item-content">
+												<div class="item-inner">
+													<div class="item-title label Text_House_habitability_during_rain_flood">Heavy rain/ flood</div>
+												</div>
+											</div>
+										</li>
 										<li>
-		                                    <div class="item-content">
-		                                        <div class="item-inner">
-		                                            <div class="item-title label">Is the house livable during Rain?</div>
-		                                            <div class="item-input">
-		                                                <select name="houseLivableRain">
-															<option value="">-- SELECT --</option>
-		                                                    <option value="YES" class="Text_Yes">Yes</option>
-															<option value="NO" class="Text_No">No</option>
-															<option value="cannotTell" class="Text_Cannot_tell">Cannot tell</option>
-		                                                </select>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                </li>
+											<label class="label-checkbox item-content">
+												<input type="checkbox" name="houseConditionDuringHeavyRain" value="Flooding/seepage/leakage in the house">
+												<div class="item-media">
+													<i class="icon icon-form-checkbox"></i>
+												</div>
+												<div class="item-inner">
+													<div class="item-title Text_House_habitability_during_rain_flood_house" style="border-right: none;">Flooding/ seepage/ leakage in the house</div>
+												</div>
+											</label>
+										</li>
 										<li>
-		                                    <div class="item-content">
-		                                        <div class="item-inner">
-		                                            <div class="item-title label">Is the house livable during Heat?</div>
-		                                            <div class="item-input">
-		                                                <select name="houseLivableHeat">
-															<option value="">-- SELECT --</option>
-		                                                    <option value="YES" class="Text_Yes">Yes</option>
-															<option value="NO" class="Text_No">No</option>
-															<option value="cannotTell" class="Text_Cannot_tell">Cannot tell</option>
-		                                                </select>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                </li>
+											<label class="label-checkbox item-content">
+												<input type="checkbox" name="houseConditionDuringHeavyRain" value="Flooding in the streets of the locality">
+												<div class="item-media">
+													<i class="icon icon-form-checkbox"></i>
+												</div>
+												<div class="item-inner">
+													<div class="item-title Text_House_habitability_during_rain_flood_streets" style="border-right: none;">Flooding in the streets of the locality</div>
+												</div>
+											</label>
+										</li>
 										<li>
-		                                    <div class="item-content">
-		                                        <div class="item-inner">
-		                                            <div class="item-title label">Is the house livable during Wind/Storm?</div>
-		                                            <div class="item-input">
-		                                                <select name="houseLivableWind">
-															<option value="">-- SELECT --</option>
-		                                                    <option value="YES" class="Text_Yes">Yes</option>
-															<option value="NO" class="Text_No">No</option>
-															<option value="cannotTell" class="Text_Cannot_tell">Cannot tell</option>
-		                                                </select>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                </li>
-										<li class="align-top">
-		                                    <div class="item-content">
-		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_House_habitability_challenges">In case you face any challenge during extreme weather conditions, please describe them</div>
-		                                            <div class="item-input">
-		                                                <textarea name="extremeWeatherDesc" placeholder="Description"></textarea>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                </li>
+											<label class="label-checkbox item-content">
+												<input type="checkbox" name="houseConditionDuringHeavyRain" value="Drainage gets clogged">
+												<div class="item-media">
+													<i class="icon icon-form-checkbox"></i>
+												</div>
+												<div class="item-inner">
+													<div class="item-title Text_House_habitability_during_rain_flood_drainage" style="border-right: none;">Drainage gets clogged</div>
+												</div>
+											</label>
+										</li>
+										<li>
+											<label class="label-checkbox item-content">
+												<input type="checkbox" name="houseConditionDuringHeavyRain" value="Road access get blocked">
+												<div class="item-media">
+													<i class="icon icon-form-checkbox"></i>
+												</div>
+												<div class="item-inner">
+													<div class="item-title Text_House_habitability_during_rain_flood_access" style="border-right: none;">Road access get blocked</div>
+												</div>
+											</label>
+										</li>
+										<li>
+											<label class="label-checkbox item-content">
+												<input type="checkbox" name="houseConditionDuringHeavyRain" value="No Problem">
+												<div class="item-media">
+													<i class="icon icon-form-checkbox"></i>
+												</div>
+												<div class="item-inner">
+													<div class="item-title Text_House_habitability_during_rain_flood_none" style="border-right: none;">No Problem</div>
+												</div>
+											</label>
+										</li>
+										<li>
+											<label class="label-checkbox item-content">
+												<input type="checkbox" name="houseConditionDuringHeavyRain" value="other">
+												<div class="item-media">
+													<i class="icon icon-form-checkbox"></i>
+												</div>
+												<div class="item-inner">
+													<div class="item-title Text_Other" style="width: 40%;">Other</div>
+													<input type="text" name="houseConditionDuringHeavyRainOther" placeholder=" Specify">
+												</div>
+											</label>
+										</li>
+										<li>
+											<div class="item-content">
+												<div class="item-inner">
+													<div class="item-title label Text_House_habitability_during_heat">Extreme heat</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<label class="label-checkbox item-content">
+												<input type="checkbox" name="houseConditionDuringHeat" value="Too hot to stay indoors">
+												<div class="item-media">
+													<i class="icon icon-form-checkbox"></i>
+												</div>
+												<div class="item-inner">
+													<div class="item-title Text_House_habitability_during_heat_house" style="border-right: none;">Too hot to stay indoors</div>
+												</div>
+											</label>
+										</li>
+										<li>
+											<label class="label-checkbox item-content">
+												<input type="checkbox" name="houseConditionDuringHeat" value="No shelter/shade present nearby">
+												<div class="item-media">
+													<i class="icon icon-form-checkbox"></i>
+												</div>
+												<div class="item-inner">
+													<div class="item-title Text_House_habitability_during_heat_shade" style="border-right: none;">No shelter/shade present nearby</div>
+												</div>
+											</label>
+										</li>
+										<li>
+											<label class="label-checkbox item-content">
+												<input type="checkbox" name="houseConditionDuringHeat" value="Unable to do household chores during the day">
+												<div class="item-media">
+													<i class="icon icon-form-checkbox"></i>
+												</div>
+												<div class="item-inner">
+													<div class="item-title Text_House_habitability_during_heat_chores" style="border-right: none;">Unable to do household chores during the day</div>
+												</div>
+											</label>
+										</li>
+										<li>
+											<label class="label-checkbox item-content">
+												<input type="checkbox" name="houseConditionDuringHeat" value="No Problem">
+												<div class="item-media">
+													<i class="icon icon-form-checkbox"></i>
+												</div>
+												<div class="item-inner">
+													<div class="item-title Text_House_habitability_during_rain_flood_none" style="border-right: none;">No Problem</div>
+												</div>
+											</label>
+										</li>
+										<li>
+											<label class="label-checkbox item-content">
+												<input type="checkbox" name="houseConditionDuringHeat" value="other">
+												<div class="item-media">
+													<i class="icon icon-form-checkbox"></i>
+												</div>
+												<div class="item-inner">
+													<div class="item-title Text_Other" style="width: 40%;">Other</div>
+													<input type="text" name="houseConditionDuringHeatOther" placeholder=" Specify">
+												</div>
+											</label>
+										</li>
+										
 		                            </ul>
 		                        </div>
 							
@@ -1713,6 +1739,22 @@
 										<li>
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Basic_services_water_connection_common_source">If Common, then what kind of source?</div>
+		                                            <div class="item-input">
+		                                                <select name="commonWaterSource">
+															<option value="">-- SELECT --</option>
+		                                                    <option value="Bore-well" class="Text_Basic_services_water_connection_common_source_borewell">Bore well</option>
+															<option value="Well" class="Text_Basic_services_water_connection_common_source_well">Well</option>
+															<option value="Tanker" class="Text_Basic_services_water_connection_common_source_tanker">Tanker</option>
+															<option value="Pipe at a common point" class="Text_Basic_services_water_connection_common_source_pipe">Pipe at a common point</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
 		                                            <div class="item-title label Text_Basic_services_water_supply_hours">Supply Hours</div>
 		                                            <div class="item-input">
 		                                                <input type="tel" name="waterSupplyHours" placeholder="">
@@ -1729,7 +1771,6 @@
 															<option value="">-- SELECT --</option>
 		                                                    <option value="YES" class="Text_Yes">Yes</option>
 															<option value="NO" class="Text_No">No</option> 
-															<option value="UNSURE" class="Text_Dont_know">Not Sure</option> 
 		                                                </select>
 		                                            </div>
 		                                        </div>
@@ -1738,7 +1779,7 @@
 										<li>
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Basic_services_water_cost">Cost</div>
+		                                            <div class="item-title label Text_Basic_services_water_cost">Cost per month</div>
 		                                            <div class="item-input">
 		                                                <input type="tel" name="waterCost" placeholder="">
 		                                            </div>
@@ -1748,7 +1789,7 @@
 										<li>
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label">Water needed in 1 day (litre)</div>
+		                                            <div class="item-title label Text_Basic_services_water_needed">Water needed in 1 day (litre)</div>
 		                                            <div class="item-input">
 		                                                <input type="tel" name="waterNeededPerDay" placeholder="">
 		                                            </div>
@@ -1806,10 +1847,11 @@
 		                                            <div class="item-input">
 		                                                <select name="typeOfToilet" onchange='checkValueForOther(this);'>
 															<option value="">-- SELECT --</option>
-		                                                    <option value="personal" class="Text_Personal">Personal</option>
-															<option value="shared" class="Text_Shared">Shared</option>
-															<option value="common" class="Text_Common">Common</option>
-															<option value="none" class="Text_None">None</option>
+		                                                    <option value="personal" class="Text_Basic_services_toilet_type_personal">Personal</option>
+															<option value="shared" class="Text_Basic_services_toilet_type_shared">Shared</option>
+															<option value="Community toilet" class="Text_Basic_services_toilet_type_community">Community toilet</option>
+															<option value="Public toilet" class="Text_Basic_services_toilet_type_public">Public toilet</option>
+															<option value="Open defecation" class="Text_Basic_services_toilet_type_none">Open defecation</option>
 															<option value="other" class="Text_Others_Specify">Other (Specify)</option>
 		                                                </select>
 		                                            </div>
@@ -1872,25 +1914,9 @@
 										<li class="typeOfToiletBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Basic_services_water_cost">Cost for Use</div>
+		                                            <div class="item-title label Text_Basic_services_toilet_cost">Cost for Use</div>
 		                                            <div class="item-input">
 		                                                <input type="tel" name="toiletCost" placeholder="">
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                </li>
-										<li>
-		                                    <div class="item-content">
-		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Basic_services_toilet_defecation">Open Defecation</div>
-		                                            <div class="item-input">
-		                                                <select name="toiletOpenDefecation">
-															<option value="">-- SELECT --</option>
-		                                                    <option value="ALWAYS" class="Text_Basic_services_toilet_defecation_always">Always</option>
-															<option value="SOMETIMES" class="Text_Sometimes">Sometimes</option> 
-															<option value="NEVER" class="Text_Never">Never</option> 
-															
-		                                                </select>
 		                                            </div>
 		                                        </div>
 		                                    </div>
@@ -1969,7 +1995,7 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li style="display: none"  class="wasteCollectionAvailableBlock">
+		                                <li class="wasteCollectionAvailableBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
 		                                            <div class="item-title label">Specify Frequency</div>
@@ -1979,7 +2005,7 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
-										<li style="display: none">
+										<li>
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
 		                                            <div class="item-title label Text_Basic_services_collection_dispose">Where do you dispose the waste for collection/cleaning?</div>
@@ -2064,7 +2090,7 @@
 										<li class="align-top">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Address">Health-care support details</div>
+		                                            <div class="item-title label">Health-care support details</div>
 		                                            <div class="item-input">
 		                                                <textarea name="healthCareSupportDetails" placeholder="Details"></textarea>
 		                                            </div>
@@ -2157,7 +2183,7 @@
 		                                <li>
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Children_Anganwadi_balwadi_BMI_checked">Is their height and weight checked regularly at the Anganwadi?</div>
+		                                            <div class="item-title label Text_Children_No_Anganwadi_balwadi_checked">Is their height and weight checked regularly at the Anganwadi?</div>
 		                                            <div class="item-input">
 		                                                <select name="anganwadiHeightMeasured">
 															<option value="">-- SELECT --</option>
@@ -2169,33 +2195,35 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li class="anganwadiHeightMeasuredBlock">
+										
+										<li class="childrenNoAnganwadiBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Children_Anganwadi_balwadi_BMI_not_checked">If no, why not?</div>
+		                                            <div class="item-title label Text_Children_No_Anganwadi_balwadi_not_checked">If no, why children don’t go to Anganwadi/ Balwadi?</div>
 		                                            <div class="item-input">
-		                                                <select name="anganwadiHeightNotMeasuredReason" onchange='checkValueForOther(this);'>
+		                                                <select name="childrenNotGoingToAnganwadiReason" onchange='checkValueForOther(this);'>
 															<option value="">-- SELECT --</option>
-		                                                    <option value="childrenTooOld" class="Text_Children_Anganwadi_balwadi_BMI_not_checked_old">Children too old</option>
-															<option value="notPresent" class="Text_Children_Anganwadi_balwadi_BMI_not_checked_not_present">No Anganwadi present</option> 
-															<option value="tooFar" class="Text_Children_Anganwadi_balwadi_BMI_not_checked_too_far">Anganwadi/Balwadi too far</option> 
-															<option value="notFunctional" class="Text_Children_Anganwadi_balwadi_BMI_not_checked_not_functional">Anganwadi/Balwadi not functional</option> 
+		                                                    <option value="childrenTooOld" class="Text_Children_No_Anganwadi_balwadi_not_checked_old">Children too old</option>
+															<option value="notPresent" class="Text_Children_No_Anganwadi_balwadi_not_checked_not_present">No Anganwadi present</option> 
+															<option value="tooFar" class="Text_Children_No_Anganwadi_balwadi_not_checked_too_far">Anganwadi/Balwadi too far</option> 
+															<option value="notFunctional" class="Text_Children_No_Anganwadi_balwadi_not_checked_not_functional">Anganwadi/Balwadi not functional</option> 
 															<option value="other" class="Text_Others_Specify">Other (Specify)</option> 
 		                                                </select>
 		                                            </div>
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li style="display: none"  class="anganwadiHeightMeasuredBlock">
+		                                <li style="display: none"  class="childrenNoAnganwadiBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
 		                                            <div class="item-title label">Specify Reason</div>
 		                                            <div class="item-input">
-		                                                <input type="text" name="anganwadiHeightNotMeasuredReasonOther" placeholder=" ">
+		                                                <input type="text" name="childrenNotGoingToAnganwadiReasonOther" placeholder=" ">
 		                                            </div>
 		                                        </div>
 		                                    </div>
 		                                </li>
+		                                
 		                                <li class="list-group-title">
 											<p class="Text_Children_Schooling">Schooling (IF CHILDREN FROM 7 TO 14 YEARS AGE) </p>
 										</li>
@@ -2213,10 +2241,20 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
+										<li class="childrenEnrolledInSchoolYesBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Schooling_enrolled_number">IF YES, how many children go to schools?</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="childrenEnrolledInSchoolCount" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
 		                                <li class="childrenEnrolledInSchoolYesBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Children_Schooling_enrolled">If yes, Which school do they attend?</div>
+		                                            <div class="item-title label Text_Children_Schooling_enrolled">Which school do they attend?</div>
 		                                            <div class="item-input">
 		                                                <select name="childrenSchoolType" onchange='checkValueForOther(this);'>
 															<option value="">-- SELECT --</option>
@@ -2238,39 +2276,22 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li class="childrenEnrolledInSchoolNoBlock">
+										<li class="childrenEnrolledInSchoolYesBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Children_Schooling_scholarship_not_availed">If no, Why?</div>
+		                                            <div class="item-title label Text_How_much_cost_per_annum"></div>
 		                                            <div class="item-input">
-		                                                <select name="childrenNotInSchoolReason" onchange='checkValueForOther(this);'>
-															<option value="">-- SELECT --</option>
-		                                                    <option value="financialConstraints" class="Text_Financial_constraints">Financial constraints</option>
-															<option value="toHelpEarn" class="Text_To_help_earn">To help earn</option>
-															<option value="notInterested" class="Text_Not_interested">Not interested</option>
-															<option value="childrenHaveCompletedSchooling" class="Text_Children_Schooling_scholarship_not_availed_schooling_complete">Children have completed their schooling</option>
-															<option value="other" class="Text_Others_Specify">Other (Specify)</option> 
-		                                                </select>
+		                                                <input type="tel" name="childrenEnrolledInSchoolCostPerAnnum" placeholder="">
 		                                            </div>
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li style="display: none" class="childrenEnrolledInSchoolNoBlock">
+										<li class="childrenEnrolledInSchoolYesBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label">Specify Reason</div>
+		                                            <div class="item-title label Text_Availed_scholarship">Have you availed any scholarship?</div>
 		                                            <div class="item-input">
-		                                                <input type="text" name="childrenNotInSchoolReasonOther" placeholder=" ">
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                </li>
-		                                <li>
-		                                    <div class="item-content">
-		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Children_Schooling_dropout">Did any of your children permanently drop out from school?</div>
-		                                            <div class="item-input">
-		                                                <select name="childrenDroppedOutOfSchool">
+		                                                <select name="childrenEnrolledInSchoolAvailedScholarship">
 															<option value="">-- SELECT --</option>
 		                                                    <option value="YES" class="Text_Yes">Yes</option>
 															<option value="NO" class="Text_No">No</option> 
@@ -2279,27 +2300,73 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li class="childrenDroppedOutOfSchoolBlock">
+										
+										<!-- IF ABOVE IS YES -->
+										<li class="childrenEnrolledInSchoolAvailedScholarshipYesBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Children_Schooling_dropped_out">If yes, How many ?</div>
+		                                            <div class="item-title label Text_Scholarship_availed_name">Name of the scholarship</div>
 		                                            <div class="item-input">
-		                                                <input type="tel" name="childrenDroppedOutCount" placeholder="">
+		                                                <input type="text" name="availedScholarshipName" placeholder=" ">
 		                                            </div>
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li class="childrenDroppedOutOfSchoolBlock">
+										<li class="childrenEnrolledInSchoolAvailedScholarshipYesBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Children_Schooling_dropped_out_reasons">Reason for dropping out</div>
-		                                            <!-- <div class="item-input">
-		                                                <input type="tel" name="childrenDroppedReason" placeholder="">
-		                                            </div> -->
+		                                            <div class="item-title label Text_Children_Schooling_scholarship_availed_agency">Source/ ​Funding agency</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="availedScholarshipSource" placeholder=" ">
+		                                            </div>
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li class="childrenDroppedOutOfSchoolBlock">
+										<li class="childrenEnrolledInSchoolAvailedScholarshipYesBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Scholarship_availed_amount">Scholarship amount</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="availedScholarshipAmount" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label">If any child does not go to school, ​how many such children? (record number)</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="childrenNotGoingToSchoolNo" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Schooling_not_studying_situation">Which of these following case it is?</div>
+		                                            <div class="item-input">
+		                                                <select name="childrenNotInSchoolReason" onchange='checkValueForOther(this);'>
+															<option value="">-- SELECT --</option>
+		                                                    <option value="Never admitted to school" class="Text_Children_Schooling_not_studying_situation_never_admitted">Never admitted to school</option>
+															<option value="Permanently dropped out" class="Text_Children_Schooling_not_studying_situation_dropout">Permanently dropped out</option>
+															<option value="Schooling completed" class="Text_Children_Schooling_not_studying_situation_completed">Schooling completed</option>
+		                                                </select>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										
+		                                <li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Schooling_not_studying_reason">If schooling not completed by any child, why? (Can select multiple options)</div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li>
 		                                    <label class="label-checkbox item-content">
 		                                        <input type="checkbox" name="childrenDroppedReason" value="Financial constraints">
 		                                        <div class="item-media">
@@ -2310,7 +2377,7 @@
 		                                        </div>
 		                                    </label>
 		                                </li>
-		                                <li class="childrenDroppedOutOfSchoolBlock">
+		                                <li>
 		                                    <label class="label-checkbox item-content">
 		                                        <input type="checkbox" name="childrenDroppedReason" value="Household responsibilities">
 		                                        <div class="item-media">
@@ -2321,7 +2388,7 @@
 		                                        </div>
 		                                    </label>
 		                                </li>
-		                                <li class="childrenDroppedOutOfSchoolBlock">
+		                                <li>
 		                                    <label class="label-checkbox item-content">
 		                                        <input type="checkbox" name="childrenDroppedReason" value="Marriage">
 		                                        <div class="item-media">
@@ -2332,7 +2399,7 @@
 		                                        </div>
 		                                    </label>
 		                                </li>
-		                                <li class="childrenDroppedOutOfSchoolBlock">
+		                                <li>
 		                                    <label class="label-checkbox item-content">
 		                                        <input type="checkbox" name="childrenDroppedReason" value="To help earn">
 		                                        <div class="item-media">
@@ -2343,7 +2410,7 @@
 		                                        </div>
 		                                    </label>
 		                                </li>
-		                                <li class="childrenDroppedOutOfSchoolBlock">
+		                                <li>
 		                                    <label class="label-checkbox item-content">
 		                                        <input type="checkbox" name="childrenDroppedReason" value="Not interested">
 		                                        <div class="item-media">
@@ -2354,9 +2421,8 @@
 		                                        </div>
 		                                    </label>
 		                                </li>
-		                                <li class="childrenDroppedOutOfSchoolBlock">
+		                                <li>
 		                                    <label class="label-checkbox item-content">
-		                                        <!-- Checked by default -->
 		                                        <input type="checkbox" name="childrenDroppedReason" value="School too far from place of residence">
 		                                        <div class="item-media">
 		                                            <i class="icon icon-form-checkbox"></i>
@@ -2366,9 +2432,8 @@
 		                                        </div>
 		                                    </label>
 		                                </li>
-		                                <li class="childrenDroppedOutOfSchoolBlock">
+		                                <li>
 		                                    <label class="label-checkbox item-content">
-		                                        <!-- Checked by default -->
 		                                        <input type="checkbox" name="childrenDroppedReason" value="Travel to school was considered unsafe">
 		                                        <div class="item-media">
 		                                            <i class="icon icon-form-checkbox"></i>
@@ -2378,9 +2443,33 @@
 		                                        </div>
 		                                    </label>
 		                                </li>
-		                                <li class="childrenDroppedOutOfSchoolBlock">
+										
+										
+										<li>
 		                                    <label class="label-checkbox item-content">
-		                                        <!-- Checked by default -->
+		                                        <input type="checkbox" name="childrenDroppedReason" value="Lack of safety at school from violence/ abuse">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Schooling_not_studying_reason_violence" style="border-right: none;">Lack of safety at school from violence/ abuse</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li>
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="childrenDroppedReason" value="Not accessible for people with physical disability">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Schooling_not_studying_reason_inacessible" style="border-right: none;">Not accessible for people with physical disability</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										
+		                                <li>
+		                                    <label class="label-checkbox item-content">
 		                                        <input type="checkbox" name="childrenDroppedReason" value="other">
 		                                        <div class="item-media">
 		                                            <i class="icon icon-form-checkbox"></i>
@@ -2442,27 +2531,185 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li class="youthAttendingCollegeNoBlock">
+										
+										<li class="childrenEnrolledInSchoolYesBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Children_Higher_Education_attended_scholarship_not_availed">If no, reason for not attending college</div>
+		                                            <div class="item-title label Text_How_much_cost_per_annum"></div>
 		                                            <div class="item-input">
-		                                                <select name="youthNotAttendingCollegeReason">
+		                                                <input type="tel" name="youthEnrolledInCollegeCostPerAnnum" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="childrenEnrolledInSchoolYesBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Availed_scholarship">Have you availed any scholarship?</div>
+		                                            <div class="item-input">
+		                                                <select name="youthEnrolledInCollegeAvailedScholarship">
 															<option value="">-- SELECT --</option>
-		                                                    <option value="To take care of household responsibilities" class="Text_Children_Higher_Education_attended_scholarship_not_availed_responsibilities">To take care of household responsibilities</option>
-															<option value="College fees too high" class="Text_Children_Higher_Education_attended_scholarship_not_availed_fees">College fees too high</option> 
-															<option value="College too far" class="Text_Children_Higher_Education_attended_scholarship_not_availed_far">College too far</option> 
-															<option value="Have completed college" class="Text_Children_Higher_Education_attended_scholarship_not_availed_completed">Have completed college</option> 
-															<option value="Marriage" class="Text_Marriage">Marriage</option> 
-															<option value="Started working" class="Text_Children_Higher_Education_attended_scholarship_not_availed_working">Started working</option> 
-															<option value="No job assured" class="Text_Children_Higher_Education_attended_scholarship_not_availed_no_job">No job assured</option> 
-															<option value="Not interested in studying" class="Text_Children_Higher_Education_attended_scholarship_not_availed_disinterest">Not interested in studying</option> 
-															<option value="others" class="Text_Others_Specify">Other (Specify)</option> 
+		                                                    <option value="YES" class="Text_Yes">Yes</option>
+															<option value="NO" class="Text_No">No</option> 
 		                                                </select>
 		                                            </div>
 		                                        </div>
 		                                    </div>
 		                                </li>
+										
+										<!-- IF ABOVE IS YES -->
+										<li class="youthEnrolledInCollegeAvailedScholarshipYesBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Scholarship_availed_name">Name of the scholarship</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="availedCollegeScholarshipName" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="youthEnrolledInCollegeAvailedScholarshipYesBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Schooling_scholarship_availed_agency">Source/ ​Funding agency</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="availedCollegeScholarshipSource" placeholder=" ">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="youthEnrolledInCollegeAvailedScholarshipYesBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Scholarship_availed_amount">Scholarship amount</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="availedCollegeScholarshipAmount" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										
+										<li>
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Higher_Education_attended_scholarship_not_availed">If no, reason for not attending college (Can select multiple options)</div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="Financial constraints">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Financial_constraints" style="border-right: none;">Financial constraints</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li>
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="Household responsibilities">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Schooling_dropped_out_reasons_household" style="border-right: none;">Household responsibilities</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li>
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="Marriage">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Marriage" style="border-right: none;">Marriage</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li>
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="To help earn">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_To_help_earn" style="border-right: none;">To help earn</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li>
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="Not interested">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Not_interested" style="border-right: none;">Not interested</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li>
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="School too far from place of residence">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Schooling_dropped_out_reasons_far" style="border-right: none;">School too far from place of residence</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li>
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="Travel to school was considered unsafe">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Schooling_dropped_out_reasons_unsafe" style="border-right: none;">Travel to school was considered unsafe</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li>
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="Lack of safety at school from violence/ abuse">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Schooling_not_studying_reason_violence" style="border-right: none;">Lack of safety at school from violence/ abuse</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li>
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="Not accessible for people with physical disability">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Schooling_not_studying_reason_inacessible" style="border-right: none;">Not accessible for people with physical disability</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										
+		                                <li>
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="other">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Other" style="width: 40%;">Other</div>
+		                                            <input type="text" name="youthNotAttendingCollegeReasonOther" placeholder=" Specify">
+		                                        </div>
+		                                    </label>
+		                                </li>
+										
+		                               
 		                                <li class="youthAttendingCollegeYesBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
@@ -2503,15 +2750,112 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li class="youthSkillTrainingBlock">
+										<li class="youthSkillTrainingBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Children_Higher_Education_skill_training_yes">If yes, Which training </div>
-		                                            <div class="item-input">
-		                                                <input type="text" name="youthSkillTrainingType" placeholder=" ">
-		                                            </div>
+		                                            <div class="item-title label Text_Children_Higher_Education_skill_training_yes">If yes, which training (Can select multiple options)</div>
 		                                        </div>
 		                                    </div>
+		                                </li>
+										<li class="youthSkillTrainingBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthTrainingType" value="Computer">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_yes_computer" style="border-right: none;">Computer</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li class="youthSkillTrainingBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthTrainingType" value="Mobile repair">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_yes_mobile" style="border-right: none;">Mobile repair</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li class="youthSkillTrainingBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthTrainingType" value="Beauty parlor">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_yes_parlour" style="border-right: none;">Beauty parlor</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li class="youthSkillTrainingBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthTrainingType" value="Auto/car repair">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_yes_repairing" style="border-right: none;">Auto/car repair</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li class="youthSkillTrainingBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthTrainingType" value="Driving">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_yes_driving" style="border-right: none;">Driving</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li class="youthSkillTrainingBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthTrainingType" value="Stitching">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_yes_stitching" style="border-right: none;">Stitching</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li class="youthSkillTrainingBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthTrainingType" value="English speaking">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_yes_speaking" style="border-right: none;">English speaking</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li class="youthSkillTrainingBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthTrainingType" value="Call centre">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_yes_BPO" style="border-right: none;">Call centre</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li class="youthSkillTrainingBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthTrainingType" value="other">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Other" style="width: 40%;">Other</div>
+		                                            <input type="text" name="youthTrainingTypeOther" placeholder=" Specify">
+		                                        </div>
+		                                    </label>
 		                                </li>
 		                                <li class="youthSkillTrainingBlock">
 		                                    <div class="item-content">
@@ -2538,6 +2882,17 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
+										
+										<li class="youthSkillTrainingBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Children_Higher_Education_skill_training_cost">How much did it cost you?</div>
+		                                            <div class="item-input">
+		                                                <input type="tel" name="youthSkillTrainingCost" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
 		                                <li class="youthSkillTrainingBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
@@ -2553,41 +2908,167 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li class="youthSkillTrainingBlock youthSkillTrainingJobSecuredBlock">
+										
+										<li class="youthSkillTrainingNoBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Children_Higher_Education_not_complete">If no, reason?</div>
-		                                            <div class="item-input">
-		                                                <select name="youthSkillTrainingJobUnsecuredReason" onchange='checkValueForOther(this);'>
-															<option value="">-- SELECT --</option>
-		                                                    <option value="Not aware of skill training">Not aware of skill training</option>
-															<option value="Did not feel the need for it">Did not feel the need for it</option> 
-															<option value="Fees to high">Fees too high</option>
-															<option value="other" class="Text_Others_Specify">Other (Specify)</option>
-		                                                </select>
-		                                            </div>
+		                                            <div class="item-title label Text_Children_Higher_Education_skill_training_no_reason">If no, reason for not attending any training (Can select multiple options)</div>
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li style="display: none" class="youthSkillTrainingBlock">
+										<li class="youthSkillTrainingNoBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthSkillTrainingNotAttendedReason" value="Not aware of skill training">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_no_reason_unaware" style="border-right: none;">Not aware of skill training</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li class="youthSkillTrainingNoBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthSkillTrainingNotAttendedReason" value="Did not feel the need for it">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_no_reason_unwanted" style="border-right: none;">Did not feel the need for it</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li class="youthSkillTrainingNoBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthSkillTrainingNotAttendedReason" value="Fees too high">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_no_reason_expensive" style="border-right: none;">Fees too high</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li class="youthSkillTrainingNoBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthSkillTrainingNotAttendedReason" value="other">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Other" style="width: 40%;">Other</div>
+		                                            <input type="text" name="youthSkillTrainingNotAttendedReasonOther" placeholder=" Specify">
+		                                        </div>
+		                                    </label>
+		                                </li>
+										
+										
+										<li class="youthSkillTrainingNoBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label">Specify Reason</div>
-		                                            <div class="item-input">
-		                                                <input type="text" name="youthSkillTrainingJobUnsecuredReasonOther" placeholder=" ">
-		                                            </div>
+		                                            <div class="item-title label Text_Children_Higher_Education_skill_training_wanted">Which course/ training/ degree/ skill would you like to have? (Can select multiple options)</div>
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li class="align-top">
-		                                    <div class="item-content">
-		                                        <div class="item-inner">
-		                                            <div class="item-title label">Which course/training/degree/skill would you like to have?</div>
-		                                            <div class="item-input">
-		                                                <textarea name="skillTrainingRequirement" placeholder=""></textarea>
-		                                            </div>
+										<li class="youthSkillTrainingNoBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthDesiredTrainingType" value="Computer">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
 		                                        </div>
-		                                    </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_yes_computer" style="border-right: none;">Computer</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li class="youthSkillTrainingNoBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthDesiredTrainingType" value="Mobile repair">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_yes_mobile" style="border-right: none;">Mobile repair</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li class="youthSkillTrainingNoBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthDesiredTrainingType" value="Beauty parlor">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_yes_parlour" style="border-right: none;">Beauty parlor</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li class="youthSkillTrainingNoBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthDesiredTrainingType" value="Auto/car repair">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_yes_repairing" style="border-right: none;">Auto/car repair</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li class="youthSkillTrainingNoBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthDesiredTrainingType" value="Driving">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_yes_driving" style="border-right: none;">Driving</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li class="youthSkillTrainingNoBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthDesiredTrainingType" value="Stitching">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_yes_stitching" style="border-right: none;">Stitching</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li class="youthSkillTrainingNoBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthDesiredTrainingType" value="English speaking">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_yes_speaking" style="border-right: none;">English speaking</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+										<li class="youthSkillTrainingNoBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthDesiredTrainingType" value="Call centre">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Children_Higher_Education_skill_training_yes_BPO" style="border-right: none;">Call centre</div>
+		                                        </div>
+		                                    </label>
+		                                </li>
+		                                <li class="youthSkillTrainingNoBlock">
+		                                    <label class="label-checkbox item-content">
+		                                        <input type="checkbox" name="youthDesiredTrainingType" value="other">
+		                                        <div class="item-media">
+		                                            <i class="icon icon-form-checkbox"></i>
+		                                        </div>
+		                                        <div class="item-inner">
+		                                            <div class="item-title Text_Other" style="width: 40%;">Other</div>
+		                                            <input type="text" name="youthDesiredTrainingTypeOther" placeholder=" Specify">
+		                                        </div>
+		                                    </label>
 		                                </li>
 		                            </ul>
 		                        </div>
@@ -2627,21 +3108,6 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
-										<li class="communityGroupMemberBlock">
-		                                    <div class="item-content">
-		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Organising_and_Participation_group_registration">Is the group recognized/registered?</div>
-		                                            <div class="item-input">
-		                                                <select name="groupRecognised">
-															<option value="">-- SELECT --</option>
-		                                                    <option value="YES" class="Text_Yes">Yes</option>
-															<option value="NO" class="Text_No">No</option> 
-															<option value="Not Sure" class="Text_Dont_know">Don't Know</option> 
-		                                                </select>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                </li>
 		                                <li>
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
@@ -2666,16 +3132,12 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li class="align-top">
+										<li class="align-top">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
-		                                            <div class="item-title label">Do you know any person with disability/transgender person living in your neighbourhood?</div>
-		                                           	<div class="item-input">
-		                                                <select name="knownPersonWithDisability">
-															<option value="">-- SELECT --</option>
-		                                                    <option value="YES" class="Text_Yes">Yes</option>
-															<option value="NO" class="Text_No">No</option> 
-		                                                </select>
+		                                            <div class="item-title label Text_Organising_and_Participation_interest">In case anyone in your family would like to participate in any community based groups/ campaigns/ events, please share their details and interest area.</div>
+		                                            <div class="item-input">
+		                                                <textarea name="familyCommunityGroupsInterestDetails" placeholder=""></textarea>
 		                                            </div>
 		                                        </div>
 		                                    </div>
