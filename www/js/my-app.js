@@ -332,6 +332,10 @@ myApp.onPageInit('survey', function (page) {
 	//});
 });
 
+myApp.onPageInit('consent-form', function (page) {
+	setLanguageText();
+});
+
 function setLanguageText(){
 	//console.log('Inside: setLanguageText');
 	
@@ -951,7 +955,11 @@ function generateFormNo() {
   return Math.random().toString(36).substr(2, 9);
 }
 
-function startNewSurvey(){
+function proceedToSurvey(e) {
+  startNewSurvey($('#consentGivenBy').val());
+}
+
+function startNewSurvey(consentGivenBy){
 	var formNo = generateFormNo();
 	currentFormID = formNo;
 	
@@ -960,7 +968,8 @@ function startNewSurvey(){
 		starteDate: new Date(),
 		endDate: null,
 		lastUpdate: new Date(),
-		data: null
+		data: null,
+		consentGivenBy: consentGivenBy
 	};
 	
 	currentFormObj = formObj;

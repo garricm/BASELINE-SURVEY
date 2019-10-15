@@ -1,0 +1,61 @@
+<body>
+    <div class="views">
+        <div class="view view-main">
+            <div class="navbar">
+                <div class="navbar-inner">
+					<div class="left">
+                        <a href="index.html" class="link icon-only">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </div>
+                    <div class="center">
+                        <h2 class="title Text_Consent_Form" style="left: 0px;">Consent Form</h2>
+                    </div>
+					<div class="right">
+						<a href="#" onclick="">
+							<h2 class="title Text_Change_language" onclick="toggleSurveyLanguage();" style="padding-right: 10px;">Change Language</h2>
+						</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pages navbar-through">
+                <div data-page="consent-form" class="page">
+                    <div class="page-content">
+                        <div class="content-block" style="padding-top: 15px;">
+                            <p class="Text_Consent_1" style="font-weight: bold;">Dear participants,</p>
+							<p class="Text_Consent_2">We request you to kindly respond to our survey questions.</p>
+							<p class="Text_Consent_3">Our survey is a part of YUVA’s project in your community that aims to strengthen it and ensure that you get adequate services in your community. </p>
+							<p class="Text_Consent_4">All the data collected in the survey is strictly confidential and will not be shared with anyone other than YUVA employees or funders/partners/collaborators. The information that reveals your identity will be removed from the data before sharing it with anyone. No bank account details or other such confidential information is needed for the survey. Also, you do not need to show/share any of your identity proofs or documents with the surveyor.</p>
+							<p class="Text_Consent_5">Only the findings of this study will be shared with your community and various groups in your community so that they can review it and use it for their work. For example, if our study report confirms that there is water scarcity in your community, it can be used while demanding more water supply from the municipal corporation. In addition, the study findings can be used for other purposes such as policy level advocacy and recommendations.</p>
+							<p class="Text_Consent_6">Your response to our survey questions will be regarded as your consent. Our surveyor will ask you some questions and may also give you some choices from which you can choose your response. There is no monetary benefit of participating in this survey.</p>
+							<p class="Text_Consent_7">You have a choice to quit the survey any time if you wish. Also, you can choose not to respond to any questions you do not want to answer. Your refusal to participate will not affect your relations with YUVA in any manner.</p>
+							<p class="Text_Consent_8">Please ask any questions you may have before giving your consent for participation. Thank you for giving us your precious time. </p>
+							<p class="Text_Consent_9" style="font-weight: bold;">For the surveyor:</p>
+							<p class="Text_Consent_10">I have read out the details in this consent form to the participant in a language they understand. I have also answered all the questions they had. They have agreed to participate in this survey. The name of the family member giving me the consent is </p>
+							
+							<div class="list-block">
+								<ul>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title label Text_Consent_Giver_Name" style="border-right: 3px solid #f1f1f1;">Name</div>
+												<div class="item-input">
+													<input type="text" placeholder=" " id="consentGivenBy" name="consentGivenBy" required>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>	
+							</div>	
+							
+							<div class="card-footer">
+								<a href="index.html" class="button button-fill" style="margin: 10px; background: #932828">Disagree</a>
+								<a href="survey.html" onclick='proceedToSurvey(event);' class="button button-fill" style="margin: 10px; background: #1b5e20;">Agree</a>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

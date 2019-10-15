@@ -146,6 +146,31 @@ form#surveyForm div.list-block ul li {
 	border-bottom: 1px solid #f1f1f1;
 }
 
+.accordion-item-content {
+	background: #fffafa;
+}
+
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#F44336;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+	z-index: 99999;
+}
+
+.my-float{
+	margin-top: 15px;
+	margin-right: 0px;
+	font-size: 30px;
+}
+
 /* -----------------------------------*/
 /* ---------->>> HEADER <<<-----------*/
 /* -----------------------------------*/

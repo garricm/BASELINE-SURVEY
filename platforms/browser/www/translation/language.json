@@ -31,8 +31,8 @@
         },
 		{
             "KEY": "Text_Change_language",
-            "ENGLISH": "Change Language",
-            "HINDI": "भाषा बदलो"
+            "ENGLISH": "HIN",
+            "HINDI": "ENG"
         },
 		{
             "KEY": "Text_Specify_Other_Religion",
@@ -588,7 +588,7 @@
         },
         {
             "KEY": "Text_Occupation_hawker",
-            "ENGLISH": "Hawker/ Peddler/ Street vendor",
+            "ENGLISH": "Hawker/ Street vendor",
             "HINDI": "फेरीवाले"
         },
         {
@@ -649,7 +649,7 @@
         {
             "KEY": "Text_Demographics_section",
             "ENGLISH": "Household Demographics ",
-            "HINDI": "गृहस्ती  जनसांख्यिकी"
+            "HINDI": "घर के सदस्यों का विवरण"
         },
         {
             "KEY": "Text_Household_questionnaire",
@@ -778,13 +778,23 @@
         },
         {
             "KEY": "Text_Children_Schooling_dropout_working_yes_nature_of_job",
-            "ENGLISH": "If yes, what work do they do",
+            "ENGLISH": "If yes, what work do they do?",
             "HINDI": "यदि हाँ, तो वे क्या कार्य करते हैं?"
         },
         {
             "KEY": "Text_Children_Schooling_enrolled",
             "ENGLISH": "Which schools do they attend",
             "HINDI": "वे किन विद्यालयों में जाते हैं?"
+        },
+		{
+            "KEY": "Text_Children_Higher_Education_skill_training_type",
+            "ENGLISH": "What type of training centre was/ is it? (Can select multiple options)",
+            "HINDI": "यह किस प्रकार का प्रशिक्षण केंद्र था/ है? (एक से ज़्यादा जवाबों को चुन सकते हैं)"
+        },
+		{
+            "KEY": "Text_Children_Schooling_not_studying_number",
+            "ENGLISH": "If any child does not go to school, how many such children? (record number)",
+            "HINDI": "अगर कोई बच्चा स्कूल नहीं जा रहा/ रही है, ऐसे कितने बच्चे हैं? (संख्या लिखें)"
         },
         {
             "KEY": "Text_Children_Higher_Education_skill_training_yes",
@@ -793,13 +803,18 @@
         },
         {
             "KEY": "Text_Health_expense_emergency",
-            "ENGLISH": "In case of emergency",
-            "HINDI": "आपातकाल के समय"
+            "ENGLISH": "How much do you spend on healthcare in case of emergency?",
+            "HINDI": "आपातकाल के समय आप स्वास्थ्य पे कितना खर्च करते हैं?"
         },
         {
             "KEY": "Text_House_habitability_challenges",
             "ENGLISH": "In case you face any challenge during extreme weather conditions, please describe them",
             "HINDI": "अगर आपको अत्यधिक मौसम की स्थिति के समय कोई संकट होता है तो कृपया वर्णन करें"
+        },
+		{
+            "KEY": "Text_Health_care_support_details",
+            "ENGLISH": "Health-care support details",
+            "HINDI": "Health-care support details"
         },
         {
             "KEY": "Text_Identity_documents_held_income",
@@ -1052,8 +1067,8 @@
         },
         {
             "KEY": "Text_Occupation_none",
-            "ENGLISH": "None",
-            "HINDI": "कुछ नहीं"
+            "ENGLISH": "Unemployed",
+            "HINDI": "बेरोज़गार"
         },
         {
             "KEY": "Text_Basic_services_electricity_supply_none",
@@ -1187,8 +1202,8 @@
         },
         {
             "KEY": "Text_Health_expense_monthly",
-            "ENGLISH": "Per month",
-            "HINDI": "प्रति महना"
+            "ENGLISH": "How much do you spend on healthcare per month?",
+            "HINDI": "प्रति महना, आप स्वास्थ्य पे कितना खर्च करते हैं?"
         },
         {
             "KEY": "Text_Personal",
@@ -1619,5 +1634,105 @@
             "KEY": "Text_Children_Schooling_not_studying_reason_inacessible",
             "ENGLISH": "Not accessible for people with physical disability",
             "HINDI": "विकलांग व्यक्तिओं के लिए प्रयोग करने की सुविधा नहीं है"
-        }
+        },
+		{
+            "KEY": "Text_Consent_Form",
+            "ENGLISH": "Consent Form",
+            "HINDI": "सहमति पत्र"
+        },
+		{
+            "KEY": "Text_Consent_1",
+            "ENGLISH": "Dear participants,",
+            "HINDI": "प्रिय सहभागी,"
+        },
+		{
+            "KEY": "Text_Consent_2",
+            "ENGLISH": "We request you to kindly respond to our survey questions.",
+            "HINDI": "हम आपसे अनुरोध करते हैं कि कृपया हमारे सर्वेक्षण के सवालों का जवाब दें।"
+        },
+		{
+            "KEY": "Text_Consent_3",
+            "ENGLISH": "Our survey is a part of YUVA’s project in your community that aims to strengthen it and ensure that you get adequate services in your community.",
+            "HINDI": "हमारा सर्वेक्षण आपके समुदाय में युवा के काम का एक हिस्सा है जिसका उद्देश्य आपके समुदाय को मजबूत करना है और यह सुनिश्चित करना है कि आपको अपने समुदाय में पर्याप्त सेवाएँ मिलें।"
+        },
+		{
+            "KEY": "Text_Consent_4",
+            "ENGLISH": "All the data collected in the survey is strictly confidential and will not be shared with anyone other than YUVA employees or funders/partners/collaborators. The information that reveals your identity will be removed from the data before sharing it with anyone. No bank account details or other such confidential information is needed for the survey. Also, you do not need to show/share any of your identity proofs or documents with the surveyor.",
+            "HINDI": "सर्वेक्षण में एकत्र की गई सभी जानकारी बिल्कुल गोपनीय है और इसे युवा कर्मचारियों या सहयोगियों के अलावा किसी और के साथ नहीं बांटा जाएगा। आपकी पहचान बताने वाली जानकारी को बाक़ी जानकारी किसी के साथ बांटने से पहले ही हटा दिया जाएगा। सर्वेक्षण के लिए किसी बैंक खाते का विवरण या अन्य ऐसी गोपनीय जानकारी की आवश्यकता नहीं है। इसके अलावा, आपको सर्वेक्षणकर्ता के साथ अपने किसी भी पहचान प्रमाण या दस्तावेज को दिखाने / साझा करने की आवश्यकता नहीं है।"
+        },
+		{
+            "KEY": "Text_Consent_5",
+            "ENGLISH": "Only the findings of this study will be shared with your community and various groups in your community so that they can review it and use it for their work. For example, if our study report confirms that there is water scarcity in your community, it can be used while demanding more water supply from the municipal corporation. In addition, the study findings can be used for other purposes such as policy level advocacy and recommendations.",
+            "HINDI": "केवल इस अध्ययन के नतीजों को आपके समुदाय और आपके समुदाय के विभिन्न समूहों के साथ बांटा जाएगा ताकि वे इसकी समीक्षा कर सकें और अपने काम के लिए इसका उपयोग कर सकें। उदाहरण के लिए, अगर हमारे अध्ययन की रिपोर्ट इस बात की पुष्टि करती है कि आपकी बस्ति में पानी की समस्या है तो मुनिसिपालिटी से अधिक पानी की मांग करते समय हमारी रिपोर्ट आपके काम आएगी। इसके अलावा, अध्ययन के नतीजों का उपयोग अन्य उद्देश्यों जैसे नीति स्तर की वकालत और सिफारिशों के लिए किया जा सकता है।"
+        },
+		{
+            "KEY": "Text_Consent_6",
+            "ENGLISH": "Your response to our survey questions will be regarded as your consent. Our surveyor will ask you some questions and may also give you some choices from which you can choose your response. There is no monetary benefit of participating in this survey.",
+            "HINDI": "हमारे सर्वेक्षण के सवालों के जवाब देना ही आपकी सहमति मानी जाएगी। हमारे सर्वेक्षणकर्ता आपसे कुछ प्रश्न पूछेंगे और आपको कुछ विकल्प भी दे सकते हैं जिनसे आप अपनी प्रतिक्रिया चुन सकते हैं। इस सर्वेक्षण में भाग लेने से आपको कोई आर्थिक लाभ नहीं मिलेगा।"
+        },
+		{
+            "KEY": "Text_Consent_7",
+            "ENGLISH": "You have a choice to quit the survey any time if you wish. Also, you can choose not to respond to any questions you do not want to answer. Your refusal to participate will not affect your relations with YUVA in any manner.",
+            "HINDI": "यदि आप चाहें तो किसी भी समय सर्वेक्षण छोड़ सकते हैं। आपको उन सवालों के जवाब देने की ज़रूरत नहीं है जिनका आप जवाब नहीं देना चाहते हैं। अगर आप भाग लेने से इनकार करते हैं तो इससे युवा के साथ आपके संबंध किसी भी तरह से प्रभावित नहीं होंगे।"
+        },
+		{
+            "KEY": "Text_Consent_8",
+            "ENGLISH": "Please ask any questions you may have before giving your consent for participation. Thank you for giving us your precious time.",
+            "HINDI": "भाग लेने के लिए अपनी सहमति देने से पहले आपके जो भी सवाल हैं वो बेझिझक पूछें। हमें अपना कीमती समय देने के लिए धन्यवाद।"
+        },
+		{
+            "KEY": "Text_Consent_9",
+            "ENGLISH": "For the surveyor:",
+            "HINDI": "सर्वेक्षक/ सर्वेक्षिका के लिए:"
+        },
+		{
+            "KEY": "Text_Consent_10",
+            "ENGLISH": "I have read out the details in this consent form to the participant in a language they understand. I have also answered all the questions they had. They have agreed to participate in this survey. The name of the family member giving me the consent is",
+            "HINDI": "मैंने इस सहमति पत्थर में लिखी पूरी जानकारी पढ़ कर सहभागियों को उस भाषा में बताई है जो वो समझते हैं। मैंने उनके सारे सवालों के जवाब भी दिए हैं। वो सर्वेक्षण में सहभाग लेने के लिए तय्यार हैं। घर के उस व्यक्ति का नाम जिसने मंजूरी दी"
+        },
+		{
+            "KEY": "Text_Consent_Giver_Name",
+            "ENGLISH": "Name",
+            "HINDI": "नाम"
+        },
+		{
+            "KEY": "Text_Instructions_to_Surveyor",
+            "ENGLISH": "Instructions to the Surveyor",
+            "HINDI": "सर्वेक्षक / सर्वेक्षिका के लिए निर्देश"
+        },
+		{
+            "KEY": "Text_Instructions_ask",
+            "ENGLISH": "Question to be asked on completion of the survey -",
+            "HINDI": "सर्वेक्षण समाप्त होने के बाद ये सवाल पूछिए -"
+        },
+		{
+            "KEY": "Text_Instructions_disability_transgender",
+            "ENGLISH": "Do you know any person with disability/ transgender person living in your neighbourhood?",
+            "HINDI": "आप किसी विकलांग/ ट्रांसजेंडर व्यक्ति को जानते हो जो आपके घर के पास रहते है?"
+        },
+		{
+            "KEY": "Text_Instructions_question_yes",
+            "ENGLISH": "If yes, ask where they live and if you can get introduced to that family to do the survey. Do the survey in that household.",
+            "HINDI": "अगर हाँ तो पूछिए कि वो कहाँ रहते हैं और क्या आपकी मुलाक़ात करवाई जा सकती है."
+        },
+		{
+            "KEY": "Text_Instructions_question_no",
+            "ENGLISH": "If no, move on to the next house according to the sampling procedure guidelines.",
+            "HINDI": "यदि नहीं तो सर्वेक्षणकर्ताओं की प्रक्रिया गाइड के अनुसार अगले घर में जाइये."
+        },
+		{
+            "KEY": "Text_Instructions_children",
+            "ENGLISH": "If you come across any child in distress",
+            "HINDI": "अगर आपको ऐसे किसी बच्चे के बारे में जानकारी मिली है जिसे मदद की ज़रूरत है"
+        },
+		{
+            "KEY": "Text_Instructions_children_cooperating",
+            "ENGLISH": "If the family seems willing to seek help, guide the family to the child helpline number (1098) or to the YUVA centre project incharge",
+            "HINDI": "अगर परिवार वाले मदद लेने के इच्छुक लागते हैं, उनको बच्चों की सहायता के लिये इस नम्बर (1098) की जानकारी दें या युवा सेंटर के अधिकारी से सम्पर्क करने को कहें."
+        },
+		{
+            "KEY": "Text_Instructions_children_not_cooperating",
+            "ENGLISH": "If the family is not welcoming any external interest or help, report to the YUVA centre project incharge.",
+            "HINDI": "अगर परिवार वाले किसी बाहरी व्यक्ति को जानकारी देने में या उसकी मदद लेने में रुचि नहीं दिखा रहे हैं, तो युवा सेंटर के अधिकारी को सूचना दें."
+        }	
 ]
