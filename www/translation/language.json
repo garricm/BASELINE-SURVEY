@@ -107,12 +107,12 @@
         {
             "KEY": "Text_Children_Anganwadi_balwadi",
             "ENGLISH": "Anganwadi/ Balwadi (IF CHILDREN UP TO 6 YEARS AGE)",
-            "HINDI": "आंगनवाड़ी/ बालवाड़ी (बच्चों के लिए यदि 6 साल के अंदर)"
+            "HINDI": "आंगनवाड़ी/ बालवाड़ी (यदि 6 साल या छोटे बच्चे हैं)"
         },
         {
             "KEY": "Text_Children_No_Anganwadi_balwadi_not_checked_not_functional",
             "ENGLISH": "Anganwadi/ Balwadi not functional",
-            "HINDI": "आंगनवाड़ी/ बालवाड़ी चालू"
+            "HINDI": "आंगनवाड़ी / बालवाड़ी चालू नहीं है"
         },
         {
             "KEY": "Text_Children_No_Anganwadi_balwadi_not_checked_too_far",
@@ -127,12 +127,17 @@
         {
             "KEY": "Text_Children_Schooling_enrollment",
             "ENGLISH": "Are the children in the house currently enrolled in school?",
-            "HINDI": "घर के बचे क्या अभी स्कूल में नामांकन है क्या?"
+            "HINDI": "इस घर के बच्चों का क्या किसी स्कूल में दाख़िला है?"
         },
         {
             "KEY": "Text_Long_term_health_issues_asthma",
             "ENGLISH": "Asthma",
             "HINDI": "दमा (अस्थमा)"
+        },
+		{
+            "KEY": "Text_Long_term_health_issues_TB",
+            "ENGLISH": "TB",
+            "HINDI": "टीबी"
         },
         {
             "KEY": "Text_Children_Higher_Education_skill_training_yes_repairing",
@@ -247,7 +252,7 @@
         {
             "KEY": "Text_Children_Section",
             "ENGLISH": "Children’s Wellbeing (IF ANY CHILDREN)",
-            "HINDI": "बच्चों की भलाई (यदि कोई हो)"
+            "HINDI": "बाल-कल्याण (यदि कोई बच्चे हो)"
         },
         {
             "KEY": "Text_Religion_Christian",
@@ -408,8 +413,8 @@
 		}, 
         {
             "KEY": "Text_Health_information_support",
-            "ENGLISH": "Does anyone in your family get healthcare-related information or any support with medicines/ nutrition/ vaccinations/ consultation from any organization? If yes, details",
-            "HINDI": "क्या आपके परिवार में किसी को किसी भी संगठन से स्वास्थ्य शिक्षा/ सहायता मिलती है?  यदि हाँ, तो विवरण"
+            "ENGLISH": "Does anyone in your family get healthcare-related information or any support with medicines/ nutrition/ vaccinations/ consultation from any organization?",
+            "HINDI": "क्या आपके परिवार में किसी को किसी भी संगठन से स्वास्थ्य शिक्षा/ सहायता मिलती है?"
         },
         {
             "KEY": "Text_Occupation_domestic_worker",
@@ -619,7 +624,7 @@
         {
             "KEY": "Text_Children_Higher_Education",
             "ENGLISH": "Higher Education (IF YOUTH BETWEEN 15 TO 29 YEARS AGE)",
-            "HINDI": "उच्च शिक्षा (अगर 15 साल से 29 साल की उम्र के बाद)"
+            "HINDI": "उच्च शिक्षा (अगर कोई 15 साल से 29 साल की उम्र का है)"
         },
         {
             "KEY": "Text_Religion_Hindu",
@@ -664,7 +669,7 @@
         {
             "KEY": "Text_Children_Anganwadi_balwadi_go_time",
             "ENGLISH": "How many times a week",
-            "HINDI": "हाँफते में कितनी बार?"
+            "HINDI": "हफ्ते में कितनी बार?"
         },
         {
             "KEY": "Text_Health_expense",
@@ -813,8 +818,8 @@
         },
 		{
             "KEY": "Text_Health_care_support_details",
-            "ENGLISH": "Health-care support details",
-            "HINDI": "Health-care support details"
+            "ENGLISH": "If yes, provide details of health-care support",
+            "HINDI": "यदि हाँ, तो स्वास्थ्य से जुड़ी सहायता का विवरण"
         },
         {
             "KEY": "Text_Identity_documents_held_income",
@@ -927,8 +932,8 @@
         },
         {
             "KEY": "Text_Organising_and_Participation_group",
-            "ENGLISH": "Is/ Was anyone in your family a part of community based groups",
-            "HINDI": "क्या आपके परिवार में कोई व्यक्ति समुदाय आधारित समूहों का हिस्सा है/ था?"
+            "ENGLISH": "Is/ Was anyone in your family a part of community based groups? If yes, what kind of group?",
+            "HINDI": "क्या आपके परिवार में कोई व्यक्ति समुदाय आधारित समूहों का हिस्सा है/ था? अगर हाँ, तो किस प्रकार का संगठन?"
         },
         {
             "KEY": "Text_Identity_documents_held_job_specific_id",
@@ -1027,8 +1032,8 @@
         },
         {
             "KEY": "Text_Scholarship_availed_name",
-            "ENGLISH": "Name of the scholarship",
-            "HINDI": "छात्रवृत्ति का नाम"
+            "ENGLISH": "If yes, name of the scholarship",
+            "HINDI": "अगर हाँ, छात्रवृत्ति का नाम"
         },
         {
             "KEY": "Text_Native_place",
@@ -1044,6 +1049,11 @@
             "KEY": "Text_Never",
             "ENGLISH": "Never",
             "HINDI": "कभी नहीं"
+        },
+		{
+            "KEY": "Text_Still_looking_for_Job",
+            "ENGLISH": "Still looking for job",
+            "HINDI": "अभी भी नौकरी ढूंढ रहे हैं"
         },
         {
             "KEY": "Text_No",
@@ -1168,12 +1178,12 @@
         {
             "KEY": "Text_Others_Specify",
             "ENGLISH": "Others (Specify)",
-            "HINDI": "अन्य (निर्दिष्ट करें)"
+            "HINDI": "व्याख्या करें"
         },
         {
             "KEY": "Text_Others_Specify_2",
             "ENGLISH": "Others (Specify)",
-            "HINDI": "अन्य (उल्लिखित करें)"
+            "HINDI": "व्याख्या करें"
         },
         {
             "KEY": "Text_Documentation_for_house_ownership_paper",
@@ -1203,7 +1213,7 @@
         {
             "KEY": "Text_Health_expense_monthly",
             "ENGLISH": "How much do you spend on healthcare per month?",
-            "HINDI": "प्रति महना, आप स्वास्थ्य पे कितना खर्च करते हैं?"
+            "HINDI": "प्रति महीना, आप स्वास्थ्य पे कितना खर्च करते हैं?"
         },
         {
             "KEY": "Text_Personal",
@@ -1310,6 +1320,11 @@
             "ENGLISH": "Rent agreement",
             "HINDI": "किराया समझौता"
         },
+		{
+            "KEY": "Text_Documentation_for_house_light_bill",
+            "ENGLISH": "Light Bill",
+            "HINDI": "लाइट बिल"
+        },
         {
             "KEY": "Text_Occupation_sanitation_worker",
             "ENGLISH": "Sanitation worker/ Waste Recycler",
@@ -1333,7 +1348,7 @@
         {
             "KEY": "Text_Children_Schooling",
             "ENGLISH": "Schooling (IF CHILDREN FROM 7 TO 14 YEARS AGE)",
-            "HINDI": "स्कूली शिक्षा (यदि बच्चों के लिए 7 से 14 साल की उम्र में)"
+            "HINDI": "स्कूली शिक्षा (यदि 7 से 14 साल की उम्र के बच्चे हैं)"
         },
         {
             "KEY": "Text_Floor_of_house_second",
@@ -1378,11 +1393,16 @@
         {
             "KEY": "Text_Shared",
             "ENGLISH": "Shared",
-            "HINDI": "साझा"
+            "HINDI": "साझा/ कुछ परिवारों का मिलाकर नल"
+        },
+        {
+            "KEY": "Text_Not_Sure",
+            "ENGLISH": "Not Sure",
+            "HINDI": "निश्चित नहीं"
         },
         {
             "KEY": "Text_Residence_duration",
-            "ENGLISH": "Since which year have they been living in this house?",
+            "ENGLISH": "Since which year have you been living in this house?",
             "HINDI": "आप किस वर्ष से इस घर में रह रहे हैं?"
         },
         {
@@ -1409,6 +1429,11 @@
             "KEY": "Text_Family_member_relation_spouse",
             "ENGLISH": "Spouse",
             "HINDI": "पति या पत्नी"
+        },
+		{
+            "KEY": "Text_Family_member",
+            "ENGLISH": "Member",
+            "HINDI": "सदस्य"
         },
         {
             "KEY": "Text_Caste_ST",
@@ -1468,7 +1493,7 @@
         {
             "KEY": "Text_Children_Schooling_dropped_out_reasons_unsafe",
             "ENGLISH": "Travel to school was considered unsafe",
-            "HINDI": "स्कूल में सफर असुरक्षित माना जाता था"
+            "HINDI": "स्कूल तक का सफर असुरक्षित माना जाता था"
         },
         {
             "KEY": "Text_Basic_services_collection_frequency_twice",
@@ -1518,12 +1543,12 @@
         {
             "KEY": "Text_Basic_services_collection",
             "ENGLISH": "Waste collection",
-            "HINDI": "कबाड़ का संग्रहण"
+            "HINDI": "कचरे का संग्रहण"
         },
         {
             "KEY": "Text_Basic_services_collection_reused",
             "ENGLISH": "Waste reused or given to recycler",
-            "HINDI": "कचड़े का दोबारा इस्तेमाल या कबाड़ी में देना"
+            "HINDI": "कचरे का दोबारा इस्तेमाल या कबाड़ी में देना"
         },
         {
             "KEY": "Text_Basic_services_water",
@@ -1543,7 +1568,7 @@
         {
             "KEY": "Text_Basic_services_collection_dispose",
             "ENGLISH": "Where do you dispose the waste for collection/ cleaning?",
-            "HINDI": "आप घर का कचड़ा कहाँ फेकते/ रकते है, संघ्रह के लिए?"
+            "HINDI": "आप घर के कचरे को संग्रह के लिए कहाँ फेंकते/ रखते हैं? "
         },
         {
             "KEY": "Text_Health_consultation",
@@ -1628,7 +1653,7 @@
         {
             "KEY": "Text_Children_Schooling_not_studying_reason_violence",
             "ENGLISH": "Lack of safety at school from violence/ abuse",
-            "HINDI": "हिंसा से सुरक्षा की कमी"
+            "HINDI": "स्कूल में हिंसा से सुरक्षा की कमी"
         },
         {
             "KEY": "Text_Children_Schooling_not_studying_reason_inacessible",
@@ -1688,7 +1713,7 @@
 		{
             "KEY": "Text_Consent_10",
             "ENGLISH": "I have read out the details in this consent form to the participant in a language they understand. I have also answered all the questions they had. They have agreed to participate in this survey. The name of the family member giving me the consent is",
-            "HINDI": "मैंने इस सहमति पत्थर में लिखी पूरी जानकारी पढ़ कर सहभागियों को उस भाषा में बताई है जो वो समझते हैं। मैंने उनके सारे सवालों के जवाब भी दिए हैं। वो सर्वेक्षण में सहभाग लेने के लिए तय्यार हैं। घर के उस व्यक्ति का नाम जिसने मंजूरी दी"
+            "HINDI": "मैंने इस सहमति पत्र में लिखी पूरी जानकारी पढ़ कर सहभागियों को उस भाषा में बताई है जो वो समझते हैं। मैंने उनके सारे सवालों के जवाब भी दिए हैं। वो सर्वेक्षण में सहभाग लेने के लिए तय्यार हैं। घर के उस व्यक्ति का नाम जिसने मंजूरी दी"
         },
 		{
             "KEY": "Text_Consent_Giver_Name",
@@ -1734,5 +1759,45 @@
             "KEY": "Text_Instructions_children_not_cooperating",
             "ENGLISH": "If the family is not welcoming any external interest or help, report to the YUVA centre project incharge.",
             "HINDI": "अगर परिवार वाले किसी बाहरी व्यक्ति को जानकारी देने में या उसकी मदद लेने में रुचि नहीं दिखा रहे हैं, तो युवा सेंटर के अधिकारी को सूचना दें."
-        }	
+        },
+		{
+            "KEY": "Text_Number_of_Family_Members",
+            "ENGLISH": "Number of Family Members",
+            "HINDI": "परिवार के सदस्यों की संख्या"
+        },
+		{
+            "KEY": "Text_Currently_Studying",
+            "ENGLISH": "Currently Studying",
+            "HINDI": "स्टूडेंट"
+        },
+		{
+            "KEY": "Text_Currently_Studying_Which_Class",
+            "ENGLISH": "Which Class?",
+            "HINDI": "कौनसी कक्षा?"
+        },
+		{
+			"KEY": "Text_Occupation_retired",
+			"ENGLISH": "Retired Person",
+            "HINDI": "सेवानिवृत्त व्यक्ति"
+		},
+		{
+			"KEY": "Text_Private",
+			"ENGLISH": "Private",
+            "HINDI": "प्राइवेट"
+		},
+		{
+			"KEY": "Text_Government",
+			"ENGLISH": "Government",
+            "HINDI": "सरकारी"
+		},
+		{
+			"KEY": "Text_NGO",
+			"ENGLISH": "NGO",
+            "HINDI": "समाजिक संस्था"
+		},
+		{
+			"KEY": "Text_Yes_private_play_school",
+			"ENGLISH": "Yes, Private play school",
+            "HINDI": "हाँ, प्ले-ग्रुप/ प्ले-स्कूल"
+		}
 ]

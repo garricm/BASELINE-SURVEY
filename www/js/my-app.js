@@ -196,14 +196,30 @@ Date.prototype.format = function (mask, utc) {
 };
 
 
+
 function checkValueForOther(el) {
-	 if($(el).val() =='other') {
+	 if($(el).val() =='other' || $(el).val() =='currentlyStudying') {
 		 $(el).closest("li").next().show();
+		 $(el).closest("li").next().find("input").prop('required',true);
 	 } else {
 		 $(el).closest("li").next().hide();
+		 $(el).closest("li").next().find("input").prop('required',false);
 		 // checkForCondition(el);
 	 }
 }
+
+function changeNoOfFamilyMembers(el) {
+	 var value = parseInt($(el).val());
+	 
+	 $('.familyMember').each(function(i, obj) {
+		 if(i < value) {
+			$(this).show();
+		 } else {
+			$(this).hide();
+		 }
+	});
+}
+
 
 function checkForCondition(el) {
 	var name = $(el).attr('name');
@@ -812,6 +828,8 @@ function resumeCompletedForm(element) {
 	}
 	
 	localStorage.setItem('completedList', JSON.stringify(newList));
+	// $(location).attr('href','survey.html');
+	mainView.router.loadPage('survey.html')
 }
 
 
@@ -846,7 +864,7 @@ function showInProgressList() {
 	    showInProgressList = true;
 		var obj = inProgressList[index];
 		if (obj != null){
-				html += '<li class="swipeout" id='+ obj.formId +'>' +
+				/*html += '<li class="swipeout" id='+ obj.formId +'>' +
 							'<div class="swipeout-content item-content">' +
 							'	<div class="item-inner">' +
 							'		<div class="item-title">FORM ID: ' + obj.formId + '</div>' +
@@ -857,7 +875,15 @@ function showInProgressList() {
 							'	<a href="#" class="action1 bg-orange" onclick="deleteInprogressForm(this)">Delete</a>' +
 							'	<a href="survey.html" class="action2" onclick="resumeForm(this)">Resume</a>' +
 							'</div>' +
-						'</li>';
+						'</li>';*/
+				html += '<li class="item-content" id='+ obj.formId +'>' +
+						'	<div class="item-inner">' + 
+						'		<div class="item-title">ID: ' + obj.formId + '</div>' + 
+						'		<div ><p class="color-gray">'+ dateFormat(obj.starteDate, "dd-mmm-yy, h:MM:ss TT") +'&nbsp;&nbsp;&nbsp;</p></div>' + 
+						'		<a href="survey.html" class="item-after" onclick="resumeForm(this)"><i class="fa fa-edit" style="font-size: 20px;color: #1b5e20; margin-right: 5px;"></i></a>' + 
+						'		<a href="#" class="item-after" onclick="deleteInprogressForm(this)"><i class="fa fa-trash" style="font-size: 20px;color: #F44336; margin-right: 5px;"></i></a>' + 
+						'	</div>' + 
+						'</li>';		
 			console.log('form list - ' + obj.formId);
 		}
 	} 
@@ -881,7 +907,7 @@ function showCompletedList() {
 	    showCompletedList = true;
 		var obj = completedList[index];
 		if (obj != null){
-				html += '<li class="swipeout" id='+ obj.formId +'>' +
+				/*html += '<li class="swipeout" id='+ obj.formId +'>' +
 							'<div class="swipeout-content item-content">' +
 							'	<div class="item-inner">' +
 							'		<div class="item-title">FORM ID: ' + obj.formId + '</div>' +
@@ -892,7 +918,15 @@ function showCompletedList() {
 							'	<a href="#" class="action1 bg-orange" onclick="deleteCompletedForm(this)">Delete</a>' +
 							'	<a href="survey.html" class="action2" onclick="resumeCompletedForm(this)">Edit</a>' +
 							'</div>' +
-						'</li>';
+						'</li>';*/
+				html += '<li class="item-content" id='+ obj.formId +'>' +
+						'	<div class="item-inner">' + 
+						'		<div class="item-title">ID: ' + obj.formId + '</div>' + 
+						'		<div ><p class="color-gray">'+ dateFormat(obj.starteDate, "dd-mmm-yy, h:MM:ss TT") +'&nbsp;&nbsp;&nbsp;</p></div>' + 
+						'		<a href="#" class="item-after" onclick="resumeCompletedForm(this)"><i class="fa fa-edit" style="font-size: 20px;color: #1b5e20; margin-right: 5px;"></i></a>' + 
+						'		<a href="#" class="item-after" onclick="deleteCompletedForm(this)"><i class="fa fa-trash" style="font-size: 20px;color: #F44336; margin-right: 5px;"></i></a>' + 
+						'	</div>' + 
+						'</li>';		
 			console.log('form list - ' + obj.formId);
 		}
 	} 
