@@ -214,8 +214,10 @@ function changeNoOfFamilyMembers(el) {
 	 $('.familyMember').each(function(i, obj) {
 		 if(i < value) {
 			$(this).show();
+			$(this).find("requiredElement").prop('required',true);
 		 } else {
 			$(this).hide();
+			$(this).find("requiredElement").prop('required',false);
 		 }
 	});
 }
@@ -829,7 +831,7 @@ function resumeCompletedForm(element) {
 	
 	localStorage.setItem('completedList', JSON.stringify(newList));
 	// $(location).attr('href','survey.html');
-	mainView.router.loadPage('survey.html')
+	mainView.router.loadPage('survey.html');
 }
 
 
@@ -990,7 +992,18 @@ function generateFormNo() {
 }
 
 function proceedToSurvey(e) {
+  if($('#consentGivenBy').val() == ""){
+	  if(lang === "ENGLISH") {
+		alert("Enter name of person who has given consent");
+	  } else {
+		alert("सहमति देने वाले व्यक्ति का नाम दर्ज करें");
+	  }
+	  
+	  return;
+  } 
+  
   startNewSurvey($('#consentGivenBy').val());
+  mainView.router.loadPage('survey.html');
 }
 
 function startNewSurvey(consentGivenBy){
