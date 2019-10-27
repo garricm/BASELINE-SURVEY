@@ -521,6 +521,11 @@
             "ENGLISH": "Formal",
             "HINDI": "संघटित"
         },
+		{
+            "KEY": "Text_Basic_services_collection_frequency_partial",
+            "ENGLISH": "Partial",
+            "HINDI": "आंशिक"
+        },
         {
             "KEY": "Text_Basic_services_collection_frequency",
             "ENGLISH": "Frequency of collection",
