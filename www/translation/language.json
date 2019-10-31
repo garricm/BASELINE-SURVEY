@@ -59,6 +59,11 @@
             "ENGLISH": "Aadhaar card",
             "HINDI": "आधार कार्ड"
         },
+		{
+            "KEY": "Text_Identity_documents_held_driving_license",
+            "ENGLISH": "Driving License",
+            "HINDI": "ड्राइविंग लाइसेंस"
+        },
         {
             "KEY": "Text_Long_term_health_issues_addiction",
             "ENGLISH": "Addiction/ Alcoholism/ Drug abuse",
@@ -196,8 +201,8 @@
         },
         {
             "KEY": "Text_Cluster",
-            "ENGLISH": "Building/ Society/ Cluster ",
-            "HINDI": "इमारत/ सोसाइटी/ समूह"
+            "ENGLISH": "Name of Building/ Society/ Cluster ",
+            "HINDI": "इमारत/ सोसाइटी/ समूह का नाम"
         },
         {
             "KEY": "Text_Children_Higher_Education_skill_training_yes_BPO",
@@ -1330,6 +1335,21 @@
             "ENGLISH": "Light Bill",
             "HINDI": "लाइट बिल"
         },
+		{
+            "KEY": "Text_Documentation_for_survey_number",
+            "ENGLISH": "Survey number/ receipt",
+            "HINDI": "सर्वे नंबर / रसीद / पुरावा"
+        },
+		{
+            "KEY": "Text_Documentation_for_property_tax_bill",
+            "ENGLISH": "Property tax bill",
+            "HINDI": "घर पट्टी"
+        },
+		{
+            "KEY": "Text_Purchased",
+            "ENGLISH": "Purchased",
+            "HINDI": "खरीदा हुआ"
+        },
         {
             "KEY": "Text_Occupation_sanitation_worker",
             "ENGLISH": "Sanitation worker/ Waste Recycler",
@@ -1572,8 +1592,8 @@
         },
         {
             "KEY": "Text_Basic_services_collection_dispose",
-            "ENGLISH": "Where do you dispose the waste for collection/ cleaning?",
-            "HINDI": "आप घर के कचरे को संग्रह के लिए कहाँ फेंकते/ रखते हैं? "
+            "ENGLISH": "From where is your waste collected OR where do you dispose your waste?",
+            "HINDI": "आपका कचरा कहाँ से संग्रह किया जाता है या आप कचरे को कहाँ फेंकते हैं?"
         },
         {
             "KEY": "Text_Health_consultation",
