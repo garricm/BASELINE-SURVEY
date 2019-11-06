@@ -3,22 +3,11 @@
         <div class="view view-main">
             <div class="navbar">
                 <div class="navbar-inner">
-                    <!--<div class="left">
-                        <a href="#" class="link icon-only open-panel">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </div>-->
 					<div class="left">
                         <a href="index.html" class="link icon-only" onclick="autoSaveFormData(); return false;">
                             <i class="fa fa-home"></i>
                         </a>
                     </div>
-                   
-					<!--<h2 class="title">{{url_query.title}}</h2>
-					
-					<div class="center" style="left: 0px;">
-                        <h2 class="title">SURVEY</h2>
-                    </div>-->
 					 <div class="right">
 						<a href="#" onclick="">
 							<h2 class="title Text_Change_language" onclick="toggleSurveyLanguage();" style="padding-right: 10px;">Change Language</h2>
@@ -34,7 +23,6 @@
 							<i class="fa fa-save my-float"></i>
 						</a>
 						<form id="surveyForm" onsubmit='return submitSurvey(this)'>
-						<!-- <form id="surveyForm"> -->
 							<span id="section_1">
 		                        <div class="content-block-title">
 		                            <h2 class="heading">I. <span class="Text_Basic_Information">Basic Information</span></h2>
@@ -127,7 +115,7 @@
 		                                        <div class="item-inner">
 		                                            <div class="item-title label Text_Phone_No">Phone No</div>
 		                                            <div class="item-input">
-		                                                <input type="tel" name="phoneNo" placeholder="" required>
+		                                                <input type="tel" name="phoneNo" placeholder="">
 		                                            </div>
 		                                        </div>
 		                                    </div>
@@ -242,7 +230,7 @@
 							                                        <div class="item-inner">
 							                                            <div class="item-title label Text_Education_qualification">Educational Qualification</div>
 							                                            <div class="item-input">
-							                                                <select class="requiredElement" name="familyMemberEducationalQualification[1]">
+							                                                <select class="requiredElement" onchange="checkValueForOther(this);" name="familyMemberEducationalQualification[1]">
 																				<option value="">-- SELECT --</option>
 																				<option value="noneCannotReadCalculate" class="Text_Education_qualification_none">None, cannot read, cannot calculate</option>
 																				<option value="canCalculate" class="Text_Education_qualification_numeracy">None, cannot read, can calculate</option>
@@ -415,7 +403,7 @@
 							                                            <i class="icon icon-form-checkbox"></i>
 							                                        </div>
 							                                        <div class="item-inner">
-							                                            <div class="item-title Text_Occupation_driver" style="border-right: none;">Self-Employed</div>
+							                                            <div class="item-title Text_Occupation_self_employed" style="border-right: none;">Self-Employed</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -566,6 +554,17 @@
 							                                        </div>
 							                                        <div class="item-inner">
 							                                            <div class="item-title Text_Identity_documents_held_caste" style="border-right: none;">Caste Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[1]" value="Driving License">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_driving_license" style="border-right: none;">Driving License</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -912,7 +911,7 @@
 							                                        <div class="item-inner">
 							                                            <div class="item-title label Text_Education_qualification">Educational Qualification</div>
 							                                            <div class="item-input">
-							                                                <select class="requiredElement" name="familyMemberEducationalQualification[2]">
+							                                                <select class="requiredElement" onchange="checkValueForOther(this);" name="familyMemberEducationalQualification[2]">
 																				<option value="">-- SELECT --</option>
 																				<option value="noneCannotReadCalculate" class="Text_Education_qualification_none">None, cannot read, cannot calculate</option>
 																				<option value="canCalculate" class="Text_Education_qualification_numeracy">None, cannot read, can calculate</option>
@@ -1085,7 +1084,7 @@
 							                                            <i class="icon icon-form-checkbox"></i>
 							                                        </div>
 							                                        <div class="item-inner">
-							                                            <div class="item-title Text_Occupation_driver" style="border-right: none;">Self-Employed</div>
+							                                            <div class="item-title Text_Occupation_self_employed" style="border-right: none;">Self-Employed</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -1236,6 +1235,17 @@
 							                                        </div>
 							                                        <div class="item-inner">
 							                                            <div class="item-title Text_Identity_documents_held_caste" style="border-right: none;">Caste Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[2]" value="Driving License">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_driving_license" style="border-right: none;">Driving License</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -1582,7 +1592,7 @@
 							                                        <div class="item-inner">
 							                                            <div class="item-title label Text_Education_qualification">Educational Qualification</div>
 							                                            <div class="item-input">
-							                                                <select class="requiredElement" name="familyMemberEducationalQualification[3]">
+							                                                <select class="requiredElement" onchange="checkValueForOther(this);" name="familyMemberEducationalQualification[3]">
 																				<option value="">-- SELECT --</option>
 																				<option value="noneCannotReadCalculate" class="Text_Education_qualification_none">None, cannot read, cannot calculate</option>
 																				<option value="canCalculate" class="Text_Education_qualification_numeracy">None, cannot read, can calculate</option>
@@ -1755,7 +1765,7 @@
 							                                            <i class="icon icon-form-checkbox"></i>
 							                                        </div>
 							                                        <div class="item-inner">
-							                                            <div class="item-title Text_Occupation_driver" style="border-right: none;">Self-Employed</div>
+							                                            <div class="item-title Text_Occupation_self_employed" style="border-right: none;">Self-Employed</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -1906,6 +1916,17 @@
 							                                        </div>
 							                                        <div class="item-inner">
 							                                            <div class="item-title Text_Identity_documents_held_caste" style="border-right: none;">Caste Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[3]" value="Driving License">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_driving_license" style="border-right: none;">Driving License</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -2252,7 +2273,7 @@
 							                                        <div class="item-inner">
 							                                            <div class="item-title label Text_Education_qualification">Educational Qualification</div>
 							                                            <div class="item-input">
-							                                                <select class="requiredElement" name="familyMemberEducationalQualification[4]">
+							                                                <select class="requiredElement" onchange="checkValueForOther(this);" name="familyMemberEducationalQualification[4]">
 																				<option value="">-- SELECT --</option>
 																				<option value="noneCannotReadCalculate" class="Text_Education_qualification_none">None, cannot read, cannot calculate</option>
 																				<option value="canCalculate" class="Text_Education_qualification_numeracy">None, cannot read, can calculate</option>
@@ -2576,6 +2597,17 @@
 							                                        </div>
 							                                        <div class="item-inner">
 							                                            <div class="item-title Text_Identity_documents_held_caste" style="border-right: none;">Caste Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[4]" value="Driving License">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_driving_license" style="border-right: none;">Driving License</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -2922,7 +2954,7 @@
 							                                        <div class="item-inner">
 							                                            <div class="item-title label Text_Education_qualification">Educational Qualification</div>
 							                                            <div class="item-input">
-							                                                <select class="requiredElement" name="familyMemberEducationalQualification[5]">
+							                                                <select class="requiredElement" onchange="checkValueForOther(this);" name="familyMemberEducationalQualification[5]">
 																				<option value="">-- SELECT --</option>
 																				<option value="noneCannotReadCalculate" class="Text_Education_qualification_none">None, cannot read, cannot calculate</option>
 																				<option value="canCalculate" class="Text_Education_qualification_numeracy">None, cannot read, can calculate</option>
@@ -3095,7 +3127,7 @@
 							                                            <i class="icon icon-form-checkbox"></i>
 							                                        </div>
 							                                        <div class="item-inner">
-							                                            <div class="item-title Text_Occupation_driver" style="border-right: none;">Self-Employed</div>
+							                                            <div class="item-title Text_Occupation_self_employed" style="border-right: none;">Self-Employed</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -3246,6 +3278,17 @@
 							                                        </div>
 							                                        <div class="item-inner">
 							                                            <div class="item-title Text_Identity_documents_held_caste" style="border-right: none;">Caste Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[5]" value="Driving License">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_driving_license" style="border-right: none;">Driving License</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -3592,7 +3635,7 @@
 							                                        <div class="item-inner">
 							                                            <div class="item-title label Text_Education_qualification">Educational Qualification</div>
 							                                            <div class="item-input">
-							                                                <select class="requiredElement" name="familyMemberEducationalQualification[6]">
+							                                                <select class="requiredElement" onchange="checkValueForOther(this);" name="familyMemberEducationalQualification[6]">
 																				<option value="">-- SELECT --</option>
 																				<option value="noneCannotReadCalculate" class="Text_Education_qualification_none">None, cannot read, cannot calculate</option>
 																				<option value="canCalculate" class="Text_Education_qualification_numeracy">None, cannot read, can calculate</option>
@@ -3765,7 +3808,7 @@
 							                                            <i class="icon icon-form-checkbox"></i>
 							                                        </div>
 							                                        <div class="item-inner">
-							                                            <div class="item-title Text_Occupation_driver" style="border-right: none;">Self-Employed</div>
+							                                            <div class="item-title Text_Occupation_self_employed" style="border-right: none;">Self-Employed</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -3916,6 +3959,17 @@
 							                                        </div>
 							                                        <div class="item-inner">
 							                                            <div class="item-title Text_Identity_documents_held_caste" style="border-right: none;">Caste Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[6]" value="Driving License">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_driving_license" style="border-right: none;">Driving License</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -4262,7 +4316,7 @@
 							                                        <div class="item-inner">
 							                                            <div class="item-title label Text_Education_qualification">Educational Qualification</div>
 							                                            <div class="item-input">
-							                                                <select class="requiredElement" name="familyMemberEducationalQualification[7]">
+							                                                <select class="requiredElement" onchange="checkValueForOther(this);" name="familyMemberEducationalQualification[7]">
 																				<option value="">-- SELECT --</option>
 																				<option value="noneCannotReadCalculate" class="Text_Education_qualification_none">None, cannot read, cannot calculate</option>
 																				<option value="canCalculate" class="Text_Education_qualification_numeracy">None, cannot read, can calculate</option>
@@ -4435,7 +4489,7 @@
 							                                            <i class="icon icon-form-checkbox"></i>
 							                                        </div>
 							                                        <div class="item-inner">
-							                                            <div class="item-title Text_Occupation_driver" style="border-right: none;">Self-Employed</div>
+							                                            <div class="item-title Text_Occupation_self_employed" style="border-right: none;">Self-Employed</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -4586,6 +4640,17 @@
 							                                        </div>
 							                                        <div class="item-inner">
 							                                            <div class="item-title Text_Identity_documents_held_caste" style="border-right: none;">Caste Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[7]" value="Driving License">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_driving_license" style="border-right: none;">Driving License</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -4932,7 +4997,7 @@
 							                                        <div class="item-inner">
 							                                            <div class="item-title label Text_Education_qualification">Educational Qualification</div>
 							                                            <div class="item-input">
-							                                                <select class="requiredElement" name="familyMemberEducationalQualification[8]">
+							                                                <select class="requiredElement" onchange="checkValueForOther(this);" name="familyMemberEducationalQualification[8]">
 																				<option value="">-- SELECT --</option>
 																				<option value="noneCannotReadCalculate" class="Text_Education_qualification_none">None, cannot read, cannot calculate</option>
 																				<option value="canCalculate" class="Text_Education_qualification_numeracy">None, cannot read, can calculate</option>
@@ -5105,7 +5170,7 @@
 							                                            <i class="icon icon-form-checkbox"></i>
 							                                        </div>
 							                                        <div class="item-inner">
-							                                            <div class="item-title Text_Occupation_driver" style="border-right: none;">Self-Employed</div>
+							                                            <div class="item-title Text_Occupation_self_employed" style="border-right: none;">Self-Employed</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -5256,6 +5321,17 @@
 							                                        </div>
 							                                        <div class="item-inner">
 							                                            <div class="item-title Text_Identity_documents_held_caste" style="border-right: none;">Caste Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[8]" value="Driving License">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_driving_license" style="border-right: none;">Driving License</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -5602,7 +5678,7 @@
 							                                        <div class="item-inner">
 							                                            <div class="item-title label Text_Education_qualification">Educational Qualification</div>
 							                                            <div class="item-input">
-							                                                <select class="requiredElement" name="familyMemberEducationalQualification[9]">
+							                                                <select class="requiredElement" onchange="checkValueForOther(this);" name="familyMemberEducationalQualification[9]">
 																				<option value="">-- SELECT --</option>
 																				<option value="noneCannotReadCalculate" class="Text_Education_qualification_none">None, cannot read, cannot calculate</option>
 																				<option value="canCalculate" class="Text_Education_qualification_numeracy">None, cannot read, can calculate</option>
@@ -5775,7 +5851,7 @@
 							                                            <i class="icon icon-form-checkbox"></i>
 							                                        </div>
 							                                        <div class="item-inner">
-							                                            <div class="item-title Text_Occupation_driver" style="border-right: none;">Self-Employed</div>
+							                                            <div class="item-title Text_Occupation_self_employed" style="border-right: none;">Self-Employed</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -5926,6 +6002,17 @@
 							                                        </div>
 							                                        <div class="item-inner">
 							                                            <div class="item-title Text_Identity_documents_held_caste" style="border-right: none;">Caste Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[9]" value="Driving License">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_driving_license" style="border-right: none;">Driving License</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -6272,7 +6359,7 @@
 							                                        <div class="item-inner">
 							                                            <div class="item-title label Text_Education_qualification">Educational Qualification</div>
 							                                            <div class="item-input">
-							                                                <select class="requiredElement" name="familyMemberEducationalQualification[10]">
+							                                                <select class="requiredElement" onchange="checkValueForOther(this);" name="familyMemberEducationalQualification[10]">
 																				<option value="">-- SELECT --</option>
 																				<option value="noneCannotReadCalculate" class="Text_Education_qualification_none">None, cannot read, cannot calculate</option>
 																				<option value="canCalculate" class="Text_Education_qualification_numeracy">None, cannot read, can calculate</option>
@@ -6445,7 +6532,7 @@
 							                                            <i class="icon icon-form-checkbox"></i>
 							                                        </div>
 							                                        <div class="item-inner">
-							                                            <div class="item-title Text_Occupation_driver" style="border-right: none;">Self-Employed</div>
+							                                            <div class="item-title Text_Occupation_self_employed" style="border-right: none;">Self-Employed</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -6596,6 +6683,17 @@
 							                                        </div>
 							                                        <div class="item-inner">
 							                                            <div class="item-title Text_Identity_documents_held_caste" style="border-right: none;">Caste Certificate</div>
+							                                        </div>
+							                                    </label>
+							                                </li>
+															<li>
+							                                    <label class="label-checkbox item-content">
+							                                        <input type="checkbox" name="familyMemberDocumentsHeld[10]" value="Driving License">
+							                                        <div class="item-media">
+							                                            <i class="icon icon-form-checkbox"></i>
+							                                        </div>
+							                                        <div class="item-inner">
+							                                            <div class="item-title Text_Identity_documents_held_driving_license" style="border-right: none;">Driving License</div>
 							                                        </div>
 							                                    </label>
 							                                </li>
@@ -7029,6 +7127,8 @@
 		                                                    <option value="ownershipPapers" class="Text_Documentation_for_house_ownership_paper">Ownership papers</option>
 															<option value="rentAgreement" class="Text_Documentation_for_house_rent_agreement">Rent Agreement</option>
 															<option value="lightBill" class="Text_Documentation_for_house_light_bill">Light Bill</option>
+															<option value="surveyNumber" class="Text_Documentation_for_survey_number">Survey number/ receipt</option>
+															<option value="propertyTaxBill" class="Text_Documentation_for_property_tax_bill">Property tax bill</option>
 															<option value="none" class="Text_None">None</option>
 															<option value="other" class="Text_Others_Specify">Other (Specify)</option>
 		                                                </select>
@@ -7361,6 +7461,7 @@
 															<option value="Well" class="Text_Basic_services_water_connection_common_source_well">Well</option>
 															<option value="Tanker" class="Text_Basic_services_water_connection_common_source_tanker">Tanker</option>
 															<option value="Pipe at a common point" class="Text_Basic_services_water_connection_common_source_pipe">Pipe at a common point</option>
+															<option value="Purchased" class="Text_Purchased">Purchased</option>
 		                                                </select>
 		                                            </div>
 		                                        </div>
@@ -7739,7 +7840,7 @@
 		                                        <div class="item-inner">
 		                                            <div class="item-title label Text_Children_Anganwadi_balwadi_go">Do any of your children go to Anganwadi/Balwadi?</div>
 		                                            <div class="item-input">
-		                                                <select name="anganwadiFood">
+		                                                <select name="anganwadiFood" onchange='checkAnganwadiBlock(this);'>
 															<option value="">-- SELECT --</option>
 		                                                    <option value="YES,Anganwadi" class="Text_Yes_anganwadi">Yes, Anganwadi</option>
 															<option value="YES,Balwadi" class="Text_Yes_balwadi">Yes, Balwadi</option>
@@ -7750,7 +7851,7 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
-										<li>
+										<li class="childrenYesAnganwadiBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
 		                                            <div class="item-title label Text_Children_Anganwadi_balwadi_go_children_in_home">How many children in the home go to the Anganwadi?</div>
@@ -7760,7 +7861,7 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li>
+		                                <li class="childrenYesAnganwadiBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
 		                                            <div class="item-title label Text_Children_Anganwadi_balwadi_go_time">If any, how many times a week?</div>
@@ -7770,7 +7871,7 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
-										<li>
+										<li class="childrenYesAnganwadiBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
 		                                            <div class="item-title label Text_How_much_cost_per_annum">How much does it cost you per annum?</div>
@@ -7780,7 +7881,7 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li>
+		                                <li class="childrenYesAnganwadiBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
 		                                            <div class="item-title label Text_Children_Anganwadi_balwadi_meal">Do they get food at the Anganwadi?</div>
@@ -7795,7 +7896,7 @@
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li>
+		                                <li class="childrenYesAnganwadiBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
 		                                            <div class="item-title label Text_Children_No_Anganwadi_balwadi_checked">Is their height and weight checked regularly at the Anganwadi?</div>
@@ -7917,7 +8018,7 @@
 		                                </li>
 										
 										<!-- IF ABOVE IS YES -->
-										<li class="childrenEnrolledInSchoolAvailedScholarshipYesBlock">
+										<li class="childrenEnrolledInSchoolYesBlock childrenEnrolledInSchoolAvailedScholarshipYesBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
 		                                            <div class="item-title label Text_Scholarship_availed_name">Name of the scholarship</div>
@@ -8204,14 +8305,14 @@
 		                                    </div>
 		                                </li>
 										
-										<li>
+										<li class="childrenEnrolledInSchoolNoBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
 		                                            <div class="item-title label Text_Children_Higher_Education_attended_scholarship_not_availed">If no, reason for not attending college (Can select multiple options)</div>
 		                                        </div>
 		                                    </div>
 		                                </li>
-		                                <li>
+		                                <li class="childrenEnrolledInSchoolNoBlock">
 		                                    <label class="label-checkbox item-content">
 		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="Financial constraints">
 		                                        <div class="item-media">
@@ -8222,7 +8323,7 @@
 		                                        </div>
 		                                    </label>
 		                                </li>
-		                                <li>
+		                                <li class="childrenEnrolledInSchoolNoBlock">
 		                                    <label class="label-checkbox item-content">
 		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="Household responsibilities">
 		                                        <div class="item-media">
@@ -8233,7 +8334,7 @@
 		                                        </div>
 		                                    </label>
 		                                </li>
-		                                <li>
+		                                <li class="childrenEnrolledInSchoolNoBlock">
 		                                    <label class="label-checkbox item-content">
 		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="Marriage">
 		                                        <div class="item-media">
@@ -8244,7 +8345,7 @@
 		                                        </div>
 		                                    </label>
 		                                </li>
-		                                <li>
+		                                <li class="childrenEnrolledInSchoolNoBlock">
 		                                    <label class="label-checkbox item-content">
 		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="To help earn">
 		                                        <div class="item-media">
@@ -8255,7 +8356,7 @@
 		                                        </div>
 		                                    </label>
 		                                </li>
-		                                <li>
+		                                <li class="childrenEnrolledInSchoolNoBlock">
 		                                    <label class="label-checkbox item-content">
 		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="Not interested">
 		                                        <div class="item-media">
@@ -8266,7 +8367,7 @@
 		                                        </div>
 		                                    </label>
 		                                </li>
-		                                <li>
+		                                <li class="childrenEnrolledInSchoolNoBlock">
 		                                    <label class="label-checkbox item-content">
 		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="School too far from place of residence">
 		                                        <div class="item-media">
@@ -8277,7 +8378,7 @@
 		                                        </div>
 		                                    </label>
 		                                </li>
-		                                <li>
+		                                <li class="childrenEnrolledInSchoolNoBlock">
 		                                    <label class="label-checkbox item-content">
 		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="Travel to school was considered unsafe">
 		                                        <div class="item-media">
@@ -8288,7 +8389,7 @@
 		                                        </div>
 		                                    </label>
 		                                </li>
-										<li>
+										<li class="childrenEnrolledInSchoolNoBlock">
 		                                    <label class="label-checkbox item-content">
 		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="Lack of safety at school from violence/ abuse">
 		                                        <div class="item-media">
@@ -8299,7 +8400,7 @@
 		                                        </div>
 		                                    </label>
 		                                </li>
-										<li>
+										<li class="childrenEnrolledInSchoolNoBlock">
 		                                    <label class="label-checkbox item-content">
 		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="Not accessible for people with physical disability">
 		                                        <div class="item-media">
@@ -8311,7 +8412,7 @@
 		                                    </label>
 		                                </li>
 										
-		                                <li>
+		                                <li class="childrenEnrolledInSchoolNoBlock">
 		                                    <label class="label-checkbox item-content">
 		                                        <input type="checkbox" name="youthNotAttendingCollegeReason" value="other">
 		                                        <div class="item-media">
@@ -8717,33 +8818,19 @@
 										<li style="display: none" class="communityGroupMemberBlock">
 		                                    <div class="item-content">
 		                                        <div class="item-inner">
+		                                            <div class="item-title label Text_Others_Specify">Specify</div>
+		                                            <div class="item-input">
+		                                                <input type="text" name="communityGroupMemberOther" placeholder="">
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </li>
+										<li class="communityGroupMemberBlock">
+		                                    <div class="item-content">
+		                                        <div class="item-inner">
 		                                            <div class="item-title label Text_Organising_and_Participation_group_name">Name of the group</div>
 		                                            <div class="item-input">
 		                                                <input type="text" name="groupName" placeholder="">
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                </li>
-		                                <li>
-		                                    <div class="item-content">
-		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Organising_and_Participation_family_participation">Has anyone from your family ever participated in any campaign/event/conference organised by any NGO or government body?</div>
-		                                            <div class="item-input">
-		                                                <select name="groupRecognised">
-															<option value="">-- SELECT --</option>
-		                                                    <option value="YES" class="Text_Yes">Yes</option>
-															<option value="NO" class="Text_No">No</option> 
-		                                                </select>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                </li>
-		                                <li class="align-top" class="familyInvolvmentInNGODetailsBlock">
-		                                    <div class="item-content">
-		                                        <div class="item-inner">
-		                                            <div class="item-title label Text_Organising_and_Participation_family_participation_yes">If yes, please provide details?</div>
-		                                            <div class="item-input">
-		                                                <textarea name="familyInvolvmentInNGODetails" placeholder=""></textarea>
 		                                            </div>
 		                                        </div>
 		                                    </div>

@@ -204,8 +204,17 @@ function checkValueForOther(el) {
 	 } else {
 		 $(el).closest("li").next().hide();
 		 $(el).closest("li").next().find("input").prop('required',false);
-		 // checkForCondition(el);
 	 }
+}
+
+function checkAnganwadiBlock(el) {
+	if($(el).val() =='NO') {
+		$('.childrenYesAnganwadiBlock').hide();
+		$('.childrenNoAnganwadiBlock').show();
+	} else {
+		$('.childrenNoAnganwadiBlock').hide();
+		$('.childrenYesAnganwadiBlock').show();
+	}
 }
 
 function changeNoOfFamilyMembers(el) {
@@ -841,6 +850,7 @@ myApp.onPageInit('home', function (page) {
 	checkUUID();
 	initInProgressList();
 	initCompletedList();
+	initSyncedList();
 	
 	// TEST
 	// var inProgressList = JSON.parse(localStorage.getItem('inProgressList'));
@@ -849,6 +859,7 @@ myApp.onPageInit('home', function (page) {
 		
 	showInProgressList();
 	showCompletedList();
+	showSyncedList();
 });
 
 
@@ -942,6 +953,37 @@ function showCompletedList() {
 	}
 }
 
+
+
+function showSyncedList() {
+	var syncedList = JSON.parse(localStorage.getItem('syncedList'));	
+	
+	console.log('syncedList length - ' + syncedList.length);
+	var html = '';
+	var showSyncedList = false;
+	for (index = 0; index < syncedList.length; index++) { 
+	    showSyncedList = true;
+		var obj = syncedList[index];
+		if (obj != null){
+				html += '<li class="item-content" id='+ obj.formId +'>' +
+						'	<div class="item-inner">' + 
+						'		<div class="item-title">ID: ' + obj.formId + '</div>' + 
+						'		<div ><p class="color-gray">'+ dateFormat(obj.starteDate, "dd-mmm-yy, h:MM:ss TT") +'&nbsp;&nbsp;&nbsp;</p></div>' +  
+						'	</div>' + 
+						'</li>';		
+			console.log('form list - ' + obj.formId);
+		}
+	} 
+	
+	
+	if (showSyncedList) {
+		$('#syncedFormsBlock').show();
+		$('#syncedFormsList').html(html);
+	} else {
+		$('#syncedFormsBlock').hide();
+	}
+}
+
 function addFamilyMember() {
 	var block = $("#familyMemberAccordion").clone();
 	block.find(".memberItemHeading").text("Member " + ($('.familyMember').length));
@@ -967,6 +1009,13 @@ function initCompletedList() {
 	if (localStorage.getItem('completedList') == null) {
 		var dummyList = [];
 		localStorage.setItem('completedList', JSON.stringify(dummyList));
+	}	
+}
+
+function initSyncedList() {
+	if (localStorage.getItem('syncedList') == null) {
+		var dummyList = [];
+		localStorage.setItem('syncedList', JSON.stringify(dummyList));
 	}	
 }
 	
@@ -1072,6 +1121,7 @@ function autoSaveFormData(){
 function syncDataToServer() {
 	var completedList = JSON.parse(localStorage.getItem('completedList'));	
 	var newList = [];
+	var syncedList = [];
 	
 	for (index = 0; index < completedList.length; index++) { 
 		var obj = completedList[index];
@@ -1080,13 +1130,16 @@ function syncDataToServer() {
 			db.collection(obj.location).doc(obj.formId).set(obj).then(function() {
 			    console.log("Document successfully written!");
 			    // newList.push(obj);
+				syncedList.push(obj);
 			});
 		}
 	 }
 	
 	localStorage.setItem('completedList', JSON.stringify(newList));
+	localStorage.setItem('completedList', JSON.stringify(syncedList));
 	
 	showCompletedList();
+	showInSyncedList();
 }	
 
 function Func1() { 
