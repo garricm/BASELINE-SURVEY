@@ -217,16 +217,22 @@ function checkAnganwadiBlock(el) {
 	}
 }
 
-function changeNoOfFamilyMembers(el) {
-	 var value = parseInt($(el).val());
-	 
+function changeNoOfFamilyMembers() {
+	 var value = parseInt($('#noOfFamilyMembers').val());
 	 $('.familyMember').each(function(i, obj) {
 		 if(i < value) {
 			$(this).show();
-			$(this).find("requiredElement").prop('required',true);
+			$(this).addClass('accordion-item-expanded');
+			$(this).find(".requiredElement").each(function(j, object) {
+				$(object).attr('required',true);
+			});
+			
 		 } else {
 			$(this).hide();
-			$(this).find("requiredElement").prop('required',false);
+			$(this).removeClass('accordion-item-expanded');
+			$(this).find(".requiredElement").each(function(j, object) {
+				$(object).attr('required',false);
+			});
 		 }
 	});
 }
@@ -311,10 +317,18 @@ function checkForCondition(el) {
 
 function checkSettlement(el) {
 	if($(el).val() =='Ambujwadi_Comic_Relief' || $(el).val() =='Nalasopara_Comic_Relief') {
+		$('#section_4 .requiredElement, #section_5 .requiredElement, #section_6 .requiredElement').each(function(i, obj) {
+			$(this).prop('required',false);
+		});
+		
 		$('#section_4').hide();
 		$('#section_5').hide();
 		$('#section_6').hide();
 	} else {
+		$('#section_4 .requiredElement, #section_5 .requiredElement, #section_6 .requiredElement').each(function(i, obj) {
+			$(this).prop('required',true);
+		});
+		
 		$('#section_4').show();
 		$('#section_5').show();
 		$('#section_6').show();
@@ -353,6 +367,7 @@ myApp.onPageInit('survey', function (page) {
 	
 	
 	setLanguageText();
+	changeNoOfFamilyMembers();
 	
 	//$('.familyMemberName').change( function() {
 	//	$(this).closest('.memberItemHeading').text($(this).val());
