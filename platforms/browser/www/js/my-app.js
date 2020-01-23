@@ -315,26 +315,6 @@ function checkForCondition(el) {
 	
 }
 
-function checkSettlement(el) {
-	if($(el).val() =='Ambujwadi_Comic_Relief' || $(el).val() =='Nalasopara_Comic_Relief') {
-		$('#section_4 .requiredElement, #section_5 .requiredElement, #section_6 .requiredElement').each(function(i, obj) {
-			$(this).prop('required',false);
-		});
-		
-		$('#section_4').hide();
-		$('#section_5').hide();
-		$('#section_6').hide();
-	} else {
-		$('#section_4 .requiredElement, #section_5 .requiredElement, #section_6 .requiredElement').each(function(i, obj) {
-			$(this).prop('required',true);
-		});
-		
-		$('#section_4').show();
-		$('#section_5').show();
-		$('#section_6').show();
-	}
-}
-
 
 // Add view
 var mainView = myApp.addView('.view-main', {

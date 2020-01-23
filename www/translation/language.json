@@ -184,6 +184,11 @@
             "ENGLISH": "Behrampada (TDH)",
             "HINDI": "बेहरामपाड़ा (टी.डी.एच.) "
         },
+		{
+            "KEY": "Text_Settlement_Guwahati",
+            "ENGLISH": "Guwahati",
+            "HINDI": "गुवाहाटी"
+        },
         {
             "KEY": "Text_Identity_documents_held_birth",
             "ENGLISH": "Birth certificate",
