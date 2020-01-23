@@ -1131,10 +1131,10 @@ function syncDataToServer() {
 	 }
 	
 	localStorage.setItem('completedList', JSON.stringify(newList));
-	localStorage.setItem('completedList', JSON.stringify(syncedList));
+	localStorage.setItem('syncedList', JSON.stringify(syncedList));
 	
 	showCompletedList();
-	showInSyncedList();
+	showSyncedList();
 }	
 
 function Func1() { 
