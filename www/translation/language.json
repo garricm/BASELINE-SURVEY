@@ -1262,9 +1262,11 @@
             "ENGLISH": "Open defecation",
             "HINDI": "खुले में शौच"
         },
-
-		
-		
+		{
+            "KEY": "Text_Basic_services_Pit_Latrines",
+            "ENGLISH": "Pit Latrines",
+            "HINDI": "पिट लेटरिन"
+        },
         {
             "KEY": "Text_Education_qualification_post_graduate_above",
             "ENGLISH": "Post graduate and above",
