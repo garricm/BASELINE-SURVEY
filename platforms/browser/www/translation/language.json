@@ -109,6 +109,11 @@
             "ENGLISH": "Ambujwadi (TDH)",
             "HINDI": "अम्बुजवाड़ी (टी.डी.एच.)"
         },
+		{
+            "KEY": "Text_Settlement_Bhopal",
+            "ENGLISH": "Bhopal",
+            "HINDI": "भोपाल"
+        },
         {
             "KEY": "Text_Children_Anganwadi_balwadi",
             "ENGLISH": "Anganwadi/ Balwadi (IF CHILDREN UP TO 6 YEARS AGE)",
@@ -208,6 +213,41 @@
             "KEY": "Text_Cluster",
             "ENGLISH": "Name of Building/ Society/ Cluster ",
             "HINDI": "इमारत/ सोसाइटी/ समूह का नाम"
+        },
+		{
+            "KEY": "Text_Cluster_Annu_Nagar",
+            "ENGLISH": "Annu Nagar",
+            "HINDI": "अन्नू नगर"
+        },
+		{
+            "KEY": "Text_Cluster_Gautam_Nagar",
+            "ENGLISH": "Gautam Nagar",
+            "HINDI": "गौतम नगर"
+        },
+		{
+            "KEY": "Text_Cluster_Ehsaan_Nagar",
+            "ENGLISH": "Ehsaan Nagar",
+            "HINDI": "एहसान नगर"
+        },
+		{
+            "KEY": "Text_Floor_Ground",
+            "ENGLISH": "Ground Floor",
+            "HINDI": "तल मंजिल"
+        },
+		{
+            "KEY": "Text_Floor_First",
+            "ENGLISH": "First Floor",
+            "HINDI": "पहली  मंजिल"
+        },
+		{
+            "KEY": "Text_Floor_Second",
+            "ENGLISH": "Second",
+            "HINDI": "दूसरी  मंजिल"
+        },
+		{
+            "KEY": "Text_Floor_Above_Two",
+            "ENGLISH": "Above two",
+            "HINDI": "दो से ज्यादा"
         },
         {
             "KEY": "Text_Children_Higher_Education_skill_training_yes_BPO",
@@ -460,6 +500,16 @@
             "KEY": "Text_Electricity",
             "ENGLISH": "Electricity",
             "HINDI": "बिजली"
+        },
+		{
+            "KEY": "Text_ICDS",
+            "ENGLISH": "ICDS",
+            "HINDI": "ICDS"
+        },
+		{
+            "KEY": "Text_Transport",
+            "ENGLISH": "Transport",
+            "HINDI": "Transport"
         },
         {
             "KEY": "Text_Employment_type",
@@ -1012,8 +1062,8 @@
         },
         {
             "KEY": "Text_Monthly_income",
-            "ENGLISH": "Monthly income",
-            "HINDI": "मासिक आय"
+            "ENGLISH": "Monthly income (In INR)",
+            "HINDI": "मासिक आय (रुपये में)"
         },
         {
             "KEY": "Text_Floor_of_house_multiple_floors",
@@ -1262,9 +1312,11 @@
             "ENGLISH": "Open defecation",
             "HINDI": "खुले में शौच"
         },
-
-		
-		
+		{
+            "KEY": "Text_Basic_services_Pit_Latrines",
+            "ENGLISH": "Pit Latrines",
+            "HINDI": "पिट लेटरिन"
+        },
         {
             "KEY": "Text_Education_qualification_post_graduate_above",
             "ENGLISH": "Post graduate and above",
@@ -1336,6 +1388,11 @@
             "HINDI": "किराया समझौता"
         },
 		{
+            "KEY": "Text_Documentation_for_house_Lease_Document",
+            "ENGLISH": "Lease Document",
+            "HINDI": "पट्टा"
+        },
+		{
             "KEY": "Text_Documentation_for_house_light_bill",
             "ENGLISH": "Light Bill",
             "HINDI": "लाइट बिल"
@@ -1351,9 +1408,24 @@
             "HINDI": "घर पट्टी"
         },
 		{
-            "KEY": "Text_Purchased",
-            "ENGLISH": "Purchased",
-            "HINDI": "खरीदा हुआ"
+            "KEY": "Text_Documentation_for_property_tax_bill",
+            "ENGLISH": "Property tax bill",
+            "HINDI": "घर पट्टी"
+        },
+		{
+            "KEY": "Text_Identity_documents_held_samagra_id",
+            "ENGLISH": "Samagra I-Card",
+            "HINDI": "समग्र पहचान पत्र"
+        },
+		{
+            "KEY": "Text_Identity_documents_held_labour_card",
+            "ENGLISH": "Labour Card",
+            "HINDI": "कामगार पहचान पत्र"
+        },
+		{
+            "KEY": "Text_Occupation_waste_picking",
+            "ENGLISH": "Waste Picking",
+            "HINDI": "पन्नी बीनने का काम"
         },
         {
             "KEY": "Text_Occupation_sanitation_worker",
@@ -1570,6 +1642,11 @@
             "ENGLISH": "Voter card",
             "HINDI": "वोटर कार्ड"
         },
+		{
+            "KEY": "Text_Identity_documents_inaccurate",
+            "ENGLISH": "Which documents are inaccurate?",
+            "HINDI": "कौनसे प्रमाणपत्रों में गलतिया है?"
+        },
         {
             "KEY": "Text_Basic_services_collection",
             "ENGLISH": "Waste collection",
@@ -1600,6 +1677,56 @@
             "ENGLISH": "From where is your waste collected OR where do you dispose your waste?",
             "HINDI": "आपका कचरा कहाँ से संग्रह किया जाता है या आप कचरे को कहाँ फेंकते हैं?"
         },
+		{
+            "KEY": "Text_Transport_how_far_is_transport",
+            "ENGLISH": "आपके घर से काम या शिक्षा की जगह कितनी दुरी पर है? (कि.मी.)",
+            "HINDI": "आपके घर से काम या शिक्षा की जगह कितनी दुरी पर है? (कि.मी.)"
+        },
+		{
+            "KEY": "Text_Transport_Mode",
+            "ENGLISH": "अपने घर से काम या शिक्षा की जगह जाने के लिए किस वाहन का इस्तमाल करते है ?",
+            "HINDI": "अपने घर से काम या शिक्षा की जगह जाने के लिए किस वाहन का इस्तमाल करते है ?"
+        },
+		{
+            "KEY": "Text_Transport_Walking",
+            "ENGLISH": "Walking",
+            "HINDI": "पैदल"
+        },
+		{
+            "KEY": "Text_Transport_Govt_Bus",
+            "ENGLISH": "Govt Bus",
+            "HINDI": "सरकारी बस"
+        },
+		{
+            "KEY": "Text_Transport_Private_Auto",
+            "ENGLISH": "Private Auto",
+			"HINDI": "प्राइवेट ऑटो"
+        },
+		{
+            "KEY": "Text_Transport_Share_Auto",
+            "ENGLISH": "Share Auto",
+            "HINDI": "शेयर ऑटो"
+        },
+		{
+            "KEY": "Text_Transport_Walking",
+            "ENGLISH": "Walking",
+            "HINDI": "पैदल"
+        },
+		{
+            "KEY": "Text_Transport_Cycle",
+            "ENGLISH": "Cycle",
+            "HINDI": "साइकल"
+        },
+		{
+            "KEY": "Text_Transport_Private_Vehicle",
+            "ENGLISH": "Private Vehicle",
+            "HINDI": "निजी वाहन"
+        },
+		{
+            "KEY": "Text_Transport_Cost",
+            "ENGLISH": "हर महीने का खर्च (घर के सभी सदस्यों का मिलाकर)",
+            "HINDI": "हर महीने का खर्च (घर के सभी सदस्यों का मिलाकर)"
+        },
         {
             "KEY": "Text_Health_consultation",
             "ENGLISH": "Where do you go in case of medical needs/ treatment/ consultation",
@@ -1624,6 +1751,11 @@
             "KEY": "Text_Migration_to_basti",
             "ENGLISH": "Year of migration to this Basti",
             "HINDI": "स्थान परिवर्तन के बाद इस बस्ती में निवास की शुरुआत का वर्ष"
+        },
+		{
+            "KEY": "Text_Where_did_you_live_before_migration_to_basti",
+            "ENGLISH": "Where did you live before coming to this Basti?",
+            "HINDI": "इस बस्ती में आने से पहले कहा रहते थे ?"
         },
         {
             "KEY": "Text_Yes",
