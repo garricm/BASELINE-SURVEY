@@ -791,6 +791,26 @@
             "ENGLISH": "If any, How many children in the home go to the Anganwadi/ Balwadi",
             "HINDI": "अगर हाँ, घर में कितने बच्चे आंगनवाड़ी/ बालवाड़ी में जाते हैं?"
         },
+		{
+            "KEY": "Text_Children_Anganwadi_in_Locality",
+            "ENGLISH": "Do you have any ‘Anganwadi’ in your locality?",
+            "HINDI": "क्या आपके बस्ती में कोई आंगनबाड़ी है?"
+        },
+		{
+            "KEY": "Text_Transport_how_far_is_Anganwadi",
+            "ENGLISH": "If yes, mention distance (KM)",
+            "HINDI": "अगर है तो  कितनी दुरी पर है? (कि.मी)"
+        },
+		{
+            "KEY": "Text_Children_Anganwadi_Midday_Meal",
+            "ENGLISH": "Midday Meal",
+            "HINDI": "मिड डे मील"
+        },
+		{
+            "KEY": "Text_Children_Anganwadi_Children_Number",
+            "ENGLISH": "How many children from your house study in Anganwadi?",
+            "HINDI": "आपके घर से कितने बच्चे जाते है?"
+        },
         {
             "KEY": "Text_Children_Higher_Education_completed",
             "ENGLISH": "If finished, did college education help in securing a job",
@@ -1679,12 +1699,12 @@
         },
 		{
             "KEY": "Text_Transport_how_far_is_transport",
-            "ENGLISH": "आपके घर से काम या शिक्षा की जगह कितनी दुरी पर है? (कि.मी.)",
+            "ENGLISH": "Distance of your workplace or educational institute from your house (KM)",
             "HINDI": "आपके घर से काम या शिक्षा की जगह कितनी दुरी पर है? (कि.मी.)"
         },
 		{
             "KEY": "Text_Transport_Mode",
-            "ENGLISH": "अपने घर से काम या शिक्षा की जगह जाने के लिए किस वाहन का इस्तमाल करते है ?",
+            "ENGLISH": "What vehicle do you use to reach your workplace or educational institutes?",
             "HINDI": "अपने घर से काम या शिक्षा की जगह जाने के लिए किस वाहन का इस्तमाल करते है ?"
         },
 		{
@@ -1724,7 +1744,7 @@
         },
 		{
             "KEY": "Text_Transport_Cost",
-            "ENGLISH": "हर महीने का खर्च (घर के सभी सदस्यों का मिलाकर)",
+            "ENGLISH": "Monthly expenses on travel (total expenditure of the members of family)",
             "HINDI": "हर महीने का खर्च (घर के सभी सदस्यों का मिलाकर)"
         },
         {
